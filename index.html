@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mateo Herrera — Asesor de Seguros | Cotizador</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#05083D;
+    --blue:#007BC4;
+    --cyan:#00A7E8;
+    --electric:#246BFD;
+    --white:#FFFFFF;
+    --offwhite:#F7F8FA;
+    --graylight:#E9EBEF;
+    --graytext:#666A73;
+    --black:#111318;
+    --radio-card:24px;
+    --sombra:0 8px 30px rgba(5,8,61,0.10);
+    --sombra-hover:0 14px 40px rgba(5,8,61,0.16);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;font-family:'Inter',sans-serif;background:var(--offwhite);color:var(--black);
+    padding-bottom:60px;
+  }
+  h1,h2,h3,.display{font-family:'Manrope',sans-serif;}
+
+  /* ---- HEADER ---- */
+  header.marca{
+    background:var(--navy);color:white;padding:16px 28px;
+    display:flex;align-items:center;justify-content:space-between;
+    position:sticky;top:0;z-index:10;box-shadow:0 2px 20px rgba(5,8,61,0.25);
+  }
+  header.marca .brand{display:flex;align-items:center;gap:12px;}
+  header.marca img{height:38px;width:auto;display:block;}
+  header.marca .tag{font-size:12px;color:#9FD8F0;font-weight:500;letter-spacing:.02em;}
+
+  main{max-width:640px;margin:40px auto;padding:0 20px;}
+
+  /* ---- PROGRESO ---- */
+  .progreso-wrap{margin-bottom:28px;}
+  .progreso-label{
+    font-size:12.5px;font-weight:700;color:var(--blue);letter-spacing:.06em;
+    text-transform:uppercase;margin-bottom:8px;
+  }
+  .progreso-barra{height:6px;background:var(--graylight);border-radius:6px;overflow:hidden;}
+  .progreso-fill{height:100%;background:linear-gradient(90deg,var(--blue),var(--cyan));border-radius:6px;transition:width .35s ease;}
+
+  .paso{display:none;}
+  .paso.activo{display:block;animation:fadein .35s ease;}
+  @keyframes fadein{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+
+  .paso h2{font-size:26px;font-weight:800;color:var(--navy);margin:0 0 6px;letter-spacing:-0.01em;}
+  .paso .sub{color:var(--graytext);font-size:14.5px;margin:0 0 26px;}
+
+  /* ---- SELECTOR DE SEGURO (tarjetas) ---- */
+  .grid-seguros{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .card-seguro{
+    background:var(--white);border:1.5px solid var(--graylight);border-radius:var(--radio-card);
+    padding:22px 18px;cursor:pointer;transition:transform .25s ease, box-shadow .25s ease, border-color .2s ease;
+    box-shadow:var(--sombra);
+  }
+  .card-seguro:hover{transform:translateY(-4px) scale(1.01);box-shadow:var(--sombra-hover);}
+  .card-seguro.seleccionado{border-color:var(--electric);background:linear-gradient(180deg,#F2F8FF,white);}
+  .card-seguro .icono{
+    width:42px;height:42px;border-radius:12px;background:var(--navy);
+    display:flex;align-items:center;justify-content:center;margin-bottom:14px;
+  }
+  .card-seguro .icono svg{width:22px;height:22px;stroke:var(--cyan);}
+  .card-seguro .nombre{font-weight:700;font-size:15px;color:var(--black);}
+  .card-seguro .desc{font-size:12.5px;color:var(--graytext);margin-top:3px;}
+
+  /* ---- CAMPOS DE FORMULARIO ---- */
+  .campo{margin-bottom:16px;}
+  .campo.oculto{display:none;}
+  label{display:block;font-size:13px;font-weight:600;color:var(--black);margin-bottom:6px;}
+  input, select{
+    width:100%;padding:12px 14px;border:1.5px solid var(--graylight);border-radius:12px;
+    font-size:14.5px;background:white;color:var(--black);font-family:'Inter',sans-serif;
+  }
+  input:focus, select:focus{outline:none;border-color:var(--electric);box-shadow:0 0 0 3px rgba(36,107,253,0.12);}
+  .fila-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+
+  /* ---- BOTONES ---- */
+  .botones{display:flex;gap:12px;margin-top:28px;}
+  button{
+    font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;border:none;border-radius:14px;
+    padding:15px 22px;cursor:pointer;transition:transform .15s ease, box-shadow .2s ease;
+  }
+  .btn-primario{
+    flex:1;background:var(--navy);color:white;
+    box-shadow:0 6px 20px rgba(5,8,61,0.25);
+  }
+  .btn-primario:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(36,107,253,0.35);background:var(--electric);}
+  .btn-secundario{background:var(--graylight);color:var(--navy);}
+  .btn-secundario:hover{background:#dde1e7;}
+
+  /* ---- RESUMEN PASO 4 ---- */
+  .resumen-item{
+    display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--graylight);font-size:14px;
+  }
+  .resumen-item span:first-child{color:var(--graytext);}
+  .resumen-item span:last-child{font-weight:600;color:var(--black);}
+
+  .nota-legal{font-size:12px;color:var(--graytext);margin-top:18px;text-align:center;}
+
+  @media (max-width:480px){
+    .grid-seguros{grid-template-columns:1fr 1fr;}
+    .fila-2{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+  <header class="marca">
+    <div class="brand">
+      <img src="/static/logo.png" alt="Mateo Herrera - Asesor de Seguros">
+    </div>
+    <div class="tag">Cotizador Multi-Aseguradora</div>
+  </header>
+
+  <main>
+    <form action="/cotizar" method="POST" id="formCotizador">
+
+      <div class="progreso-wrap">
+        <div class="progreso-label" id="labelPaso">Paso 1 de 4</div>
+        <div class="progreso-barra"><div class="progreso-fill" id="barraProgreso" style="width:25%"></div></div>
+      </div>
+
+      <!-- PASO 1: TIPO DE SEGURO -->
+      <div class="paso activo" data-paso="1">
+        <h2>¿Qué deseas proteger?</h2>
+        <p class="sub">Elige el tipo de seguro y buscamos las mejores opciones entre todas las aseguradoras conectadas.</p>
+        <div class="grid-seguros">
+          <div class="card-seguro" data-valor="auto">
+            <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M5 17a2 2 0 100 4 2 2 0 000-4zm14 0a2 2 0 100 4 2 2 0 000-4zM5 17l1.5-6h11L19 17M6.5 11h11l-1-4h-9l-1 4z"/></svg></div>
+            <div class="nombre">Seguro de Auto</div>
+            <div class="desc">Protege tu vehículo</div>
+          </div>
+          <div class="card-seguro" data-valor="hogar">
+            <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg></div>
+            <div class="nombre">Seguro de Hogar</div>
+            <div class="desc">Cuida tu patrimonio</div>
+          </div>
+          <div class="card-seguro" data-valor="vida">
+            <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9.5-9C.7 8.4 2.3 5 6 5c2 0 3.3 1.1 4 2.2C10.7 6.1 12 5 14 5c3.7 0 5.3 3.4 3.5 7-2.5 4.5-9.5 9-9.5 9z"/></svg></div>
+            <div class="nombre">Seguro de Vida</div>
+            <div class="desc">Protege a tu familia</div>
+          </div>
+          <div class="card-seguro" data-valor="salud">
+            <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 6v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6l-8-4z"/><path d="M12 8v6M9 11h6"/></svg></div>
+            <div class="nombre">Seguro de Salud</div>
+            <div class="desc">Cuida tu bienestar</div>
+          </div>
+        </div>
+        <input type="hidden" name="tipo_seguro" id="tipo_seguro" required>
+      </div>
+
+      <!-- PASO 2: DATOS RELEVANTES DEL SEGURO -->
+      <div class="paso" data-paso="2">
+        <h2>Cuéntanos un poco más</h2>
+        <p class="sub">Solo lo necesario para calcular tu cotización.</p>
+
+        <div class="fila-2">
+          <div class="campo">
+            <label>Tipo de documento</label>
+            <select name="tipo_documento">
+              <option value="CC">Cédula de Ciudadanía</option>
+              <option value="CE">Cédula de Extranjería</option>
+              <option value="TI">Tarjeta de Identidad</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label>Número de documento</label>
+            <input type="text" name="numero_documento" required>
+          </div>
+          <div class="campo">
+            <label>Fecha de nacimiento</label>
+            <input type="text" name="fecha_nacimiento" placeholder="DD/MM/AAAA" required>
+          </div>
+          <div class="campo">
+            <label>Género</label>
+            <select name="genero" required>
+              <option value="F">Femenino</option>
+              <option value="M">Masculino</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label>Valor asegurado (COP)</label>
+            <input type="number" name="valor_asegurado" required>
+          </div>
+          <div class="campo campo-placa oculto">
+            <label>Placa del vehículo</label>
+            <input type="text" name="placa_vehiculo" placeholder="ABC123" style="text-transform:uppercase;">
+          </div>
+        </div>
+      </div>
+
+      <!-- PASO 3: DATOS BÁSICOS DE CONTACTO -->
+      <div class="paso" data-paso="3">
+        <h2>Tus datos de contacto</h2>
+        <p class="sub">Para enviarte la cotización y hacer seguimiento.</p>
+        <div class="campo">
+          <label>Nombre completo</label>
+          <input type="text" name="nombre_completo" required>
+        </div>
+        <div class="fila-2">
+          <div class="campo">
+            <label>Ciudad</label>
+            <input type="text" name="ciudad" required>
+          </div>
+          <div class="campo">
+            <label>Teléfono</label>
+            <input type="text" name="telefono" required>
+          </div>
+        </div>
+        <div class="campo">
+          <label>Correo electrónico</label>
+          <input type="email" name="correo" required>
+        </div>
+      </div>
+
+      <!-- PASO 4: CONFIRMACIÓN -->
+      <div class="paso" data-paso="4">
+        <h2>Revisa tu solicitud</h2>
+        <p class="sub">Confirma que todo esté correcto antes de generar la cotización.</p>
+        <div id="resumenFinal"></div>
+      </div>
+
+      <div class="botones">
+        <button type="button" class="btn-secundario" id="btnAtras" style="display:none;">Atrás</button>
+        <button type="button" class="btn-primario" id="btnSiguiente">Continuar</button>
+      </div>
+
+      <p class="nota-legal">Los datos ingresados se usan únicamente para generar la cotización solicitada.</p>
+    </form>
+  </main>
+
+<script>
+  const TOTAL_PASOS = 4;
+  let pasoActual = 1;
+  const form = document.getElementById('formCotizador');
+
+  function mostrarPaso(n){
+    document.querySelectorAll('.paso').forEach(p => p.classList.toggle('activo', +p.dataset.paso === n));
+    document.getElementById('labelPaso').textContent = `Paso ${n} de ${TOTAL_PASOS}`;
+    document.getElementById('barraProgreso').style.width = (n/TOTAL_PASOS*100) + '%';
+    document.getElementById('btnAtras').style.display = n === 1 ? 'none' : 'block';
+    const btnSig = document.getElementById('btnSiguiente');
+    if(n === TOTAL_PASOS){
+      btnSig.textContent = 'Generar cotización';
+      construirResumen();
+    } else {
+      btnSig.textContent = 'Continuar';
+    }
+  }
+
+  function validarPasoActual(){
+    const pasoDiv = document.querySelector(`.paso[data-paso="${pasoActual}"]`);
+    if(pasoActual === 1 && !document.getElementById('tipo_seguro').value){
+      alert('Elige un tipo de seguro para continuar.');
+      return false;
+    }
+    const requeridos = pasoDiv.querySelectorAll('input[required], select[required]');
+    for(const campo of requeridos){
+      if(campo.offsetParent !== null && !campo.value){
+        campo.focus();
+        alert('Completa este campo para continuar.');
+        return false;
+      }
+    }
+    return true;
+  }
+
+  function construirResumen(){
+    const datos = new FormData(form);
+    const etiquetas = {
+      tipo_seguro:'Tipo de seguro', nombre_completo:'Nombre', numero_documento:'Documento',
+      ciudad:'Ciudad', telefono:'Teléfono', correo:'Correo', valor_asegurado:'Valor asegurado'
+    };
+    let html = '';
+    for(const campo in etiquetas){
+      const valor = datos.get(campo);
+      if(valor) html += `<div class="resumen-item"><span>${etiquetas[campo]}</span><span>${valor}</span></div>`;
+    }
+    document.getElementById('resumenFinal').innerHTML = html;
+  }
+
+  document.querySelectorAll('.card-seguro').forEach(card => {
+    card.addEventListener('click', () => {
+      document.querySelectorAll('.card-seguro').forEach(c => c.classList.remove('seleccionado'));
+      card.classList.add('seleccionado');
+      document.getElementById('tipo_seguro').value = card.dataset.valor;
+      document.querySelector('.campo-placa').classList.toggle('oculto', card.dataset.valor !== 'auto');
+    });
+  });
+
+  document.getElementById('btnSiguiente').addEventListener('click', () => {
+    if(!validarPasoActual()) return;
+    if(pasoActual === TOTAL_PASOS){
+      form.submit();
+      return;
+    }
+    pasoActual++;
+    mostrarPaso(pasoActual);
+  });
+
+  document.getElementById('btnAtras').addEventListener('click', () => {
+    pasoActual--;
+    mostrarPaso(pasoActual);
+  });
+</script>
+
+</body>
+</html>
