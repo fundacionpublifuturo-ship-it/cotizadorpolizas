@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cotizador Multi-Aseguradora — Mateo Herrera Seguros</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 0 20px; background:#f5f6f8; }
+    h1 { color: #1a2b4c; font-size: 22px; }
+    form { background: white; padding: 24px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+    label { display: block; margin-top: 14px; font-weight: bold; font-size: 14px; color: #333; }
+    input, select { width: 100%; padding: 8px; margin-top: 4px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+    button { margin-top: 20px; width: 100%; padding: 12px; background: #1a2b4c; color: white; border: none; border-radius: 4px; font-size: 15px; cursor: pointer; }
+    button:hover { background: #10203f; }
+  </style>
+</head>
+<body>
+  <h1>Cotizar Póliza — Todas las Aseguradoras</h1>
+  <form action="/cotizar" method="POST">
+    <label>Nombre completo</label>
+    <input type="text" name="nombre_completo" required>
+
+    <label>Tipo de documento</label>
+    <select name="tipo_documento">
+      <option value="CC">Cédula de Ciudadanía</option>
+      <option value="CE">Cédula de Extranjería</option>
+      <option value="TI">Tarjeta de Identidad</option>
+    </select>
+
+    <label>Número de documento</label>
+    <input type="text" name="numero_documento" required>
+
+    <label>Fecha de nacimiento</label>
+    <input type="text" name="fecha_nacimiento" placeholder="DD/MM/AAAA" required>
+
+    <label>Género</label>
+    <select name="genero" required>
+      <option value="F">Femenino</option>
+      <option value="M">Masculino</option>
+    </select>
+
+    <label>Ciudad</label>
+    <input type="text" name="ciudad" required>
+
+    <label>Teléfono</label>
+    <input type="text" name="telefono" required>
+
+    <label>Correo electrónico</label>
+    <input type="email" name="correo" required>
+
+    <label>Tipo de seguro</label>
+    <select name="tipo_seguro">
+      <option value="vida">Vida</option>
+      <option value="auto">Auto</option>
+      <option value="hogar">Hogar</option>
+      <option value="salud">Salud</option>
+    </select>
+
+    <label>Valor asegurado (COP)</label>
+    <input type="number" name="valor_asegurado" required>
+
+    <label>Marca y modelo del vehículo (si aplica)</label>
+    <input type="text" name="marca_modelo_vehiculo">
+
+    <label>Año del vehículo (si aplica)</label>
+    <input type="text" name="anio_vehiculo">
+
+    <button type="submit">Cotizar en todas las aseguradoras</button>
+  </form>
+</body>
+</html>
