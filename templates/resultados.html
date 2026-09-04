@@ -68,8 +68,8 @@
 
   <main>
     <div class="resumen">
-      <h2>Cotización para {{ cliente.nombre_completo }}</h2>
-      <p>{{ cliente.tipo_seguro|capitalize }} — {{ resultados|length }} resultado(s) encontrados</p>
+      <h2>{% if cliente %}Cotización para {{ cliente.nombre_completo }}{% else %}No se pudo generar la cotización{% endif %}</h2>
+      <p>{% if cliente %}{{ cliente.tipo_seguro|capitalize }} — {% endif %}{{ resultados|length }} resultado(s) encontrados</p>
     </div>
 
     {% for r in resultados %}
