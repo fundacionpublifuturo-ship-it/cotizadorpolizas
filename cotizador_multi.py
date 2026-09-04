@@ -139,35 +139,43 @@ async def _cotizar_generico(nombre_aseguradora: str, url_login: str,
 
     resultados = []
     async with _SEMAFORO:
-        async with async_playwright() as p:
-            browser = await p.chromium.launch(headless=headless)
-            page = await browser.new_page()
-            try:
-                await page.goto(url_login)
-                await page.fill(user_field, os.getenv(env_user, ""))
-                await page.fill(pass_field, os.getenv(env_pass, ""))
-                await page.click('button[type="submit"]')
-                await page.wait_for_load_state("networkidle")
+        try:
+            async with async_playwright() as p:
+                browser = await p.chromium.launch(headless=headless)
+                page = await browser.new_page()
+                try:
+                    await page.goto(url_login)
+                    await page.fill(user_field, os.getenv(env_user, ""))
+                    await page.fill(pass_field, os.getenv(env_pass, ""))
+                    await page.click('button[type="submit"]')
+                    await page.wait_for_load_state("networkidle")
 
-                for plan in planes_a_cotizar:
-                    resultado = {"aseguradora": nombre_aseguradora, "plan": plan["nombre"],
-                                 "estado": "pendiente_configurar_selectores", "prima": None,
-                                 "pdf_path": None, "detalle": ""}
-                    # --- AJUSTAR POR PORTAL: navegar, seleccionar plan['selector_valor'],
-                    #     llenar formulario con datos del cliente, calcular, descargar PDF ---
-                    #     Nota: cliente.valor_asegurado puede ser None (campo opcional).
-                    #     Si el portal lo exige y viene vacío, deja que el portal lo pida
-                    #     con su propio default, o omite ese page.fill() cuando sea None:
-                    #     if cliente.valor_asegurado is not None:
-                    #         await page.fill('input[name="valor_asegurado"]', str(cliente.valor_asegurado))
-                    resultados.append(resultado)
+                    for plan in planes_a_cotizar:
+                        resultado = {"aseguradora": nombre_aseguradora, "plan": plan["nombre"],
+                                     "estado": "pendiente_configurar_selectores", "prima": None,
+                                     "pdf_path": None, "detalle": ""}
+                        # --- AJUSTAR POR PORTAL: navegar, seleccionar plan['selector_valor'],
+                        #     llenar formulario con datos del cliente, calcular, descargar PDF ---
+                        #     Nota: cliente.valor_asegurado puede ser None (campo opcional).
+                        #     Si el portal lo exige y viene vacío, deja que el portal lo pida
+                        #     con su propio default, o omite ese page.fill() cuando sea None:
+                        #     if cliente.valor_asegurado is not None:
+                        #         await page.fill('input[name="valor_asegurado"]', str(cliente.valor_asegurado))
+                        resultados.append(resultado)
 
-            except Exception as e:
-                resultados = [{"aseguradora": nombre_aseguradora, "plan": p["nombre"], "estado": "error",
-                               "prima": None, "pdf_path": None, "detalle": f"Fallo de login: {e}"}
-                              for p in planes_a_cotizar]
-            finally:
-                await browser.close()
+                except Exception as e:
+                    resultados = [{"aseguradora": nombre_aseguradora, "plan": p["nombre"], "estado": "error",
+                                   "prima": None, "pdf_path": None, "detalle": f"Fallo de login: {e}"}
+                                  for p in planes_a_cotizar]
+                finally:
+                    await browser.close()
+        except Exception as e:
+            # Fallo al abrir el navegador en sí (ej: Chromium no instalado
+            # correctamente en el servidor) — nunca debe tumbar toda la
+            # página, solo reportarse como error de esta aseguradora.
+            resultados = [{"aseguradora": nombre_aseguradora, "plan": p["nombre"], "estado": "error",
+                           "prima": None, "pdf_path": None, "detalle": f"No se pudo abrir el navegador: {e}"}
+                          for p in planes_a_cotizar]
     return resultados
 
 

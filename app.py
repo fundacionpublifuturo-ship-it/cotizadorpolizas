@@ -73,27 +73,41 @@ def cotizador_page():
 def cotizar():
     form = request.form
 
-    cliente = DatosCliente(
-        nombre_completo=form["nombre_completo"],
-        tipo_documento=form["tipo_documento"],
-        numero_documento=form["numero_documento"],
-        fecha_nacimiento=form["fecha_nacimiento"],
-        genero=form["genero"],
-        ciudad=form["ciudad"],
-        telefono=form["telefono"],
-        correo=form["correo"],
-        tipo_seguro=form["tipo_seguro"],
-        valor_asegurado=float(form["valor_asegurado"]) if form.get("valor_asegurado") else None,
-        placa_vehiculo=form.get("placa_vehiculo", ""),
-    )
+    try:
+        cliente = DatosCliente(
+            nombre_completo=form["nombre_completo"],
+            tipo_documento=form["tipo_documento"],
+            numero_documento=form["numero_documento"],
+            fecha_nacimiento=form["fecha_nacimiento"],
+            genero=form["genero"],
+            ciudad=form["ciudad"],
+            telefono=form["telefono"],
+            correo=form["correo"],
+            tipo_seguro=form["tipo_seguro"],
+            valor_asegurado=float(form["valor_asegurado"]) if form.get("valor_asegurado") else None,
+            placa_vehiculo=form.get("placa_vehiculo", ""),
+        )
 
-    # Ejecuta las cotizaciones en paralelo (headless=True para no abrir ventanas)
-    resultados = asyncio.run(cotizar_todas(cliente, headless=True))
+        # Ejecuta las cotizaciones en paralelo (headless=True para no abrir ventanas)
+        resultados = asyncio.run(cotizar_todas(cliente, headless=True))
 
-    ULTIMO_RESULTADO["cliente"] = cliente
-    ULTIMO_RESULTADO["resultados"] = resultados
+        ULTIMO_RESULTADO["cliente"] = cliente
+        ULTIMO_RESULTADO["resultados"] = resultados
 
-    return render_template("resultados.html", cliente=cliente, resultados=resultados)
+        return render_template("resultados.html", cliente=cliente, resultados=resultados)
+
+    except Exception as e:
+        # Nunca mostrar el error genérico de Render/Flask: siempre devolver
+        # una respuesta clara indicando qué aseguradora o paso falló.
+        return render_template(
+            "resultados.html",
+            cliente=None,
+            resultados=[{
+                "aseguradora": "Sistema", "plan": "—", "estado": "error",
+                "prima": None, "pdf_path": None,
+                "detalle": f"No se pudo completar la cotización: {e}",
+            }],
+        ), 200
 
 
 @app.route("/pdf/<nombre_archivo>")
