@@ -235,7 +235,7 @@ img{max-width:100%;display:block;}
 .qa-dots i.on{background:var(--brand-500);width:16px;border-radius:3px;}
 
 /* encabezado de página interna */
-.phead{background:linear-gradient(170deg,var(--white),var(--ivory));border-bottom:1px solid var(--line);margin:-60px -24px 40px;padding:44px 24px;}
+.phead{background:linear-gradient(170deg,var(--white),var(--ivory));border:1.5px solid var(--line);border-radius:var(--r-lg);margin:0 0 40px;padding:36px 32px;}
 .phead .wrap{max-width:1140px;margin:0 auto;}
 .crumb{font-family:'IBM Plex Mono';font-size:.72rem;color:var(--ink-3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px;}
 .crumb b{color:var(--brand-700);}
@@ -256,7 +256,7 @@ img{max-width:100%;display:block;}
 @media(max-width:1000px){
   .nav-pills{display:none;}
   .qa{display:block;}
-  .phead{margin:-60px -24px 36px;}
+  .phead{margin:0 0 32px;padding:28px 22px;}
 }
 
 /* ---- MARQUESINA DE DIFERENCIALES ---- */
@@ -273,7 +273,8 @@ img{max-width:100%;display:block;}
 @media (prefers-reduced-motion:reduce){.strip-track{animation:none;}}
 
 /* animación palabra por palabra */
-.palabra-anim{display:inline-block;opacity:0;transform:translateY(14px);animation:aparecer-palabra .5s cubic-bezier(.16,1,.3,1) forwards;}
+.palabra-anim{display:inline-block;opacity:0;transform:translateY(14px);animation:aparecer-palabra .55s cubic-bezier(.16,1,.3,1) forwards;}
+.hero h1 .palabra-anim.grad{background:linear-gradient(100deg,var(--brand-800),var(--brand-500),var(--accent),var(--brand-500),var(--brand-800));background-size:220% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:aparecer-palabra .55s cubic-bezier(.16,1,.3,1) forwards, slide 6s linear infinite;padding-bottom:.06em;}
 @keyframes aparecer-palabra{to{opacity:1;transform:none;}}
 @media (prefers-reduced-motion:reduce){.palabra-anim{opacity:1 !important;transform:none !important;animation:none !important;}}
 </style>
@@ -303,7 +304,7 @@ img{max-width:100%;display:block;}
       <div class="hero-grid">
         <div>
           <span class="eyebrow rv">Asesoría personalizada en seguros</span>
-          <h1 class="rv" id="heroTitulo"><span class="grad">Protege hoy lo que más importa</span></h1>
+          <h1 id="heroTitulo"><span class="grad">Protege hoy lo que más importa</span></h1>
           <p class="lead rv">Encuentra la protección adecuada para ti, tu familia, tu vehículo o tu patrimonio con asesoría de un experto con 29 años de experiencia.</p>
           <div class="btn-fila rv"><a href="https://wa.me/573108646019?text=%C2%A1Hola%20%2AMateo%20Herrera%2A%21%20%F0%9F%9B%A1%EF%B8%8F%0A%0AQuiero%20%2Acotizar%20un%20seguro%2A%20con%20tu%20asesor%C3%ADa%20personalizada.%0A%0A%C2%BFMe%20ayudas%3F%20%F0%9F%99%8C" target="_blank" rel="noopener" class="btn btn-p">Cotizar mi seguro</a><button class="btn btn-s" data-page="seguros">Ver seguros</button></div>
         </div>
@@ -484,8 +485,9 @@ img{max-width:100%;display:block;}
     var span = h.querySelector('.grad');
     if(!span) return;
     var palabras = span.textContent.split(' ');
-    span.innerHTML = palabras.map(function(p, i){
-      return '<span class="palabra-anim" style="animation-delay:'+(i*0.09)+'s">'+p+'</span>';
+    // Reemplazar el h1 completo: sin span.grad padre (rompe el clip de los hijos)
+    h.innerHTML = palabras.map(function(p, i){
+      return '<span class="palabra-anim grad" style="animation-delay:'+(i*0.11)+'s">'+p+'</span>';
     }).join(' ');
   })();
 
