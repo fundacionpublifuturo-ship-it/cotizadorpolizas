@@ -381,6 +381,22 @@ img{max-width:100%;display:block;}
 .faq-panel .finput:focus{outline:none;border-color:var(--brand-700);box-shadow:0 0 0 3px rgba(15,62,140,.1);}
 .faq-panel .btn{width:100%;justify-content:center;}
 @media(max-width:900px){.faq-layout{grid-template-columns:1fr;}.faq-panel{position:static;}}
+
+/* Áreas táctiles y ajustes móviles */
+@media(max-width:768px){
+  .filtro-btn{padding:12px 18px;min-height:44px;}
+  .pill-nav,.qa-item{min-height:44px;}
+  .faq-q{min-height:52px;}
+  .btn{min-height:46px;}
+  .card.link,.tile,.post.link{min-height:44px;}
+  .cont-row{padding:14px 0;}
+  input,select,.finput{font-size:16px;}
+  .nav-cta{min-height:44px;display:inline-flex;align-items:center;}
+}
+/* respetar safe-area en iPhone */
+@supports(padding:env(safe-area-inset-bottom)){
+  .float{bottom:calc(24px + env(safe-area-inset-bottom));right:calc(24px + env(safe-area-inset-right));}
+}
 </style>
 </head>
 <body>
@@ -547,7 +563,7 @@ img{max-width:100%;display:block;}
       <h3>¿Tienes otra pregunta?</h3>
       <p class="sub-p">Escríbela y te responderemos directamente por WhatsApp.</p>
       <label for="faqPregunta">Cuéntanos</label>
-      <input type="text" id="faqPregunta" class="finput" placeholder="Escribe tu pregunta aquí...">
+      <input type="text" id="faqPregunta" class="finput" inputmode="text" placeholder="Escribe tu pregunta aquí...">
       <button class="btn btn-p" id="faqEnviar">Enviar por WhatsApp</button>
     </div></div>
 </div>
