@@ -157,14 +157,19 @@ img{max-width:100%;display:block;}
 .faq-a p{padding:0 4px 20px;color:var(--ink-3);font-size:.9rem;}
 
 /* contacto */
-.cont-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.cont-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;}
+.cont-ubicacion{margin-top:24px;background:var(--white);border:1.5px solid var(--line);border-radius:var(--r-lg);padding:24px 26px;}
+.cont-ubicacion h3{font-size:1.1rem;margin-bottom:6px;color:var(--brand-900);}
+.cont-ubicacion .dir{color:var(--ink-2);font-size:.92rem;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+.cont-ubicacion .dir svg{width:18px;height:18px;stroke:var(--brand-700);fill:none;stroke-width:2;flex-shrink:0;}
+.cont-mapa{width:100%;height:320px;border:0;border-radius:var(--r);display:block;}
 .cont-card{background:var(--white);border:1.5px solid var(--line);border-radius:var(--r-lg);padding:28px;}
 .cont-card h3{font-size:1.1rem;margin-bottom:16px;color:var(--brand-900);}
 .cont-row{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--line-2);font-size:.9rem;color:var(--ink-2);}
 .cont-row:last-child{border:none;}
 .cont-row .ic{width:34px;height:34px;border-radius:10px;background:var(--brand-50);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .cont-row .ic svg{width:16px;height:16px;stroke:var(--brand-700);fill:none;stroke-width:2;}
-.cont-cta{background:linear-gradient(135deg,var(--brand-900),var(--brand-800));border-radius:var(--r-lg);padding:36px;color:white;text-align:center;position:relative;overflow:hidden;}
+.cont-cta{background:linear-gradient(135deg,var(--brand-900),var(--brand-800));border-radius:var(--r-lg);padding:28px 26px;color:white;text-align:center;position:relative;overflow:hidden;align-self:start;}
 .cont-cta::after{content:'';position:absolute;bottom:-70px;right:-70px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(37,185,235,.22),transparent 70%);}
 .cont-cta h3{font-size:1.5rem;margin-bottom:12px;position:relative;}
 .cont-cta p{color:#B9D6EE;margin-bottom:22px;position:relative;font-size:.92rem;}
@@ -277,6 +282,43 @@ img{max-width:100%;display:block;}
 .hero h1 .palabra-anim.grad{background:linear-gradient(100deg,var(--brand-800),var(--brand-500),var(--accent),var(--brand-500),var(--brand-800));background-size:220% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:aparecer-palabra .55s cubic-bezier(.16,1,.3,1) forwards, slide 6s linear infinite;padding-bottom:.06em;}
 @keyframes aparecer-palabra{to{opacity:1;transform:none;}}
 @media (prefers-reduced-motion:reduce){.palabra-anim{opacity:1 !important;transform:none !important;animation:none !important;}}
+
+.post{cursor:pointer;}
+.post.link:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(5,8,61,.13);border-color:var(--brand-500);}
+.post .leer{display:inline-block;margin-top:14px;font-size:.85rem;font-weight:700;color:var(--brand-500);}
+.post-detalle{max-width:760px;margin:0 auto;background:var(--white);border:1.5px solid var(--line);border-radius:var(--r-lg);padding:36px;}
+.post-detalle .volver{display:inline-flex;align-items:center;gap:6px;font-size:.85rem;font-weight:600;color:var(--brand-700);margin-bottom:20px;cursor:pointer;}
+.post-detalle .post-cat{margin-bottom:14px;}
+.post-detalle h2{font-size:1.6rem;color:var(--brand-900);margin:12px 0;}
+.post-detalle .res{color:var(--ink-2);font-size:1rem;margin-bottom:22px;font-style:italic;}
+.post-detalle ul{list-style:none;display:flex;flex-direction:column;gap:16px;}
+.post-detalle li{font-size:.95rem;color:var(--ink-2);padding-left:22px;position:relative;line-height:1.6;}
+.post-detalle li::before{content:'';position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%;background:var(--brand-500);}
+.post-detalle .cta-fin{margin-top:28px;padding-top:24px;border-top:1px solid var(--line);text-align:center;}
+
+.tray-seccion{margin-top:44px;}
+.tray-seccion > h3{font-size:1.3rem;color:var(--brand-900);margin-bottom:20px;text-align:center;}
+/* línea de tiempo */
+.timeline{position:relative;max-width:720px;margin:0 auto;padding-left:32px;}
+.timeline::before{content:'';position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--brand-500),var(--brand-800));}
+.tl-item{position:relative;padding-bottom:26px;}
+.tl-item::before{content:'';position:absolute;left:-31px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--brand-500);border:3px solid var(--white);box-shadow:0 0 0 2px var(--brand-500);}
+.tl-item .año{font-family:'IBM Plex Mono';font-weight:700;color:var(--brand-700);font-size:.9rem;}
+.tl-item h4{font-size:1rem;margin:3px 0 4px;color:var(--ink);}
+.tl-item p{font-size:.88rem;color:var(--ink-3);}
+/* áreas */
+.areas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.area-chip{background:var(--white);border:1.5px solid var(--line);border-radius:var(--r);padding:16px;display:flex;align-items:center;gap:12px;transition:.18s;}
+.area-chip:hover{border-color:var(--brand-500);transform:translateY(-3px);box-shadow:var(--sh);}
+.area-chip svg{width:20px;height:20px;stroke:var(--brand-700);fill:none;stroke-width:2;flex-shrink:0;}
+.area-chip span{font-size:.9rem;font-weight:600;color:var(--ink);}
+/* valores */
+.valores-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.valor-card{background:linear-gradient(160deg,var(--white),var(--brand-50));border:1.5px solid var(--line);border-radius:var(--r-lg);padding:20px;}
+.valor-card h4{font-size:1rem;color:var(--brand-800);margin-bottom:6px;}
+.valor-card p{font-size:.88rem;color:var(--ink-3);}
+@media(max-width:820px){.areas-grid{grid-template-columns:1fr 1fr;}.valores-grid{grid-template-columns:1fr;}}
+@media(max-width:480px){.areas-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -348,12 +390,76 @@ img{max-width:100%;display:block;}
       <div class="tray-tags"><span class="tray-tag">Administrador de Empresas</span><span class="tray-tag">Esp. Gerencia de Mercadeo</span><span class="tray-tag">Independiente desde 2017</span></div>
     </div>
   </div>
+  <div class="tray-seccion">
+    <h3>Línea de tiempo</h3>
+    <div class="timeline">
+      <div class="tl-item rv"><div class="año">1996</div><h4>Inicio en el sector asegurador</h4><p>Comienza su carrera profesional en el mundo de los seguros.</p></div>
+      <div class="tl-item rv"><div class="año">1996 – 2017</div><h4>Trayectoria en grandes aseguradoras</h4><p>Desarrolla su carrera en Seguros Sura, Seguros Mundial y La Previsora, ocupando cargos en áreas financieras, comerciales, empresariales, de cumplimiento, siniestros y dirección de sucursales.</p></div>
+      <div class="tl-item rv"><div class="año">2017</div><h4>Agente independiente</h4><p>Inicia su labor como asesor independiente, brindando atención cercana y personalizada.</p></div>
+      <div class="tl-item rv"><div class="año">Hoy</div><h4>29 años de experiencia</h4><p>Acompaña a personas, familias y empresas en la protección de lo que más importa.</p></div>
+    </div>
+  </div>
+  <div class="tray-seccion">
+    <h3>Áreas de experiencia</h3>
+    <div class="areas-grid"><div class="area-chip rv"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg><span>Financiera</span></div><div class="area-chip rv"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M18 9l-5 5-3-3-4 4"/></svg><span>Comercial</span></div><div class="area-chip rv"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg><span>Empresarial</span></div><div class="area-chip rv"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Cumplimiento</span></div><div class="area-chip rv"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 6v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6l-8-4z"/></svg><span>Siniestros</span></div><div class="area-chip rv"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14"/></svg><span>Dirección de Sucursales</span></div></div>
+  </div>
+  <div class="tray-seccion">
+    <h3>Cómo trabaja Mateo</h3>
+    <div class="valores-grid">
+      <div class="valor-card rv"><h4>Asesoría cercana</h4><p>Atención personal y directa, entendiendo la necesidad real de cada cliente.</p></div>
+      <div class="valor-card rv"><h4>Visión estratégica</h4><p>Aprovecha su formación en Gerencia de Mercadeo para orientar cada decisión.</p></div>
+      <div class="valor-card rv"><h4>Confianza</h4><p>29 años de trayectoria que respaldan cada recomendación.</p></div>
+      <div class="valor-card rv"><h4>Acompañamiento real</h4><p>Presente antes, durante y después de contratar, especialmente ante un siniestro.</p></div>
+    </div>
+  </div>
+
 </div>
 
 <div class="page" data-pg="blog">
   <div class="phead"><div class="wrap"><div class="crumb">Inicio · <b>Blog y consejos</b></div><h1>Blog y consejos de seguros</h1><p>Aprende a tomar mejores decisiones para proteger lo que más importa.</p></div></div>
-  <div class="posts"><article class="post rv"><span class="post-cat">AUTO</span><h3>5 errores al contratar un seguro de auto</h3><p class="post-res">Los fallos más comunes que pueden dejarte sin cobertura justo cuando más la necesitas.</p><ul class="post-body"><li>Elegir solo por precio. El seguro más barato suele tener coberturas limitadas o deducibles muy altos. Compara el alcance de la cobertura y no solo el valor de la prima.</li><li>No leer las exclusiones. Muchas personas descubren tarde que su póliza no cubre cierto daño. Revisa las condiciones generales y ten claro qué NO está cubierto antes de firmar.</li><li>Declarar datos incompletos o falsos. Si el uso real del vehículo o el historial no coincide con lo declarado, la aseguradora puede rechazar el reclamo. La buena fe es la base del contrato de seguro.</li><li>No comparar entre aseguradoras. La diferencia de precio por la misma cobertura puede ser considerable. Cotizar en varias es clave — justamente lo que hacemos por ti.</li><li>Ignorar la responsabilidad civil. Esta cobertura protege ante daños a terceros; sin ella, un accidente puede convertirse en una deuda enorme.</li></ul></article><article class="post rv"><span class="post-cat">CONCEPTOS</span><h3>¿Qué es el deducible y cómo elegirlo?</h3><p class="post-res">El monto que asumes tú antes de que la aseguradora cubra el resto. Te explicamos cómo decidir.</p><ul class="post-body"><li>El deducible es la parte del daño que pagas de tu bolsillo antes de que la aseguradora cubra el saldo. Ejemplo: con deducible de $500.000 y un daño de $3.500.000, tú pagas $500.000 y la aseguradora $3.000.000.</li><li>Regla general: a mayor deducible, menor prima mensual — y viceversa. Es un equilibrio entre lo que pagas cada mes y lo que pagarías si ocurre un siniestro.</li><li>¿Cuándo conviene un deducible alto? Si usas poco el seguro y puedes asumir ese monto sin afectar tu estabilidad. ¿Uno bajo? Si prefieres pagar menos en caso de siniestro.</li><li>En Colombia el deducible está regulado por la Superintendencia Financiera y debe estar claramente especificado en las condiciones particulares de tu póliza.</li></ul></article><article class="post rv"><span class="post-cat">VIDA</span><h3>¿Por qué contratar un seguro de vida?</h3><p class="post-res">No es para ti, es para quienes dependen de ti. Aquí te explicamos su verdadero valor.</p><ul class="post-body"><li>Un seguro de vida paga una suma a tus beneficiarios si llegas a faltar, ayudándoles a mantener su estabilidad económica en un momento difícil.</li><li>Puede incluir amparos adicionales, como cobertura por invalidez o enfermedades graves, que te protegen a ti en vida.</li><li>El costo suele ser más accesible de lo que la gente cree, especialmente si se contrata a una edad temprana.</li><li>Define bien a tus beneficiarios: pueden ser expresos (una persona concreta) o quedar a tus herederos legales. Es una decisión importante que conviene revisar con tu asesor.</li></ul></article><article class="post rv"><span class="post-cat">GENERAL</span><h3>Todo Riesgo vs. RCE: ¿cuál necesitas?</h3><p class="post-res">La diferencia clave entre las dos coberturas de auto más comunes en Colombia.</p><ul class="post-body"><li>El seguro Todo Riesgo cubre daños a tu propio vehículo (choques, robo, pérdida total) además de los daños que causes a terceros. Es la protección más completa.</li><li>El RCE (Responsabilidad Civil Extracontractual) cubre únicamente los daños que le causes a terceros — sus vehículos, bienes o su integridad — pero no repara tu propio carro.</li><li>El SOAT es obligatorio y va aparte: cubre lesiones a personas en accidentes de tránsito, no daños materiales.</li><li>¿Cuál elegir? Depende del valor de tu vehículo, tu presupuesto y tu tolerancia al riesgo. Con gusto te ayudamos a decidir según tu caso.</li></ul></article></div>
+  <div class="posts"><article class="post link rv" data-page="blog1"><span class="post-cat">AUTO</span><h3>5 errores al contratar un seguro de auto</h3><p class="post-res">Los fallos más comunes que pueden dejarte sin cobertura justo cuando más la necesitas.</p><span class="leer">Leer artículo →</span></article><article class="post link rv" data-page="blog2"><span class="post-cat">CONCEPTOS</span><h3>¿Qué es el deducible y cómo elegirlo?</h3><p class="post-res">El monto que asumes tú antes de que la aseguradora cubra el resto. Te explicamos cómo decidir.</p><span class="leer">Leer artículo →</span></article><article class="post link rv" data-page="blog3"><span class="post-cat">VIDA</span><h3>¿Por qué contratar un seguro de vida?</h3><p class="post-res">No es para ti, es para quienes dependen de ti. Aquí te explicamos su verdadero valor.</p><span class="leer">Leer artículo →</span></article><article class="post link rv" data-page="blog4"><span class="post-cat">GENERAL</span><h3>Todo Riesgo vs. RCE: ¿cuál necesitas?</h3><p class="post-res">La diferencia clave entre las dos coberturas de auto más comunes en Colombia.</p><span class="leer">Leer artículo →</span></article></div>
 </div>
+<div class="page" data-pg="blog1">
+  <div class="phead"><div class="wrap"><div class="crumb">Inicio · Blog · <b>5 errores al contratar un seguro de auto</b></div><h1>5 errores al contratar un seguro de auto</h1></div></div>
+  <div class="post-detalle rv">
+    <span class="volver" data-page="blog"><svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Volver al blog</span>
+    <span class="post-cat">AUTO</span>
+    <p class="res">Los fallos más comunes que pueden dejarte sin cobertura justo cuando más la necesitas.</p>
+    <ul><li>Elegir solo por precio. El seguro más barato suele tener coberturas limitadas o deducibles muy altos. Compara el alcance de la cobertura y no solo el valor de la prima.</li><li>No leer las exclusiones. Muchas personas descubren tarde que su póliza no cubre cierto daño. Revisa las condiciones generales y ten claro qué NO está cubierto antes de firmar.</li><li>Declarar datos incompletos o falsos. Si el uso real del vehículo o el historial no coincide con lo declarado, la aseguradora puede rechazar el reclamo. La buena fe es la base del contrato de seguro.</li><li>No comparar entre aseguradoras. La diferencia de precio por la misma cobertura puede ser considerable. Cotizar en varias es clave — justamente lo que hacemos por ti.</li><li>Ignorar la responsabilidad civil. Esta cobertura protege ante daños a terceros; sin ella, un accidente puede convertirse en una deuda enorme.</li></ul>
+    <div class="cta-fin"><a href="https://wa.me/573108646019?text=%C2%A1Hola%20%2AMateo%20Herrera%2A%21%20%F0%9F%9B%A1%EF%B8%8F%0A%0AQuiero%20%2Acotizar%20un%20seguro%2A.%0A%0A%C2%BFMe%20ayudas%3F%20%F0%9F%99%8C" target="_blank" rel="noopener" class="btn btn-p">¿Dudas? Habla con Mateo</a></div>
+  </div>
+</div>
+<div class="page" data-pg="blog2">
+  <div class="phead"><div class="wrap"><div class="crumb">Inicio · Blog · <b>¿Qué es el deducible y cómo elegirlo?</b></div><h1>¿Qué es el deducible y cómo elegirlo?</h1></div></div>
+  <div class="post-detalle rv">
+    <span class="volver" data-page="blog"><svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Volver al blog</span>
+    <span class="post-cat">CONCEPTOS</span>
+    <p class="res">El monto que asumes tú antes de que la aseguradora cubra el resto. Te explicamos cómo decidir.</p>
+    <ul><li>El deducible es la parte del daño que pagas de tu bolsillo antes de que la aseguradora cubra el saldo. Ejemplo: con deducible de $500.000 y un daño de $3.500.000, tú pagas $500.000 y la aseguradora $3.000.000.</li><li>Regla general: a mayor deducible, menor prima mensual — y viceversa. Es un equilibrio entre lo que pagas cada mes y lo que pagarías si ocurre un siniestro.</li><li>¿Cuándo conviene un deducible alto? Si usas poco el seguro y puedes asumir ese monto sin afectar tu estabilidad. ¿Uno bajo? Si prefieres pagar menos en caso de siniestro.</li><li>En Colombia el deducible está regulado por la Superintendencia Financiera y debe estar claramente especificado en las condiciones particulares de tu póliza.</li></ul>
+    <div class="cta-fin"><a href="https://wa.me/573108646019?text=%C2%A1Hola%20%2AMateo%20Herrera%2A%21%20%F0%9F%9B%A1%EF%B8%8F%0A%0AQuiero%20%2Acotizar%20un%20seguro%2A.%0A%0A%C2%BFMe%20ayudas%3F%20%F0%9F%99%8C" target="_blank" rel="noopener" class="btn btn-p">¿Dudas? Habla con Mateo</a></div>
+  </div>
+</div>
+<div class="page" data-pg="blog3">
+  <div class="phead"><div class="wrap"><div class="crumb">Inicio · Blog · <b>¿Por qué contratar un seguro de vida?</b></div><h1>¿Por qué contratar un seguro de vida?</h1></div></div>
+  <div class="post-detalle rv">
+    <span class="volver" data-page="blog"><svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Volver al blog</span>
+    <span class="post-cat">VIDA</span>
+    <p class="res">No es para ti, es para quienes dependen de ti. Aquí te explicamos su verdadero valor.</p>
+    <ul><li>Un seguro de vida paga una suma a tus beneficiarios si llegas a faltar, ayudándoles a mantener su estabilidad económica en un momento difícil.</li><li>Puede incluir amparos adicionales, como cobertura por invalidez o enfermedades graves, que te protegen a ti en vida.</li><li>El costo suele ser más accesible de lo que la gente cree, especialmente si se contrata a una edad temprana.</li><li>Define bien a tus beneficiarios: pueden ser expresos (una persona concreta) o quedar a tus herederos legales. Es una decisión importante que conviene revisar con tu asesor.</li></ul>
+    <div class="cta-fin"><a href="https://wa.me/573108646019?text=%C2%A1Hola%20%2AMateo%20Herrera%2A%21%20%F0%9F%9B%A1%EF%B8%8F%0A%0AQuiero%20%2Acotizar%20un%20seguro%2A.%0A%0A%C2%BFMe%20ayudas%3F%20%F0%9F%99%8C" target="_blank" rel="noopener" class="btn btn-p">¿Dudas? Habla con Mateo</a></div>
+  </div>
+</div>
+<div class="page" data-pg="blog4">
+  <div class="phead"><div class="wrap"><div class="crumb">Inicio · Blog · <b>Todo Riesgo vs. RCE: ¿cuál necesitas?</b></div><h1>Todo Riesgo vs. RCE: ¿cuál necesitas?</h1></div></div>
+  <div class="post-detalle rv">
+    <span class="volver" data-page="blog"><svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Volver al blog</span>
+    <span class="post-cat">GENERAL</span>
+    <p class="res">La diferencia clave entre las dos coberturas de auto más comunes en Colombia.</p>
+    <ul><li>El seguro Todo Riesgo cubre daños a tu propio vehículo (choques, robo, pérdida total) además de los daños que causes a terceros. Es la protección más completa.</li><li>El RCE (Responsabilidad Civil Extracontractual) cubre únicamente los daños que le causes a terceros — sus vehículos, bienes o su integridad — pero no repara tu propio carro.</li><li>El SOAT es obligatorio y va aparte: cubre lesiones a personas en accidentes de tránsito, no daños materiales.</li><li>¿Cuál elegir? Depende del valor de tu vehículo, tu presupuesto y tu tolerancia al riesgo. Con gusto te ayudamos a decidir según tu caso.</li></ul>
+    <div class="cta-fin"><a href="https://wa.me/573108646019?text=%C2%A1Hola%20%2AMateo%20Herrera%2A%21%20%F0%9F%9B%A1%EF%B8%8F%0A%0AQuiero%20%2Acotizar%20un%20seguro%2A.%0A%0A%C2%BFMe%20ayudas%3F%20%F0%9F%99%8C" target="_blank" rel="noopener" class="btn btn-p">¿Dudas? Habla con Mateo</a></div>
+  </div>
+</div>
+
 
 <div class="page" data-pg="preguntas">
   <div class="phead"><div class="wrap"><div class="crumb">Inicio · <b>Preguntas</b></div><h1>Preguntas frecuentes</h1><p>Resolvemos las dudas más comunes sobre seguros y cotizaciones.</p></div></div>
@@ -376,6 +482,11 @@ img{max-width:100%;display:block;}
       <p>Recibe asesoría personalizada y encuentra la protección adecuada para tus necesidades.</p>
       <div class="btn-fila" style="justify-content:center;"><a href="https://wa.me/573108646019?text=%C2%A1Hola%20%2AMateo%20Herrera%2A%21%20%F0%9F%9B%A1%EF%B8%8F%0A%0AQuiero%20%2Acotizar%20un%20seguro%2A%20con%20tu%20asesor%C3%ADa%20personalizada.%0A%0A%C2%BFMe%20ayudas%3F%20%F0%9F%99%8C" target="_blank" rel="noopener" class="btn btn-p" style="background:linear-gradient(135deg,var(--accent),var(--brand-500));">Cotizar ahora</a><a href="https://wa.me/573108646019" target="_blank" rel="noopener" class="btn btn-s" style="background:transparent;color:white;border-color:rgba(255,255,255,.3);">Hablar por WhatsApp</a></div>
     </div>
+  </div>
+  <div class="cont-ubicacion rv">
+    <h3>Nuestra ubicación</h3>
+    <div class="dir"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Centro Comercial La Quinta, Primer Piso, Local 128 — Ibagué, Tolima</div>
+    <iframe class="cont-mapa" src="https://www.google.com/maps?q=Centro+Comercial+La+Quinta+Ibague+Tolima&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación Mateo Herrera Seguros"></iframe>
   </div>
 </div>
 
@@ -400,7 +511,11 @@ img{max-width:100%;display:block;}
     trayectoria:{t:'Trayectoria | Mateo Herrera Asesor',d:'29 años en el sector asegurador. Conoce la trayectoria de Mateo Herrera Puentes.'},
     blog:{t:'Blog y consejos de seguros | Mateo Herrera',d:'Consejos prácticos para elegir y entender tus seguros.'},
     preguntas:{t:'Preguntas frecuentes | Mateo Herrera Asesor',d:'Resolvemos las dudas más comunes sobre seguros y cotizaciones.'},
-    contacto:{t:'Contacto y ubicación | Mateo Herrera Asesor',d:'WhatsApp, teléfono y ubicación en Ibagué. Hablemos hoy.'}
+    contacto:{t:'Contacto y ubicación | Mateo Herrera Asesor',d:'WhatsApp, teléfono y ubicación en Ibagué. Hablemos hoy.'},
+    blog1:{t:'5 errores al contratar un seguro de auto | Mateo Herrera',d:'Los fallos más comunes que pueden dejarte sin cobertura justo cuando más la necesitas.'},
+    blog2:{t:'¿Qué es el deducible y cómo elegirlo? | Mateo Herrera',d:'El monto que asumes tú antes de que la aseguradora cubra el resto. Te explicamos cómo decidir.'},
+    blog3:{t:'¿Por qué contratar un seguro de vida? | Mateo Herrera',d:'No es para ti, es para quienes dependen de ti. Aquí te explicamos su verdadero valor.'},
+    blog4:{t:'Todo Riesgo vs. RCE: ¿cuál necesitas? | Mateo Herrera',d:'La diferencia clave entre las dos coberturas de auto más comunes en Colombia.'}
   };
   var io = new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.1});
 
