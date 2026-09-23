@@ -1343,6 +1343,63 @@ body.dark .mx-toast{background:#1E2C4E;}
   .mx-table td{white-space:nowrap;}
 }
 @media (prefers-reduced-motion:reduce){#mxAdmin *{animation:none !important;transition:none !important;}}
+
+/* ---- WIZARD DE CAMPAÑAS ---- */
+.mx-wiz{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-bottom:22px;}
+.mx-wiz-s{padding:12px 16px;border-radius:12px;font-size:.88rem;font-weight:600;cursor:pointer;border:1.5px solid var(--mx-line);background:var(--mx-surface);color:var(--mx-ink-2);display:flex;align-items:center;gap:10px;transition:background .15s,color .15s,border-color .15s;}
+.mx-wiz-s .num{width:28px;height:28px;border-radius:50%;background:var(--mx-sunk);color:var(--mx-ink-3);display:flex;align-items:center;justify-content:center;font-size:.78rem;font-weight:700;flex-shrink:0;transition:.15s;}
+.mx-wiz-s.done{border-color:var(--mx-ok);color:var(--mx-ok);}
+.mx-wiz-s.done .num{background:var(--mx-ok);color:#fff;}
+.mx-wiz-s.on{background:linear-gradient(135deg,var(--mx-navy-2),var(--mx-blue));border-color:transparent;color:#fff;}
+.mx-wiz-s.on .num{background:rgba(255,255,255,.2);color:#fff;}
+.mx-wiz-body{min-height:200px;}
+
+.mx-obj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:12px;}
+.mx-obj{background:var(--mx-surface);border:1.5px solid var(--mx-line);border-radius:14px;padding:18px 14px;cursor:pointer;text-align:left;transition:border-color .15s,box-shadow .15s,transform .12s;display:flex;flex-direction:column;gap:6px;}
+.mx-obj:hover{border-color:color-mix(in srgb,var(--mx-blue) 50%,var(--mx-line));transform:translateY(-2px);box-shadow:var(--mx-sh-2);}
+.mx-obj.sel{border-color:var(--mx-blue);background:var(--mx-info-bg);box-shadow:0 0 0 3px color-mix(in srgb,var(--mx-blue) 18%,transparent);}
+.mx-obj .emo{font-size:1.6rem;line-height:1;}
+.mx-obj b{font-size:.88rem;color:var(--mx-ink);}
+.mx-obj small{font-size:.76rem;color:var(--mx-ink-3);line-height:1.3;}
+
+.mx-aud-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:12px;margin-bottom:16px;}
+.mx-aud{background:var(--mx-surface);border:1.5px solid var(--mx-line);border-radius:14px;padding:16px 14px;cursor:pointer;text-align:left;transition:border-color .15s,box-shadow .15s;}
+.mx-aud:hover{border-color:color-mix(in srgb,var(--mx-blue) 50%,var(--mx-line));}
+.mx-aud.sel{border-color:var(--mx-blue);background:var(--mx-info-bg);}
+.mx-aud .emo{font-size:1.4rem;margin-bottom:4px;}
+.mx-aud b{font-size:.84rem;color:var(--mx-ink);display:block;margin-bottom:2px;}
+.mx-aud small{font-size:.74rem;color:var(--mx-ink-3);line-height:1.3;}
+.mx-aud .ct{display:inline-block;margin-top:6px;font-size:.74rem;font-weight:600;color:var(--mx-blue);background:color-mix(in srgb,var(--mx-blue) 10%,transparent);padding:2px 8px;border-radius:100px;}
+
+.mx-msg-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;align-items:start;}
+.mx-msg-area{width:100%;min-height:180px;border:1.5px solid var(--mx-line);border-radius:12px;padding:14px;font:inherit;font-size:.88rem;color:var(--mx-ink);background:var(--mx-surface);resize:vertical;transition:border-color .15s;}
+.mx-msg-area:focus{outline:none;border-color:var(--mx-blue);box-shadow:0 0 0 3px color-mix(in srgb,var(--mx-blue) 14%,transparent);}
+.mx-vars{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 16px;}
+.mx-var{border:1.5px solid var(--mx-line);background:var(--mx-surface);border-radius:100px;padding:6px 12px;font-size:.78rem;font-weight:600;color:var(--mx-ink-2);cursor:pointer;display:inline-flex;align-items:center;gap:5px;transition:.15s;}
+.mx-var:hover{border-color:var(--mx-blue);color:var(--mx-blue);}
+.mx-preview{background:var(--mx-sunk);border-radius:16px;padding:18px;position:sticky;top:10px;}
+.mx-preview-h{display:flex;align-items:center;gap:8px;margin-bottom:12px;font-size:.84rem;color:var(--mx-ink-2);}
+.mx-preview-h b{color:var(--mx-ink);}
+.mx-bubble{background:var(--mx-surface);border:1px solid var(--mx-line);border-radius:0 16px 16px 16px;padding:14px 16px;font-size:.88rem;line-height:1.55;color:var(--mx-ink);box-shadow:var(--mx-sh-1);white-space:pre-wrap;word-break:break-word;}
+.mx-bubble b{color:var(--mx-ink);}
+.mx-tpl{border:1px solid var(--mx-line-2);border-radius:10px;padding:10px 14px;cursor:pointer;font-size:.82rem;color:var(--mx-ink-2);display:flex;align-items:center;gap:8px;transition:.15s;margin-bottom:6px;}
+.mx-tpl:hover{border-color:var(--mx-blue);color:var(--mx-ink);}
+
+.mx-send-banner{background:color-mix(in srgb,var(--mx-ok) 8%,transparent);border:1px solid color-mix(in srgb,var(--mx-ok) 25%,transparent);border-radius:12px;padding:14px 16px;font-size:.86rem;color:var(--mx-ok);margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+.mx-send-banner b{color:var(--mx-ink);}
+.mx-prog{display:flex;align-items:center;gap:14px;margin-bottom:16px;}
+.mx-prog-bar{flex:1;height:10px;background:var(--mx-sunk);border-radius:6px;overflow:hidden;}
+.mx-prog-bar i{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,var(--mx-blue),var(--mx-cyan));transition:width .3s;}
+.mx-prog-txt{font-size:.84rem;font-weight:600;color:var(--mx-ink);font-variant-numeric:tabular-nums;white-space:nowrap;}
+.mx-contact{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--mx-line-2);}
+.mx-contact:last-child{border-bottom:0;}
+.mx-contact .info{flex:1;min-width:0;}
+.mx-contact .info b{display:block;color:var(--mx-ink);font-size:.88rem;}
+.mx-contact .info small{color:var(--mx-ink-3);font-size:.78rem;}
+.mx-contact .sent{font-size:.72rem;color:var(--mx-ok);font-weight:600;}
+.mx-hist-table .mx-table{min-width:500px;}
+@media(max-width:820px){.mx-msg-grid{grid-template-columns:1fr;} .mx-preview{position:static;}}
+@media(max-width:640px){.mx-wiz{grid-template-columns:1fr 1fr;gap:6px;} .mx-wiz-s{padding:10px 12px;font-size:.8rem;} .mx-obj-grid,.mx-aud-grid{grid-template-columns:1fr 1fr;}}
 </style>
 </head>
 <body>
@@ -1938,8 +1995,8 @@ body.dark .mx-toast{background:#1E2C4E;}
         <button class="mx-nav-i" data-v="cot"><span data-ico="doc"></span>Cotizaciones<span class="ct" id="ctCot">0</span></button>
         <button class="mx-nav-i" data-v="ren"><span data-ico="refresh"></span>Renovaciones<span class="ct warn" id="ctRen">0</span></button>
         <div class="mx-nav-g">Marketing</div>
-        <button class="mx-nav-i" data-v="meta"><span data-ico="mega"></span>Campañas Meta<span class="ct" id="ctMeta">0</span></button>
-        <button class="mx-nav-i" data-v="links"><span data-ico="link"></span>Enlaces de WhatsApp</button>
+        <button class="mx-nav-i" data-v="meta"><span data-ico="trend"></span>Analítica Meta<span class="ct" id="ctMeta">0</span></button>
+        <button class="mx-nav-i" data-v="camp"><span data-ico="mega"></span>Campañas WhatsApp<span class="ct" id="ctCamp">0</span></button>
         <div class="mx-nav-g">Sistema</div>
         <button class="mx-nav-i" data-v="conf"><span data-ico="gear"></span>Configuración</button>
       </nav>
@@ -1967,7 +2024,7 @@ body.dark .mx-toast{background:#1E2C4E;}
           <section class="mx-view" data-v="cot" id="vCot"></section>
           <section class="mx-view" data-v="ren" id="vRen"></section>
           <section class="mx-view" data-v="meta" id="vMeta"></section>
-          <section class="mx-view" data-v="links" id="vLinks"></section>
+          <section class="mx-view" data-v="camp" id="vCamp"></section>
           <section class="mx-view" data-v="conf" id="vConf"></section>
         </div>
       </div>
@@ -2594,25 +2651,169 @@ body.dark .mx-toast{background:#1E2C4E;}
       '<div class="mx-sec">Conjuntos de anuncios</div>'+(c.g?sets.map(function(s,i){return '<div class="mx-note"><b style="color:var(--mx-ink)">'+s.n+'</b><br><small>Gasto '+cop(c.g*s.p)+' · '+nf(c.conv*s.p)+' chats · costo por chat '+cop(c.g/Math.max(1,c.conv))+'</small><div style="margin-top:8px">'+ads.slice(0,i?2:3).map(function(a){return '<span class="mx-badge b-info" style="margin:0 4px 4px 0">'+a+'</span>';}).join('')+'</div></div>';}).join(''):'<div class="mx-note">La campaña aún no está publicada. Sigue la etapa «'+CICLO[c.ci]+'».</div>')+
       '<div class="mx-sec">Resultado comercial</div><dl class="mx-dl"><dt>Conversaciones</dt><dd>'+nf(c.conv)+'</dd><dt>Cotizaciones</dt><dd>'+c.cot+'</dd><dt>Pólizas pagadas</dt><dd>'+c.pol+'</dd><dt>Primas generadas</dt><dd>'+cop(c.pri)+'</dd><dt>Retorno</dt><dd>'+(c.g?(c.pri/c.g).toLocaleString('es-CO',{maximumFractionDigits:1})+'x':'—')+'</dd></dl>';
     openDrawer(c.n,FUNNEL_ET[c.fe][0]+' · '+c.obj,b,'<button class="mx-btn mx-btn-s" data-camp-link="'+c.id+'">'+ico('link')+'Crear enlace de WhatsApp</button><button class="mx-btn mx-btn-p" data-camp-leads="'+esc(c.n)+'">Ver sus contactos en el pipeline</button>');
-    $('[data-camp-link]').addEventListener('click',function(){closeDrawer();linkCamp=c.id;go('links');});
+    $('[data-camp-link]').addEventListener('click',function(){closeDrawer();cw.step=0;cw.obj=null;go('camp');});
     $('[data-camp-leads]').addEventListener('click',function(){closeDrawer();pipeState.q=c.n;pipeState.et=null;go('pipe');});
   }
 
-  /* ---- Enlaces WhatsApp ---- */
-  var linkCamp=null;
-  function renderLinks(){
-    var h='<div class="mx-grid mx-g-2"><div class="mx-card"><div class="mx-card-h"><div><h3>Generador de enlaces para anuncios</h3><p>El enlace abre WhatsApp con el mensaje escrito y un código que identifica la campaña, para saber de dónde vino cada contacto.</p></div></div>'+
-      '<label class="mx-field"><span>Campaña</span><select class="mx-select" id="lkC">'+CAMP.map(function(c){return '<option value="'+c.id+'"'+(linkCamp===c.id?' selected':'')+'>'+esc(c.n)+'</option>';}).join('')+'</select></label>'+
-      '<label class="mx-field"><span>Número que recibe</span><select class="mx-select" id="lkN"><option value="573108646019">WhatsApp principal · 310 864 6019</option><option value="573116574219">Gerencia · 311 657 4219</option></select></label>'+
-      '<label class="mx-field"><span>Mensaje que llegará escrito</span><textarea class="mx-input" id="lkM" rows="3">¡Hola Mateo! Vi su anuncio y quiero cotizar mi seguro.</textarea></label>'+
-      '<div style="display:flex;gap:8px;flex-wrap:wrap"><button class="mx-btn mx-btn-p" id="lkGen">'+ico('link')+'Generar enlace</button><button class="mx-btn mx-btn-s" id="lkCopy">'+ico('copy')+'Copiar enlace</button><a class="mx-btn mx-btn-wa" id="lkTest" target="_blank" rel="noopener" style="display:none">'+ico('wa')+'Probar</a></div><div class="mx-linkout" id="lkOut"></div></div>'+
-      '<div class="mx-card"><div class="mx-card-h"><div><h3>Dónde usarlo</h3><p>El mismo enlace sirve en todos estos lugares</p></div></div>'+
-      [['Anuncio de Meta','Destino «Sitio web» con este enlace, o el botón «Enviar mensaje de WhatsApp».'],['Biografía de Instagram','Pega el enlace en «Enlaces» del perfil.'],['Historias','Usa el sticker de enlace.'],['Tarjetas y volantes','Convierte el enlace en código QR.']].map(function(k,i){return '<div class="mx-check"><i style="background:var(--mx-info-bg);color:var(--mx-info)">'+(i+1)+'</i><div><b>'+k[0]+'</b>'+k[1]+'</div></div>';}).join('')+'</div></div>';
-    $('#vLinks').innerHTML=h;
-    function gen(){var c=CAMP.filter(function(x){return x.id===$('#lkC').value;})[0];var url=waLink($('#lkN').value,$('#lkM').value+'\n\n(Ref: '+c.id+' · '+c.n+')');var o=$('#lkOut');o.textContent=url;o.classList.add('on');var t=$('#lkTest');t.href=url;t.style.display='inline-flex';return url;}
-    $('#lkGen').addEventListener('click',gen);
-    $('#lkCopy').addEventListener('click',function(){var u=$('#lkOut').textContent||gen();try{navigator.clipboard.writeText(u).then(function(){toast('Enlace copiado');},function(){toast('Selecciona el enlace y cópialo');});}catch(e){toast('Selecciona el enlace y cópialo');}});
-    if(linkCamp)gen();
+  /* ---- Campañas WhatsApp (wizard) ---- */
+  var cw={step:0,obj:null,aud:null,audFilter:'',msg:'',sent:{}};
+  var CW_OBJ=[
+    {id:'renov',e:'🔄',t:'Aviso de renovación',d:'Pólizas próximas a vencer'},
+    {id:'promo',e:'🎉',t:'Promoción u oferta',d:'Descuentos o combos especiales'},
+    {id:'nuevo',e:'✨',t:'Producto o ramo nuevo',d:'Anunciar un seguro recién agregado'},
+    {id:'recup',e:'🔁',t:'Recuperar clientes',d:'Reactivar a quien no ha comprado'},
+    {id:'fecha',e:'🎁',t:'Fecha especial',d:'Cumpleaños, Navidad, Día de la Madre'},
+    {id:'estado',e:'🔧',t:'Estado de póliza',d:'Avisar que la póliza está lista'},
+    {id:'libre',e:'✍️',t:'Mensaje personalizado',d:'Tú escribes todo desde cero'}
+  ];
+  var CW_AUD=[
+    {id:'todos',e:'👥',t:'Todos los clientes',d:'Toda tu base de datos',f:function(){return CLIENTES;}},
+    {id:'nuevos',e:'🌱',t:'Clientes nuevos',d:'Ingresaron en los últimos 30 días',f:function(){return CLIENTES.filter(function(c){return c.desde>=2025;});}},
+    {id:'antiguos',e:'🕰️',t:'Clientes antiguos',d:'Sin póliza nueva hace más de 1 año',f:function(){return CLIENTES.filter(function(c){return c.desde<2024;});}},
+    {id:'mejores',e:'⭐',t:'Mejores clientes',d:'Los que más primas tienen',f:function(){return CLIENTES.slice().sort(function(a,b){return b.pols.reduce(function(s,p){return s+p.prima;},0)-a.pols.reduce(function(s,p){return s+p.prima;},0);}).slice(0,10);}},
+    {id:'empresa',e:'🏢',t:'Empresas',d:'Clientes tipo empresa o PJ',f:function(){return CLIENTES.filter(function(c){return c.tipo==='Empresa';});}},
+    {id:'persona',e:'👤',t:'Personas naturales',d:'Clientes personas naturales',f:function(){return CLIENTES.filter(function(c){return c.tipo!=='Empresa';});}},
+    {id:'vencer',e:'🔴',t:'Póliza por vencer',d:'Vence en menos de 30 días',f:function(){return CLIENTES.filter(function(c){return c.pols.some(function(p){return p.dias>=0&&p.dias<=30;});});}},
+    {id:'vencida',e:'⚠️',t:'Póliza vencida',d:'Ya venció y no renovó',f:function(){return CLIENTES.filter(function(c){return c.pols.some(function(p){return p.dias<0;});});}},
+    {id:'ramo',e:'🛡️',t:'Por ramo contratado',d:'Quien tiene cierto ramo',f:function(){if(!cw.audFilter)return [];return CLIENTES.filter(function(c){return c.pols.some(function(p){return p.ramo===cw.audFilter;});});}},
+    {id:'asesor',e:'👨‍💼',t:'Por asesor',d:'Clientes de Mateo o Andrea',f:function(){return CLIENTES.filter(function(c){return !cw.audFilter||c.as===cw.audFilter;});}}
+  ];
+  var CW_TPL={
+    renov:'¡Hola {nombre}! 🛡️\n\nTe recordamos que tu póliza de seguro está próxima a vencer.\n\n📋 No dejes que tu protección se interrumpa. Renovar es rápido y fácil.\n\n¿Te preparo la cotización de renovación?\n\n_Mateo Herrera Seguros_ 📞 3108646019',
+    promo:'¡Hola {nombre}! 🎉\n\n¡Tenemos una promoción especial en seguros!\n\n🔥 Hasta un 15% de descuento en nuevas pólizas este mes.\n\n¿Quieres que te cotice?\n\n_Mateo Herrera Seguros_ 📞 3108646019',
+    nuevo:'¡Hola {nombre}! ✨\n\n¡Llegó un nuevo producto a *Mateo Herrera Seguros*! 🎁\n\n🛡️ Ahora puedes proteger lo que más importa con coberturas ampliadas.\n\n¿Te cuento los detalles?\n\n_Mateo Herrera Seguros_ 📞 3108646019',
+    recup:'¡Hola {nombre}! 👋\n\nHace un tiempo hablamos sobre tu seguro y queremos saber cómo estás.\n\n💙 Seguimos aquí para ayudarte a proteger lo que importa.\n\n¿Tienes un momento para conversar?\n\n_Mateo Herrera Seguros_ 📞 3108646019',
+    fecha:'¡Hola {nombre}! 🎁\n\n¡Feliz día! En *Mateo Herrera Seguros* queremos celebrar contigo.\n\n🎉 Tenemos un detalle especial para nuestros clientes.\n\n¿Te gustaría conocerlo?\n\n_Mateo Herrera Seguros_ 📞 3108646019',
+    estado:'¡Hola {nombre}! 📋\n\nTu póliza ya está lista.\n\n✅ Puedes contar con tu protección activa desde hoy.\n\nSi tienes alguna duda, estoy para ayudarte.\n\n_Mateo Herrera Seguros_ 📞 3108646019',
+    libre:'¡Hola {nombre}! 🛡️\n\n\n\n_Mateo Herrera Seguros_ 📞 3108646019'
+  };
+  var CW_HIST=[
+    {fecha:'22/09/2026',nombre:'Aviso renovación · septiembre',aud:'Póliza por vencer',cont:8,env:6},
+    {fecha:'15/09/2026',nombre:'Promoción Auto Todo Riesgo',aud:'Personas naturales',cont:22,env:18},
+    {fecha:'01/09/2026',nombre:'Bienvenida clientes nuevos',aud:'Clientes nuevos',cont:5,env:5}
+  ];
+
+  function cwContacts(){
+    if(!cw.aud) return [];
+    var a=CW_AUD.filter(function(x){return x.id===cw.aud;})[0];
+    return a?a.f():[];
+  }
+  function cwPreview(msg,cli){
+    var t=msg||'';
+    t=t.replace(/\{nombre\}/g,cli?cli.n.split(' ')[0]:'Carlos');
+    t=t.replace(/\{nombre_completo\}/g,cli?cli.n:'Carlos Ramírez');
+    t=t.replace(/\{ramo\}/g,cli&&cli.pols[0]?ramoN(cli.pols[0].ramo):'Auto Todo Riesgo');
+    t=t.replace(/\{aseguradora\}/g,cli&&cli.pols[0]?cli.pols[0].aseg:'Mapfre');
+    t=t.replace(/\{asesor\}/g,cli?ASES[cli.as]:'Mateo Herrera');
+    t=t.replace(/\{vencimiento\}/g,cli&&cli.pols[0]?fchL(cli.pols[0].vence):'28 sept 2026');
+    t=t.replace(/\*([^*]+)\*/g,'<b>$1</b>');
+    t=t.replace(/_([^_]+)_/g,'<i>$1</i>');
+    return t;
+  }
+
+  function renderCamp(){
+    var contacts=cwContacts();
+    var envTotal=Object.keys(cw.sent).length;
+    var h='<div class="mx-grid mx-g-kpi mx-mb">'+
+      kpi('Campañas enviadas',CW_HIST.length,'histórico','mega',true)+
+      kpi('Contactos disponibles',CLIENTES.length,'de '+CLIENTES.length+' clientes con teléfono','users')+
+      kpi('Mensajes abiertos',CW_HIST.reduce(function(a,c){return a+c.env;},0),'chats lanzados desde aquí','chat')+
+      kpi('WhatsApp del negocio','310 864 6019','se firma en los mensajes','wa')+'</div>';
+
+    // wizard
+    var steps=['Objetivo','Audiencia','Mensaje','Enviar'];
+    h+='<div class="mx-card mx-mb"><div class="mx-card-h"><div><h3>🚀 Crear campaña</h3></div>'+(cw.step>0?'<button class="mx-btn mx-btn-s mx-btn-sm" id="cwReset">Empezar de nuevo</button>':'')+'</div>';
+    h+='<div class="mx-wiz">';
+    steps.forEach(function(s,i){
+      var cls=i<cw.step?'done':(i===cw.step?'on':'');
+      h+='<div class="mx-wiz-s '+cls+'" data-ws="'+i+'"><span class="num">'+(i<cw.step?'✓':(i+1))+'</span>'+s+'</div>';
+    });
+    h+='</div><div class="mx-wiz-body">';
+
+    if(cw.step===0){
+      h+='<p style="font-size:.86rem;color:var(--mx-ink-2);margin-bottom:14px;">¿De qué quieres crear la campaña?</p>';
+      h+='<div class="mx-obj-grid">'+CW_OBJ.map(function(o){
+        return '<div class="mx-obj'+(cw.obj===o.id?' sel':'')+'" data-obj="'+o.id+'"><span class="emo">'+o.e+'</span><b>'+o.t+'</b><small>'+o.d+'</small></div>';
+      }).join('')+'</div>';
+      if(cw.obj) h+='<div style="margin-top:16px;text-align:right;"><button class="mx-btn mx-btn-p" id="cwNext1">Siguiente: Audiencia →</button></div>';
+    }
+    else if(cw.step===1){
+      h+='<p style="font-size:.86rem;color:var(--mx-ink-2);margin-bottom:14px;">¿A quién le vas a escribir?</p>';
+      h+='<div class="mx-aud-grid">'+CW_AUD.map(function(a){
+        var cnt=a.f().length;
+        return '<div class="mx-aud'+(cw.aud===a.id?' sel':'')+'" data-aud="'+a.id+'"><span class="emo">'+a.e+'</span><b>'+a.t+'</b><small>'+a.d+'</small>'+(cnt?'<span class="ct">'+cnt+' contacto(s)</span>':'<span class="ct" style="color:var(--mx-ink-3)">0 contacto(s)</span>')+'</div>';
+      }).join('')+'</div>';
+      if(cw.aud==='ramo'){
+        h+='<label class="mx-field"><span>Selecciona el ramo</span><select class="mx-select" id="cwRamoF"><option value="">— Elegir —</option>'+Object.keys(RAMOS).map(function(r){return '<option value="'+r+'"'+(cw.audFilter===r?' selected':'')+'>'+RAMOS[r][0]+'</option>';}).join('')+'</select></label>';
+      }
+      if(cw.aud==='asesor'){
+        h+='<label class="mx-field"><span>Selecciona el asesor</span><select class="mx-select" id="cwAseF"><option value="">Todos</option><option value="M"'+(cw.audFilter==='M'?' selected':'')+'>Mateo Herrera</option><option value="A"'+(cw.audFilter==='A'?' selected':'')+'>Andrea</option></select></label>';
+      }
+      if(cw.aud&&contacts.length>0) h+='<div style="margin-top:16px;display:flex;gap:8px;flex-wrap:wrap;"><button class="mx-btn mx-btn-s" id="cwPrev1">← Objetivo</button><button class="mx-btn mx-btn-p" id="cwNext2">Siguiente: Mensaje → ('+contacts.length+' contactos)</button></div>';
+      else if(cw.aud) h+='<div style="margin-top:16px;"><button class="mx-btn mx-btn-s" id="cwPrev1">← Objetivo</button><span style="margin-left:12px;font-size:.84rem;color:var(--mx-warn);">No hay contactos en esta audiencia.</span></div>';
+    }
+    else if(cw.step===2){
+      h+='<p style="font-size:.86rem;color:var(--mx-ink-2);margin-bottom:8px;">Mensaje de la campaña — usa <b>*asteriscos*</b> para negrilla en WhatsApp y las variables de abajo</p>';
+      h+='<div class="mx-msg-grid"><div>';
+      h+='<textarea class="mx-msg-area" id="cwMsg" rows="8">'+esc(cw.msg)+'</textarea>';
+      h+='<div class="mx-vars">';
+      [{v:'{nombre}',l:'👤 Nombre'},{v:'{nombre_completo}',l:'👥 Nombre completo'},{v:'{ramo}',l:'🛡️ Ramo'},{v:'{aseguradora}',l:'🏢 Aseguradora'},{v:'{asesor}',l:'👨‍💼 Asesor'},{v:'{vencimiento}',l:'📅 Vencimiento'}].forEach(function(x){
+        h+='<button class="mx-var" data-var="'+x.v+'">'+x.l+'</button>';
+      });
+      h+='</div>';
+      h+='<div class="mx-sec" style="margin-top:8px;">💡 Otras plantillas sugeridas</div>';
+      CW_OBJ.filter(function(o){return o.id!==cw.obj;}).slice(0,4).forEach(function(o){
+        h+='<div class="mx-tpl" data-tpl="'+o.id+'">'+o.e+' '+o.t+'</div>';
+      });
+      h+='</div><div><div class="mx-preview"><div class="mx-preview-h">👁️ <b>Vista previa</b></div><p style="font-size:.78rem;color:var(--mx-ink-3);margin-bottom:10px;">Así lo verá <b>'+(contacts[0]?contacts[0].n.split(' ')[0]:'el cliente')+'</b></p><div class="mx-bubble" id="cwBubble">'+cwPreview(cw.msg,contacts[0])+'</div><div style="margin-top:10px;background:var(--mx-info-bg);padding:10px 12px;border-radius:10px;font-size:.78rem;color:var(--mx-info);display:flex;gap:8px;align-items:center;">🎯 <span>'+contacts.length+' contacto(s) en '+((CW_AUD.filter(function(a){return a.id===cw.aud;})[0]||{}).t||'')+'</span></div></div></div></div>';
+      h+='<div style="margin-top:16px;display:flex;gap:8px;flex-wrap:wrap;"><button class="mx-btn mx-btn-s" id="cwPrev2">← Audiencia</button><button class="mx-btn mx-btn-p" id="cwNext3">Siguiente: Enviar →</button></div>';
+    }
+    else if(cw.step===3){
+      h+='<div class="mx-send-banner">🚀 Toca <b>Enviar</b> en cada contacto: se abre WhatsApp con el mensaje ya escrito y personalizado. Marca el progreso automáticamente.</div>';
+      h+='<div class="mx-prog"><div class="mx-prog-bar"><i style="width:'+(contacts.length?(envTotal/contacts.length*100):0)+'%"></i></div><span class="mx-prog-txt">'+envTotal+' de '+contacts.length+'</span></div>';
+      h+='<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;"><button class="mx-btn mx-btn-s" id="cwPrev3">← Editar mensaje</button><button class="mx-btn mx-btn-s" id="cwResetProg">Reiniciar</button><button class="mx-btn mx-btn-p" id="cwSave">💾 Guardar campaña</button></div>';
+      h+='<div class="mx-card"><div class="mx-card-h"><div><h3>🎯 '+((CW_AUD.filter(function(a){return a.id===cw.aud;})[0]||{}).t||'Contactos')+'</h3></div><span style="font-size:.84rem;color:var(--mx-ink-3);">'+contacts.length+' contacto(s)</span></div>';
+      contacts.forEach(function(cl){
+        var ini=cl.n.split(' ').map(function(w){return w[0];}).slice(0,2).join('');
+        var sent=cw.sent[cl.id];
+        var msg=cwPreview(cw.msg,cl).replace(/<[^>]+>/g,'');
+        var url=waLink(cl.tel,msg);
+        h+='<div class="mx-contact"><div class="mx-av" style="font-size:.68rem;width:34px;height:34px;">'+ini+'</div><div class="info"><b>'+esc(cl.n)+'</b><small>'+cl.tel.replace(/^57/,'')+' · '+cl.tipo+'</small></div>';
+        if(sent) h+='<span class="sent">✅ Enviado</span>';
+        else h+='<a class="mx-btn mx-btn-wa mx-btn-sm" href="'+url+'" target="_blank" rel="noopener" data-send="'+cl.id+'">💬 Enviar</a>';
+        h+='</div>';
+      });
+      h+='</div>';
+    }
+    h+='</div></div>';
+
+    // historial
+    h+='<div class="mx-card mx-hist-table"><div class="mx-card-h"><div><h3>📁 Campañas anteriores</h3></div></div><div class="mx-table-wrap"><table class="mx-table"><thead><tr><th>Fecha</th><th>Campaña</th><th>Audiencia</th><th class="r">Contactos</th><th class="r">Enviados</th></tr></thead><tbody>'+
+      CW_HIST.map(function(c){return '<tr><td>'+c.fecha+'</td><td><b>'+esc(c.nombre)+'</b></td><td>'+c.aud+'</td><td class="r">'+c.cont+'</td><td class="r">'+c.env+'</td></tr>';}).join('')+
+      '</tbody></table></div></div>';
+
+    $('#vCamp').innerHTML=h;
+
+    // events
+    $$('.mx-wiz-s').forEach(function(s){s.addEventListener('click',function(){var i=+s.dataset.ws;if(i<cw.step){cw.step=i;renderCamp();}});});
+    var rst=$('#cwReset');if(rst)rst.addEventListener('click',function(){cw={step:0,obj:null,aud:null,audFilter:'',msg:'',sent:{}};renderCamp();});
+    $$('.mx-obj').forEach(function(o){o.addEventListener('click',function(){cw.obj=o.dataset.obj;if(!cw.msg||cw.msg===CW_TPL[cw.obj]||Object.values(CW_TPL).indexOf(cw.msg)>-1)cw.msg=CW_TPL[cw.obj]||CW_TPL.libre;renderCamp();});});
+    var n1=$('#cwNext1');if(n1)n1.addEventListener('click',function(){cw.step=1;renderCamp();});
+    $$('.mx-aud').forEach(function(a){a.addEventListener('click',function(){cw.aud=a.dataset.aud;cw.audFilter='';renderCamp();});});
+    var rf=$('#cwRamoF');if(rf)rf.addEventListener('change',function(){cw.audFilter=rf.value;renderCamp();});
+    var af=$('#cwAseF');if(af)af.addEventListener('change',function(){cw.audFilter=af.value;renderCamp();});
+    var p1=$('#cwPrev1');if(p1)p1.addEventListener('click',function(){cw.step=0;renderCamp();});
+    var n2=$('#cwNext2');if(n2)n2.addEventListener('click',function(){if(!cw.msg||Object.values(CW_TPL).indexOf(cw.msg)<0)cw.msg=CW_TPL[cw.obj]||CW_TPL.libre;cw.step=2;renderCamp();});
+    var p2=$('#cwPrev2');if(p2)p2.addEventListener('click',function(){cw.step=1;renderCamp();});
+    var n3=$('#cwNext3');if(n3)n3.addEventListener('click',function(){cw.msg=$('#cwMsg').value;cw.step=3;renderCamp();});
+    var p3=$('#cwPrev3');if(p3)p3.addEventListener('click',function(){cw.step=2;renderCamp();});
+    $$('.mx-var').forEach(function(v){v.addEventListener('click',function(){var ta=$('#cwMsg');if(!ta)return;var pos=ta.selectionStart||ta.value.length;var val=ta.value;ta.value=val.slice(0,pos)+v.dataset.var+val.slice(pos);ta.focus();ta.setSelectionRange(pos+v.dataset.var.length,pos+v.dataset.var.length);updatePreview();});});
+    $$('.mx-tpl').forEach(function(t){t.addEventListener('click',function(){cw.msg=CW_TPL[t.dataset.tpl]||CW_TPL.libre;cw.obj=t.dataset.tpl;renderCamp();});});
+    var ta=$('#cwMsg');if(ta){ta.addEventListener('input',updatePreview);updatePreview();}
+    function updatePreview(){var b=$('#cwBubble');if(b&&ta)b.innerHTML=cwPreview(ta.value,contacts[0]);}
+    $$('[data-send]').forEach(function(a){a.addEventListener('click',function(){cw.sent[a.dataset.send]=true;setTimeout(function(){renderCamp();},300);});});
+    var rp=$('#cwResetProg');if(rp)rp.addEventListener('click',function(){cw.sent={};renderCamp();});
+    var sv=$('#cwSave');if(sv)sv.addEventListener('click',function(){var obj=CW_OBJ.filter(function(o){return o.id===cw.obj;})[0];CW_HIST.unshift({fecha:fch(HOY),nombre:(obj?obj.t:'Campaña')+' · '+fch(HOY),aud:(CW_AUD.filter(function(a){return a.id===cw.aud;})[0]||{}).t||'Manual',cont:contacts.length,env:envTotal});cw={step:0,obj:null,aud:null,audFilter:'',msg:'',sent:{}};toast('Campaña guardada en el historial');renderCamp();});
   }
 
   /* ---- Configuración ---- */
@@ -2630,15 +2831,15 @@ body.dark .mx-toast{background:#1E2C4E;}
   }
 
   /* ================= NAVEGACIÓN ================= */
-  var TIT={dash:['Resumen','Cómo va el negocio hoy'],pipe:['Pipeline de ventas','9 etapas, del primer contacto a la venta cruzada'],cli:['Clientes','Cartera de clientes y sus pólizas'],cot:['Cotizaciones','Comparativo entre aseguradoras y su avance'],ren:['Renovaciones','Pólizas que vencen en los próximos 60 días'],meta:['Campañas Meta','Facebook e Instagram: del anuncio a la póliza'],links:['Enlaces de WhatsApp','Enlaces con código de campaña para tus anuncios'],conf:['Configuración','Equipo, etapas y estado de la plataforma']};
-  var RENDER={dash:renderDash,pipe:renderPipe,cli:renderCli,cot:renderCot,ren:renderRen,meta:renderMeta,links:renderLinks,conf:renderConf};
+  var TIT={dash:['Resumen','Cómo va el negocio hoy'],pipe:['Pipeline de ventas','9 etapas, del primer contacto a la venta cruzada'],cli:['Clientes','Cartera de clientes y sus pólizas'],cot:['Cotizaciones','Comparativo entre aseguradoras y su avance'],ren:['Renovaciones','Pólizas que vencen en los próximos 60 días'],meta:['Campañas Meta','Facebook e Instagram: del anuncio a la póliza'],camp:['Campañas WhatsApp','Crea, personaliza y envía campañas a tus clientes'],conf:['Configuración','Equipo, etapas y estado de la plataforma']};
+  var RENDER={dash:renderDash,pipe:renderPipe,cli:renderCli,cot:renderCot,ren:renderRen,meta:renderMeta,camp:renderCamp,conf:renderConf};
   var cur='dash';
   function go(v){cur=v;$$('.mx-nav-i').forEach(function(b){b.classList.toggle('on',b.dataset.v===v);});$$('.mx-view').forEach(function(s){s.classList.toggle('on',s.dataset.v===v);});
     $('#mxTitle').textContent=TIT[v][0];$('#mxSub').textContent=TIT[v][1]+' · '+HOY.toLocaleDateString('es-CO',{weekday:'long',day:'numeric',month:'long'});
     RENDER[v]();bindGo();$('#mxScroll').scrollTop=0;$('#mxSide').classList.remove('open');if(!$('#mxDrawer').classList.contains('on'))$('#mxScrim').classList.remove('on');
     try{sessionStorage.setItem('mxView',v);}catch(e){}}
   function bindGo(){$$('[data-go]').forEach(function(b){if(b._g)return;b._g=1;b.addEventListener('click',function(){go(b.dataset.go);});});}
-  function counts(){$('#ctPipe').textContent=LEADS.filter(function(l){return l.et<6;}).length;$('#ctCli').textContent=CLIENTES.length;$('#ctCot').textContent=COTIZ.filter(function(c){return c.et<4;}).length;$('#ctRen').textContent=RENOV.filter(function(r){return r.p.dias<=30&&r.et<4;}).length;$('#ctMeta').textContent=CAMP.filter(function(c){return c.st==='Activa'||c.st==='En aprendizaje';}).length;}
+  function counts(){$('#ctPipe').textContent=LEADS.filter(function(l){return l.et<6;}).length;$('#ctCli').textContent=CLIENTES.length;$('#ctCot').textContent=COTIZ.filter(function(c){return c.et<4;}).length;$('#ctRen').textContent=RENOV.filter(function(r){return r.p.dias<=30&&r.et<4;}).length;try{$('#ctCamp').textContent=CLIENTES.length;}catch(e){} $('#ctMeta').textContent=CAMP.filter(function(c){return c.st==='Activa'||c.st==='En aprendizaje';}).length;}
   function refreshAll(){counts();RENDER[cur]();bindGo();}
 
   $$('.mx-nav-i').forEach(function(b){b.addEventListener('click',function(){go(b.dataset.v);});});
