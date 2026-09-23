@@ -2323,15 +2323,23 @@ body.dark .mx-toast{background:#1E2C4E;}
 
   /* ---------- catálogo ---------- */
   var RAMOS={
-    ATR:['Auto Todo Riesgo','#2563EB'],HOG:['Hogar','#D97706'],VID:['Vida Individual','#1A57E0'],VDE:['Vida Deudor','#3B82F6'],APS:['Accidentes Personales','#F59E0B'],
-    CAP:['Capital Futuro','#10B981'],EXE:['Exequial','#64748B'],VAI:['Vida Ahorro e Inversión','#8B5CF6'],EDU:['Educativo','#EC4899'],MVI:['Millón Vida','#0EA5E9'],
-    PYM:['PYME','#1E3A8A'],VCO:['Vida Colectivo','#06B6D4'],ACO:['AP Colectivo','#F97316'],CRE:['Copropiedad Residencial','#14B8A6'],CCO:['Copropiedad Comercial','#0891B2'],
-    DEC:['Decenal','#92400E'],AUC:['Autos Colectivo','#DC2626'],CUM:['Cumplimiento','#7C3AED'],ARL:['ARL','#EA580C'],SCO:['Salud Colectiva','#059669'],
-    TRC:['Todo Riesgo Construcción','#B45309'],TRM:['Todo Riesgo Montaje','#78716C'],TCA:['Transporte de Carga','#0369A1'],TME:['Transporte de Mercancías','#155E75'],
-    RCP:['RCC/RCE Pasajeros','#4338CA'],SAL:['Salud','#E11D48'],RCM:['RC Médica','#0D9488'],VIA:['Viaje','#A855F7'],JUD:['Judicial','#475569'],APE:['AP Escolar','#DB2777']
+    ATR:['Auto Todo Riesgo','#2563EB'],HOG:['Hogar','#D97706'],
+    VD:['Vida Deudor Individual','#3B82F6'],VI:['Vida Individual','#1A57E0'],API:['AP Individual','#F59E0B'],
+    PCF:['Plan Capital Futuro','#10B981'],EXE:['Exequial','#64748B'],VIA:['Viaje','#A855F7'],
+    EDU:['Educativo','#EC4899'],
+    MV:['Millón Vida','#0EA5E9'],PYME:['PYME','#1E3A8A'],VG:['Vida Colectivo','#06B6D4'],
+    APG:['AP Colectivo','#F97316'],VDG:['Vida Grupo Deudor','#4F46E5'],VDA:['Vida Grupo Aportes','#7C3AED'],
+    COPR:['Copropiedad Residencial','#14B8A6'],COPC:['Copropiedad Comercial','#0891B2'],
+    DEC:['Decenal','#92400E'],AC:['Autos Colectivo','#DC2626'],CUM:['Cumplimiento','#7C3AED'],
+    ARL:['ARL','#EA580C'],SC:['Salud Colectiva','#059669'],TRC:['Todo Riesgo Construcción','#B45309'],
+    TRM:['Todo Riesgo Montaje','#78716C'],VAI:['Vida Ahorro e Inversión','#8B5CF6'],
+    TRCA:['Transporte de Carga','#0369A1'],TRME:['Transporte de Mercancías','#155E75'],
+    RCCE:['RCC/RCE Pasajeros','#4338CA'],
+    SALUD:['Salud','#E11D48'],MP:['Medicina Prepagada','#BE185D'],RCM:['RC Médica','#0D9488'],
+    JUD:['Judicial','#475569'],APE:['AP Escolar','#DB2777']
   };
-  var PRIMA={ATR:[1.6,4.2],HOG:[.35,1.1],VID:[.8,3],VDE:[.3,1.2],APS:[.12,.5],CAP:[1.5,5],EXE:[.18,.5],VAI:[2,8],EDU:[1.2,4],MVI:[3,9],PYM:[2.5,12],VCO:[4,15],ACO:[1,4],
-    CRE:[3,18],CCO:[5,22],DEC:[6,25],AUC:[8,30],CUM:[.6,4],ARL:[1,6],SCO:[6,28],TRC:[4,20],TRM:[3,14],TCA:[2,9],TME:[1.5,7],RCP:[3,12],SAL:[2,7],RCM:[1.2,4],VIA:[.15,.6],JUD:[.3,2],APE:[.8,3]};
+  var PRIMA={ATR:[1.6,4.2],HOG:[.35,1.1],VI:[.8,3],VD:[.3,1.2],API:[.12,.5],PCF:[1.5,5],EXE:[.18,.5],VAI:[2,8],EDU:[1.2,4],MV:[3,9],PYME:[2.5,12],VG:[4,15],APG:[1,4],VDG:[1.5,6],VDA:[2,8],
+    COPR:[3,18],COPC:[5,22],DEC:[6,25],AC:[8,30],CUM:[.6,4],ARL:[1,6],SC:[6,28],TRC:[4,20],TRM:[3,14],TRCA:[2,9],TRME:[1.5,7],RCCE:[3,12],SALUD:[2,7],MP:[1.5,5],RCM:[1.2,4],VIA:[.15,.6],JUD:[.3,2],APE:[.8,3]};
   function code(c){var r=RAMOS[c]||['Varios','#475569'];return '<span class="mx-code" style="background:'+r[1]+'">'+c+'</span>';}
   function ramoN(c){return (RAMOS[c]||['Varios'])[0];}
   function prima(c){var r=PRIMA[c]||[.5,2];return Math.round((r[0]+rnd()*(r[1]-r[0]))*1e6/10000)*10000;}
@@ -2345,21 +2353,21 @@ body.dark .mx-toast{background:#1E2C4E;}
   var NOMBRES=['Carlos Ramírez','Laura Gómez','Andrés Peña','Marcela Ruiz','Jorge Castillo','Diana Torres','Felipe Ortiz','Sandra Molina','Ricardo Vargas','Paola Herrera','Juan Camilo Rojas','Natalia Cárdenas','Sebastián Lozano','Valentina Prada','Óscar Bermúdez','Luisa Fernanda Díaz','Hernán Quintero','Catalina Varón','Mauricio Guzmán','Daniela Oviedo','Fabián Rincón','Gloria Aguirre','Cristian Barrios','Mónica Salazar','Esteban Murillo','Liliana Cruz','Álvaro Méndez','Yuliana Parra','Camilo Tovar','Adriana Leal','Transportes El Tolima SAS','Constructora Ambalá','Conjunto La Arboleda','Clínica Dental Sonríe','Ferretería El Tornillo','Cooperativa Coopemtol','Edificio Torre Quinta','Distribuidora La 60','Dr. Mario Suárez','Colegio San Simón','Julián Arango','Tatiana Ospina','Nelson Cuéllar','Brenda Lozada','Iván Perdomo','Rocío Saavedra','Wilson Trujillo','Karen Montealegre'];
   var CIUD=['Ibagué','Ibagué','Ibagué','Ibagué','Espinal','Melgar','Honda','Mariquita','Chaparral','Bogotá'];
   var EMPRESA=/SAS|Constructora|Conjunto|Clínica|Ferretería|Cooperativa|Edificio|Distribuidora|Colegio/;
-  var RAMO_EMP=['PYM','VCO','ACO','CRE','CCO','DEC','AUC','CUM','ARL','SCO','TRC','TRM','TCA','TME','RCP','APE'];
-  var RAMO_PER=['ATR','ATR','ATR','HOG','HOG','VID','VID','VDE','APS','CAP','EXE','VAI','EDU','MVI','SAL','SAL','RCM','VIA','JUD'];
+  var RAMO_EMP=['PYME','VG','APG','VDG','VDA','COPR','COPC','DEC','AC','CUM','ARL','SC','TRC','TRM','TRCA','TRME','RCCE','APE'];
+  var RAMO_PER=['ATR','ATR','ATR','HOG','HOG','VI','VI','VD','API','PCF','EXE','VAI','EDU','MV','SALUD','SALUD','MP','RCM','VIA','JUD'];
 
   /* ---------- campañas Meta ---------- */
   var FUNNEL_ET=[['Reconocimiento','Darse a conocer: alcance y reproducciones de video'],['Consideración','Generar interés: interacción y mensajes'],['Conversión','Pedir la cotización: mensajes a WhatsApp y formularios'],['Remarketing','Volver a impactar a quien ya escribió o visitó']];
   var CICLO=['Planeación','Creativos','Revisión de Meta','Aprendizaje','Optimización','Escalado','Cierre'];
   var CAMP=[
     {id:'C1',n:'Auto Todo Riesgo · Ibagué',ramo:'ATR',fe:2,obj:'Mensajes (WhatsApp)',pub:'Ibagué +15 km · 25-60 años · intereses: vehículos, concesionarios',pd:35000,g:812000,imp:96400,alc:41200,cl:2310,conv:164,cot:58,pol:17,pri:24650000,st:'Activa',ci:5,fmt:'Reel 9:16 + carrusel'},
-    {id:'C2',n:'Vida familiar · Video testimonio',ramo:'VID',fe:0,obj:'Reproducciones de video',pub:'Tolima · 28-55 años · padres de familia',pd:20000,g:540000,imp:182000,alc:88500,cl:1020,conv:38,cot:11,pol:4,pri:7200000,st:'Activa',ci:4,fmt:'Video 30 s'},
+    {id:'C2',n:'Vida familiar · Video testimonio',ramo:'VI',fe:0,obj:'Reproducciones de video',pub:'Tolima · 28-55 años · padres de familia',pd:20000,g:540000,imp:182000,alc:88500,cl:1020,conv:38,cot:11,pol:4,pri:7200000,st:'Activa',ci:4,fmt:'Video 30 s'},
     {id:'C3',n:'Hogar seguro · Carrusel',ramo:'HOG',fe:1,obj:'Interacción → mensajes',pub:'Ibagué · 27-60 años · propietarios de vivienda',pd:18000,g:396000,imp:64800,alc:30100,cl:1380,conv:72,cot:21,pol:6,pri:4100000,st:'En aprendizaje',ci:3,fmt:'Carrusel 4 tarjetas'},
-    {id:'C4',n:'PYME protegida · Formulario',ramo:'PYM',fe:2,obj:'Clientes potenciales',pub:'Tolima · dueños de negocio · administradores',pd:30000,g:610000,imp:48300,alc:22700,cl:890,conv:46,cot:19,pol:5,pri:18900000,st:'Activa',ci:4,fmt:'Imagen + formulario instantáneo'},
+    {id:'C4',n:'PYME protegida · Formulario',ramo:'PYME',fe:2,obj:'Clientes potenciales',pub:'Tolima · dueños de negocio · administradores',pd:30000,g:610000,imp:48300,alc:22700,cl:890,conv:46,cot:19,pol:5,pri:18900000,st:'Activa',ci:4,fmt:'Imagen + formulario instantáneo'},
     {id:'C5',n:'Remarketing · Chats y visitantes',ramo:'VAR',fe:3,obj:'Mensajes (público personalizado)',pub:'Personas que escribieron o visitaron la web en 30 días',pd:12000,g:214000,imp:21600,alc:6900,cl:640,conv:58,cot:24,pol:9,pri:11300000,st:'Activa',ci:5,fmt:'Reel testimonio'},
-    {id:'C6',n:'Copropiedades · Administradores',ramo:'CRE',fe:1,obj:'Interacción → mensajes',pub:'Ibagué · administradores de propiedad horizontal',pd:15000,g:165000,imp:18200,alc:9400,cl:310,conv:12,cot:5,pol:1,pri:6800000,st:'Pausada',ci:4,fmt:'Imagen estática'},
+    {id:'C6',n:'Copropiedades · Administradores',ramo:'COPR',fe:1,obj:'Interacción → mensajes',pub:'Ibagué · administradores de propiedad horizontal',pd:15000,g:165000,imp:18200,alc:9400,cl:310,conv:12,cot:5,pol:1,pri:6800000,st:'Pausada',ci:4,fmt:'Imagen estática'},
     {id:'C7',n:'Educativo · Regreso a clases',ramo:'EDU',fe:2,obj:'Mensajes (WhatsApp)',pub:'Tolima · 30-50 años · padres con hijos en colegio',pd:16000,g:480000,imp:71300,alc:35800,cl:1190,conv:64,cot:22,pol:7,pri:15400000,st:'Finalizada',ci:6,fmt:'Reel + historia'},
-    {id:'C8',n:'Salud colectiva · Empresas',ramo:'SCO',fe:0,obj:'Alcance',pub:'Tolima · cargos de talento humano',pd:14000,g:0,imp:0,alc:0,cl:0,conv:0,cot:0,pol:0,pri:0,st:'Borrador',ci:1,fmt:'Video en producción'}
+    {id:'C8',n:'Salud colectiva · Empresas',ramo:'SC',fe:0,obj:'Alcance',pub:'Tolima · cargos de talento humano',pd:14000,g:0,imp:0,alc:0,cl:0,conv:0,cot:0,pol:0,pri:0,st:'Borrador',ci:1,fmt:'Video en producción'}
   ];
 
   /* ---------- datos demo ---------- */
@@ -2580,7 +2588,7 @@ body.dark .mx-toast{background:#1E2C4E;}
     $$('#vCli [data-cl]').forEach(function(tr){tr.addEventListener('click',function(){cliDrawer(tr.dataset.cl);});});
   }
   function cliDrawer(id){var c=CLIENTES.filter(function(x){return x.id===id;})[0];
-    var tiene=c.pols.map(function(p){return p.ramo;});var sug=(c.tipo==='Empresa'?['PYM','VCO','ARL','SCO','CUM','AUC']:['VID','HOG','SAL','EDU','ATR','EXE']).filter(function(r){return tiene.indexOf(r)<0;}).slice(0,3);
+    var tiene=c.pols.map(function(p){return p.ramo;});var sug=(c.tipo==='Empresa'?['PYME','VG','ARL','SC','CUM','AC']:['VI','HOG','SALUD','EDU','ATR','EXE','MP']).filter(function(r){return tiene.indexOf(r)<0;}).slice(0,3);
     var nacStr=c.nac?c.nac.toLocaleDateString('es-CO',{day:'2-digit',month:'long',year:'numeric'}):'—';
     var b='<div class="mx-sec">Datos personales</div><dl class="mx-dl"><dt>Nombre</dt><dd>'+esc(c.n)+'</dd><dt>Documento</dt><dd>'+c.doc+'</dd><dt>Tipo</dt><dd>'+c.tipo+'</dd><dt>Celular</dt><dd>+'+c.tel.slice(0,2)+' '+c.tel.slice(2,5)+' '+c.tel.slice(5)+'</dd><dt>Correo</dt><dd>'+esc(c.email||'—')+'</dd><dt>Ciudad</dt><dd>'+c.ciudad+'</dd><dt>Dirección</dt><dd>'+esc(c.dir||'—')+'</dd><dt>Nacimiento</dt><dd>'+nacStr+'</dd><dt>Hijos</dt><dd>'+(c.hijos>0?c.hijos+' hijo(s)':'No registra')+'</dd><dt>Asesor</dt><dd>'+ASES[c.as]+'</dd><dt>Cliente desde</dt><dd>'+c.desde+'</dd></dl>'+
       (c.obs?'<div class="mx-sec">Observaciones</div><div class="mx-note">'+esc(c.obs)+'</div>':'')+
