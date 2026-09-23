@@ -1401,6 +1401,7 @@ body.dark .mx-toast{background:#1E2C4E;}
 @media(max-width:820px){.mx-msg-grid{grid-template-columns:1fr;} .mx-preview{position:static;}}
 @media(max-width:640px){.mx-wiz{grid-template-columns:1fr 1fr;gap:6px;} .mx-wiz-s{padding:10px 12px;font-size:.8rem;} .mx-obj-grid,.mx-aud-grid{grid-template-columns:1fr 1fr;}}
 </style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 </head>
 <body>
 <div class="splash" id="splash">
@@ -2269,6 +2270,171 @@ body.dark .mx-toast{background:#1E2C4E;}
 /* ================= PORTAL ADMINISTRATIVO v2 ================= */
 (function(){
   var root=document.getElementById('mxAdmin'); if(!root) return;
+
+  /* ===== SUPABASE ===== */
+  var SB_URL='https://ppzegmemytxcfallivez.supabase.co';
+  var SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBwemVnbWVteXR4Y2ZhbGxpdmV6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTAxOTUyNjUsImV4cCI6MjEwNTc3MTI2NX0.itD8mTsB3athrMnHrOmZIt8p2_m2aAJULjI7NaTK6s8';
+  var sb=null,sbOk=false;
+  try{
+    if(window.supabase){sb=window.supabase.createClient(SB_URL,SB_KEY);sbOk=true;console.log('[SB] Supabase conectado');}
+    else console.warn('[SB] supabase-js no cargó, modo demo');
+  }catch(e){console.warn('[SB] Error init:',e);}
+
+  /* --- helpers Supabase --- */
+  async function sbSeed(){
+    if(!sbOk)return;
+    // Check if leads table has data
+    var {data}=await sb.from('leads').select('id',{count:'exact',head:true});
+    if(data&&data.length>0){console.log('[SB] Ya tiene datos, no seed');return;}
+    console.log('[SB] Seeding datos de demostración...');
+    // Seed asesores
+    var {data:asesores}=await sb.from('asesores').select('*');
+    var asesorM=asesores&&asesores.find(function(a){return a.iniciales==='MH';});
+    var asesorA=asesores&&asesores.find(function(a){return a.iniciales==='AN';});
+    if(!asesorM){
+      var r=await sb.from('asesores').insert([
+        {nombre:'Mateo Herrera',iniciales:'MH',email:'mateoherrerap@gmail.com',rol:'admin'},
+        {nombre:'Andrea',iniciales:'AN',email:'andrea@mateoherrera.com',rol:'asesor'}
+      ]).select();
+      if(r.data){asesorM=r.data[0];asesorA=r.data[1];}
+    }
+    if(!asesorM){console.error('[SB] No se pudieron crear asesores');return;}
+    // Seed clientes from demo data
+    for(var i=0;i<CLIENTES.length;i++){
+      var c=CLIENTES[i];
+      var {data:cli}=await sb.from('clientes').insert({
+        nombre:c.n,documento:c.doc,tipo:c.tipo,celular:c.tel,email:c.email||null,
+        ciudad:c.ciudad,direccion:c.dir||null,nacimiento:c.nac?c.nac.toISOString().slice(0,10):null,
+        hijos:c.hijos||0,observaciones:c.obs||null,
+        asesor_id:c.as==='M'?asesorM.id:asesorA.id
+      }).select().single();
+      if(cli){
+        c._sbId=cli.id;
+        // Seed polizas
+        for(var j=0;j<c.pols.length;j++){
+          var p=c.pols[j];
+          await sb.from('polizas').insert({
+            cliente_id:cli.id,ramo:p.ramo,aseguradora:p.aseg,numero_poliza:p.num,
+            prima_anual:p.prima,fecha_vencimiento:p.vence.toISOString().slice(0,10),
+            financiacion:p.fin||'contado',cuotas:p.cuotas||1,valor_cuota:p.cuotaVal||0,
+            cuotas_pagadas:p.cuotaPagadas||0
+          });
+        }
+      }
+    }
+    // Seed leads
+    for(var i=0;i<LEADS.length;i++){
+      var l=LEADS[i];
+      await sb.from('leads').insert({
+        nombre:l.n,celular:l.tel,ciudad:l.ciudad,ramo:l.ramo,origen:l.o,
+        campana:l.camp||null,asesor_id:l.as==='M'?asesorM.id:asesorA.id,
+        etapa:l.et,valor_prima:l.v,aseguradora:l.aseg,
+        dias_en_etapa:l.dias,proximo_contacto:l.prox.toISOString().slice(0,10),nota:l.nota
+      });
+    }
+    // Seed cotizaciones
+    for(var i=0;i<COTIZ.length;i++){
+      var c=COTIZ[i];
+      var {data:cot}=await sb.from('cotizaciones').insert({
+        numero:c.id,ramo:c.l.ramo,
+        estado:['generada','aprobada','rechazada'][c.et],
+        financiacion:c.fin||'Por definir',asesor_id:c.l.as==='M'?asesorM.id:asesorA.id
+      }).select().single();
+      if(cot){
+        for(var j=0;j<c.of.length;j++){
+          await sb.from('cotizacion_ofertas').insert({
+            cotizacion_id:cot.id,aseguradora:c.of[j].a,valor:c.of[j].v,seleccionada:j===0
+          });
+        }
+      }
+    }
+    console.log('[SB] Seed completado');
+    toast('Datos sincronizados con Supabase');
+  }
+
+  /* --- CRUD Supabase --- */
+  async function sbUpdateLead(leadId,fields){
+    if(!sbOk)return;
+    try{
+      // Find by matching name since we don't store SB ids yet
+      var l=LEADS.filter(function(x){return x.id===leadId;})[0];
+      if(!l)return;
+      var {data}=await sb.from('leads').select('id').eq('nombre',l.n).limit(1).single();
+      if(data)await sb.from('leads').update(fields).eq('id',data.id);
+    }catch(e){console.warn('[SB] updateLead:',e);}
+  }
+
+  async function sbInsertLead(l){
+    if(!sbOk)return;
+    try{
+      var {data:asesores}=await sb.from('asesores').select('id,iniciales');
+      var as=asesores&&asesores.find(function(a){return a.iniciales===(l.as==='M'?'MH':'AN');});
+      await sb.from('leads').insert({
+        nombre:l.n,celular:l.tel,ciudad:l.ciudad,ramo:l.ramo,origen:l.o,
+        campana:l.camp||null,asesor_id:as?as.id:null,
+        etapa:l.et,valor_prima:l.v,aseguradora:l.aseg,
+        dias_en_etapa:l.dias,proximo_contacto:l.prox.toISOString().slice(0,10),nota:l.nota
+      });
+    }catch(e){console.warn('[SB] insertLead:',e);}
+  }
+
+  async function sbInsertCotizacion(c){
+    if(!sbOk)return;
+    try{
+      var {data:asesores}=await sb.from('asesores').select('id,iniciales');
+      var as=asesores&&asesores.find(function(a){return a.iniciales===(c.as==='M'?'MH':'AN');});
+      var {data:cot}=await sb.from('cotizaciones').insert({
+        numero:c.id,ramo:c.l.ramo,
+        estado:['generada','aprobada','rechazada'][c.et],
+        financiacion:c.fin||'Por definir',asesor_id:as?as.id:null
+      }).select().single();
+      if(cot){
+        for(var j=0;j<c.of.length;j++){
+          await sb.from('cotizacion_ofertas').insert({
+            cotizacion_id:cot.id,aseguradora:c.of[j].a,valor:c.of[j].v,seleccionada:j===0
+          });
+        }
+      }
+    }catch(e){console.warn('[SB] insertCot:',e);}
+  }
+
+  async function sbUpdateCotizacion(cotId,estado){
+    if(!sbOk)return;
+    try{
+      await sb.from('cotizaciones').update({estado:estado}).eq('numero',cotId);
+    }catch(e){console.warn('[SB] updateCot:',e);}
+  }
+
+  async function sbMarkPago(p){
+    if(!sbOk)return;
+    try{
+      // Update poliza cuotas_pagadas
+      var {data}=await sb.from('polizas').select('id,cuotas_pagadas').eq('numero_poliza',p.p.num).single();
+      if(data)await sb.from('polizas').update({cuotas_pagadas:data.cuotas_pagadas+1}).eq('id',data.id);
+    }catch(e){console.warn('[SB] markPago:',e);}
+  }
+
+  async function sbUploadFile(bucket,file,path){
+    if(!sbOk||!file)return null;
+    try{
+      var {data,error}=await sb.storage.from(bucket).upload(path,file,{upsert:true});
+      if(error){console.error('[SB] upload:',error);return null;}
+      var {data:pub}=sb.storage.from(bucket).getPublicUrl(path);
+      return pub?pub.publicUrl:null;
+    }catch(e){console.warn('[SB] upload:',e);return null;}
+  }
+
+  async function sbSaveCampaign(camp){
+    if(!sbOk)return;
+    try{
+      await sb.from('campanas').insert({
+        nombre:camp.nombre,objetivo:camp.objetivo||'',audiencia:camp.audiencia||'',
+        mensaje:camp.mensaje||'',imagen_url:camp.imagen_url||null,
+        total_contactos:camp.contactos||0,total_enviados:camp.enviados||0
+      });
+    }catch(e){console.warn('[SB] saveCampaign:',e);}
+  }
+
   var CLAVE='93412108';
   function $(s,c){return (c||root).querySelector(s);} function $$(s,c){return Array.prototype.slice.call((c||root).querySelectorAll(s));}
 
@@ -2541,8 +2707,8 @@ body.dark .mx-toast{background:#1E2C4E;}
   function leadCard(l){return '<div class="mx-lead" draggable="true" data-id="'+l.id+'"><div class="mx-lead-top">'+code(l.ramo)+src(l.o)+badgeDias(l.dias)+'</div><h4>'+esc(l.n)+'</h4><div class="r">'+ramoN(l.ramo)+' · '+l.ciudad+'</div>'+steps(9,l.et)+'<div class="mx-lead-bot"><span class="val">'+copM(l.v)+'</span><span>Próx. '+fch(l.prox)+'</span>'+asAv(l.as)+'</div></div>';}
   function moverLead(id,et){var l=LEADS.filter(function(x){return x.id===id;})[0];if(!l||l.et===et)return;l.et=et;l.dias=0;if(et>=4&&l.aseg==='Por definir')l.aseg=pick(ASEG);
     // Al pasar a etapa 2 (Seguimiento) auto-crear cotización
-    if(et===2){var ya=COTIZ.some(function(c){return c.l.id===l.id;});if(!ya){var of=[{a:pick(ASEG),v:l.v},{a:pick(ASEG),v:Math.round(l.v*1.12/10000)*10000}].sort(function(a,b){return a.v-b.v;});COTIZ.unshift({id:'COT-'+Date.now().toString().slice(-4),l:l,et:0,of:of,fecha:HOY,as:l.as,fin:'Por definir'});toast(l.n+' pasó a «'+ETAPAS[et]+'» — cotización creada automáticamente');refreshAll();return;}}
-    toast(l.n+' pasó a «'+ETAPAS[et]+'»');refreshAll();}
+    if(et===2){var ya=COTIZ.some(function(c){return c.l.id===l.id;});if(!ya){var of=[{a:pick(ASEG),v:l.v},{a:pick(ASEG),v:Math.round(l.v*1.12/10000)*10000}].sort(function(a,b){return a.v-b.v;});COTIZ.unshift({id:'COT-'+Date.now().toString().slice(-4),l:l,et:0,of:of,fecha:HOY,as:l.as,fin:'Por definir'});sbInsertCotizacion(COTIZ[0]);toast(l.n+' pasó a «'+ETAPAS[et]+'» — cotización creada automáticamente');refreshAll();return;}}
+    toast(l.n+' pasó a «'+ETAPAS[et]+'»');sbUpdateLead(id,{etapa:et,dias_en_etapa:0,aseguradora:l.aseg});refreshAll();}
   function leadDrawer(id){var l=LEADS.filter(function(x){return x.id===id;})[0];if(!l)return;
     var msg='Hola '+l.n.split(' ')[0]+', te saluda '+ASES[l.as]+' de Mateo Herrera Seguros. Te escribo por tu '+ramoN(l.ramo).toLowerCase()+'. ¿Tienes un momento?';
     var b='<div class="mx-sec">Etapa actual</div>'+vsteps(ETAPAS,l.et)+
@@ -2563,7 +2729,7 @@ body.dark .mx-toast{background:#1E2C4E;}
     openDrawer('Nuevo contacto','Entra al pipeline en la etapa 1 · Nuevo cliente',b,'<button class="mx-btn mx-btn-p" id="nlSave">Agregar al pipeline</button>');
     $('#nlSave').addEventListener('click',function(){var n=$('#nlN').value.trim();if(!n){$('#nlN').focus();$('#nlN').style.borderColor='var(--mx-dan)';return;}
       var r=$('#nlR').value;LEADS.unshift({id:'L'+Date.now(),n:n,tel:'57'+($('#nlT').value.replace(/\D/g,'')||'3100000000'),ciudad:'Ibagué',ramo:r,o:$('#nlO').value,camp:null,as:$('#nlA').value,et:0,v:prima(r),dias:0,prox:addD(1),aseg:'Por definir',nota:'Contacto creado desde el portal.'});
-      closeDrawer();toast('Contacto agregado a «Nuevo cliente»');refreshAll();});
+      closeDrawer();sbInsertLead(LEADS[0]);toast('Contacto agregado a «Nuevo cliente»');refreshAll();});
   }
 
   /* ---- Clientes ---- */
@@ -2621,7 +2787,7 @@ body.dark .mx-toast{background:#1E2C4E;}
       '<div class="mx-note">📎 La subida de PDFs de cotización estará disponible al conectar Supabase.</div>'+
       '<label class="mx-field"><span>Cambiar estado</span><select class="mx-select" id="drCotEt">'+COT_ETAPAS.map(function(e,i){return '<option value="'+i+'"'+(i===c.et?' selected':'')+'>'+e+'</option>';}).join('')+'</select></label>';
     openDrawer(c.id,esc(c.l.n)+' · '+COT_ETAPAS[c.et],b,'<a class="mx-btn mx-btn-wa" target="_blank" rel="noopener" href="'+waLink(c.l.tel,'Hola '+c.l.n.split(' ')[0]+', ya tengo tu cotización de '+ramoN(c.l.ramo).toLowerCase()+'. La mejor opción es '+c.of[0].a+' por '+cop(c.of[0].v)+' al año.')+'">'+ico('wa')+'Enviar al cliente</a>');
-    $('#drCotEt').addEventListener('change',function(e){c.et=+e.target.value;toast('Cotización '+c.id+' → '+COT_ETAPAS[c.et]);refreshAll();cotDrawer(id);});
+    $('#drCotEt').addEventListener('change',function(e){c.et=+e.target.value;sbUpdateCotizacion(c.id,COT_ETAPAS[c.et]);toast('Cotización '+c.id+' → '+COT_ETAPAS[c.et]);refreshAll();cotDrawer(id);});
   }
 
   /* ---- Renovaciones ---- */
@@ -2716,7 +2882,7 @@ body.dark .mx-toast{background:#1E2C4E;}
     else h+='<div class="mx-empty">No hay cumpleaños en los próximos 60 días.</div>';
     h+='</div>';
     $('#vCart').innerHTML=h;
-    $$('#vCart [data-pago]').forEach(function(b){b.addEventListener('click',function(){PAGOS[+b.dataset.pago].pagado=true;toast('Cuota marcada como pagada');refreshAll();});});
+    $$('#vCart [data-pago]').forEach(function(b){b.addEventListener('click',function(){var _pg=PAGOS[+b.dataset.pago];_pg.pagado=true;sbMarkPago(_pg);toast('Cuota marcada como pagada');refreshAll();});});
   }
 
   /* ---- Campañas WhatsApp (wizard) ---- */
@@ -2883,7 +3049,7 @@ body.dark .mx-toast{background:#1E2C4E;}
     function updatePreview(){var b=$('#cwBubble');if(b&&ta)b.innerHTML=cwPreview(ta.value,contacts[0]);}
     $$('[data-send]').forEach(function(a){a.addEventListener('click',function(){cw.sent[a.dataset.send]=true;setTimeout(function(){renderCamp();},300);});});
     var rp=$('#cwResetProg');if(rp)rp.addEventListener('click',function(){cw.sent={};renderCamp();});
-    var sv=$('#cwSave');if(sv)sv.addEventListener('click',function(){var obj=CW_OBJ.filter(function(o){return o.id===cw.obj;})[0];CW_HIST.unshift({fecha:fch(HOY),nombre:(obj?obj.t:'Campaña')+' · '+fch(HOY),aud:(CW_AUD.filter(function(a){return a.id===cw.aud;})[0]||{}).t||'Manual',cont:contacts.length,env:envTotal});cw={step:0,obj:null,aud:null,audFilter:'',msg:'',sent:{}};toast('Campaña guardada en el historial');renderCamp();});
+    var sv=$('#cwSave');if(sv)sv.addEventListener('click',function(){var obj=CW_OBJ.filter(function(o){return o.id===cw.obj;})[0];CW_HIST.unshift({fecha:fch(HOY),nombre:(obj?obj.t:'Campaña')+' · '+fch(HOY),aud:(CW_AUD.filter(function(a){return a.id===cw.aud;})[0]||{}).t||'Manual',cont:contacts.length,env:envTotal});sbSaveCampaign({nombre:CW_HIST[0].nombre,objetivo:cw.obj||'',audiencia:CW_HIST[0].aud,mensaje:cw.msg,contactos:contacts.length,enviados:envTotal});cw={step:0,obj:null,aud:null,audFilter:'',msg:'',sent:{}};toast('Campaña guardada en Supabase');renderCamp();});
   }
 
   /* ---- Configuración ---- */
@@ -2932,7 +3098,7 @@ body.dark .mx-toast{background:#1E2C4E;}
     if(u===CLAVE&&p===CLAVE){$('#mxErr').classList.remove('on');abrirApp();try{sessionStorage.setItem('mxAdm','1');}catch(e){}}
     else{$('#mxErr').classList.add('on');$('#mxPass').value='';$('#mxPass').focus();}}
   var iniciado=false;
-  function abrirApp(){$('#mxLogin').style.display='none';$('#mxApp').classList.add('on');if(!iniciado){genData();iniciado=true;}counts();var v='dash';try{v=sessionStorage.getItem('mxView')||'dash';}catch(e){}go(RENDER[v]?v:'dash');}
+  function abrirApp(){$('#mxLogin').style.display='none';$('#mxApp').classList.add('on');if(!iniciado){genData();iniciado=true;if(sbOk)sbSeed();}counts();var v='dash';try{v=sessionStorage.getItem('mxView')||'dash';}catch(e){}go(RENDER[v]?v:'dash');}
   $('#mxEntrar').addEventListener('click',entrar);
   ['mxUser','mxPass'].forEach(function(id){$('#'+id).addEventListener('keydown',function(e){if(e.key==='Enter')entrar();});});
   $('#mxSalir').addEventListener('click',function(){try{sessionStorage.removeItem('mxAdm');}catch(e){}$('#mxApp').classList.remove('on');$('#mxLogin').style.display='';$('#mxUser').value='';$('#mxPass').value='';toSite();});
