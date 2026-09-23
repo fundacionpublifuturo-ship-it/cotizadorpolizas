@@ -115,7 +115,7 @@ img{max-width:100%;display:block;}
 .hl-glow{position:absolute;inset:-6% -2%;z-index:0;border-radius:50%;filter:blur(56px);opacity:.7;background:conic-gradient(from 0deg,#1A57E0,#38BDF8,#5B4BE1,#19C1D6,#1A57E0);animation:girar 16s linear infinite;pointer-events:none;}
 @media (prefers-reduced-motion:reduce){.logo-hero img,.hl-glow{animation:none;}}
 .chip{position:absolute;background:var(--white);border-radius:var(--r);padding:12px 16px;box-shadow:var(--sh);font-size:.8rem;font-weight:700;color:var(--brand-900);display:flex;align-items:center;gap:8px;animation:flot 4s ease-in-out infinite;}
-.chip .n{font-family:'Plus Jakarta Sans';font-size:1.1rem;color:var(--brand-500);}
+.chip .n{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:1.1rem;color:var(--brand-500);}
 .chip.c1{top:0;left:-8px;} .chip.c2{bottom:24px;right:-16px;animation-delay:.7s;} .chip.c3{bottom:-8px;left:24px;animation-delay:1.3s;}
 @keyframes flot{0%,100%{transform:translateY(0);}50%{transform:translateY(-9px);}}
 
@@ -153,7 +153,7 @@ img{max-width:100%;display:block;}
 /* trayectoria */
 .tray-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:center;}
 .tray-visual{background:linear-gradient(135deg,var(--brand-900),var(--brand-800));border-radius:var(--r-xl);padding:44px;text-align:center;color:white;box-shadow:var(--sh);}
-.tray-visual .big{font-family:'Plus Jakarta Sans';font-size:4rem;font-weight:800;color:var(--accent);line-height:1;}
+.tray-visual .big{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:4rem;font-weight:800;color:var(--accent);line-height:1;}
 .tray-visual .big-l{color:#B9D6EE;font-size:.9rem;margin-top:6px;}
 .tray-txt p{color:var(--ink-2);margin-bottom:14px;}
 .tray-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;}
@@ -162,7 +162,7 @@ img{max-width:100%;display:block;}
 /* FAQ */
 .faq{max-width:720px;margin:0 auto;}
 .faq-i{border-bottom:1px solid var(--line);}
-.faq-q{width:100%;text-align:left;background:none;border:none;padding:20px 4px;font-family:'Plus Jakarta Sans';font-size:1rem;font-weight:700;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:20px 4px;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:1rem;font-weight:700;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;}
 .faq-q .s{color:var(--brand-500);font-size:1.3rem;transition:transform .25s ease;flex-shrink:0;}
 .faq-i.open .s{transform:rotate(135deg);}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;}
@@ -191,7 +191,7 @@ img{max-width:100%;display:block;}
 .foot-grid{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1.1fr .9fr;gap:30px;}
 .foot img{height:34px;margin-bottom:14px;}
 .foot p{font-size:.85rem;line-height:1.6;}
-.foot h4{color:white;font-family:'Plus Jakarta Sans';font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px;}
+.foot h4{color:white;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px;}
 .foot a{font-size:.86rem;color:#B9D6EE;display:block;margin-bottom:9px;}
 .foot a:hover{color:var(--accent);}
 .foot-bot{max-width:1140px;margin:32px auto 0;border-top:1px solid rgba(255,255,255,.1);padding-top:20px;text-align:center;font-size:.78rem;}
@@ -227,7 +227,7 @@ img{max-width:100%;display:block;}
 .tile{display:flex;flex-direction:column;gap:8px;text-align:left;padding:22px 20px;background:var(--white);border:1.5px solid var(--line);border-radius:var(--r-lg);transition:.16s;cursor:pointer;position:relative;}
 .tile .ico{width:42px;height:42px;border-radius:12px;background:var(--brand-50);display:flex;align-items:center;justify-content:center;transition:.16s;}
 .tile .ico svg{width:20px;height:20px;stroke:var(--brand-700);fill:none;stroke-width:2;transition:.16s;}
-.tile b{font-family:'Plus Jakarta Sans';font-size:1rem;color:var(--ink);}
+.tile b{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:1rem;color:var(--ink);}
 .tile span{font-size:.83rem;color:var(--ink-3);}
 .tile .arw{position:absolute;top:20px;right:18px;opacity:0;transition:.16s;}
 .tile .arw svg{width:18px;height:18px;stroke:var(--brand-500);fill:none;stroke-width:2;}
@@ -352,7 +352,7 @@ img{max-width:100%;display:block;}
 .pasos3-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
 .paso3{background:var(--white);border:1.5px solid var(--line);border-radius:var(--r-lg);padding:26px 22px;text-align:center;position:relative;transition:.18s;}
 .paso3:hover{transform:translateY(-4px);box-shadow:var(--sh);border-color:var(--brand-500);}
-.paso3 .n3{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--brand-800),var(--brand-700));color:#fff;font-family:'Plus Jakarta Sans';font-weight:800;font-size:1.2rem;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;}
+.paso3 .n3{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--brand-800),var(--brand-700));color:#fff;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:800;font-size:1.2rem;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;}
 .paso3 .ic3{width:64px;height:64px;margin:0 auto 14px;border-radius:50%;background:linear-gradient(160deg,var(--brand-50),#DCEEFB);display:flex;align-items:center;justify-content:center;position:relative;transition:.25s;}
 .paso3 .ic3::after{content:'';position:absolute;inset:0;border-radius:50%;border:1.5px solid rgba(7,141,197,.25);}
 .pasos3 .paso3 .ic3 svg{width:28px;height:28px;stroke:var(--brand-600) !important;fill:none;stroke-width:2;}
@@ -661,7 +661,7 @@ body.dark .actualizado{color:var(--ink-3);border-bottom-color:#222C48;}
 body.dark .franja .f-item{background:rgba(255,255,255,.07);}
 
 /* ================= PORTAL ADMINISTRATIVO ================= */
-.admin-btn{background:linear-gradient(135deg,#05083D,#0A1B5C);color:#fff !important;padding:11px 20px;border-radius:12px;font-family:'Plus Jakarta Sans';font-weight:700;font-size:.83rem;border:1.5px solid rgba(255,255,255,.15);cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:.2s;margin-left:10px;box-shadow:0 4px 14px rgba(5,8,61,.3);}
+.admin-btn{background:linear-gradient(135deg,#05083D,#0A1B5C);color:#fff !important;padding:11px 20px;border-radius:12px;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:700;font-size:.83rem;border:1.5px solid rgba(255,255,255,.15);cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:.2s;margin-left:10px;box-shadow:0 4px 14px rgba(5,8,61,.3);}
 .admin-btn:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(5,8,61,.45);border-color:var(--accent);}
 .admin-btn svg{width:15px;height:15px;stroke:var(--accent);fill:none;stroke-width:2;}
 /* login */
@@ -689,7 +689,7 @@ body.dark .franja .f-item{background:rgba(255,255,255,.07);}
 .kpi{background:var(--white);border:1.5px solid var(--line);border-radius:var(--r-lg);padding:18px;transition:.18s;}
 .kpi:hover{transform:translateY(-3px);box-shadow:var(--sh);border-color:var(--brand-500);}
 .kpi .lbl{font-family:'IBM Plex Mono';font-size:.66rem;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px;display:flex;align-items:center;gap:6px;}
-.kpi .val{font-family:'Plus Jakarta Sans';font-size:1.75rem;font-weight:800;color:var(--brand-900);line-height:1;font-variant-numeric:tabular-nums;}
+.kpi .val{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:1.75rem;font-weight:800;color:var(--brand-900);line-height:1;font-variant-numeric:tabular-nums;}
 .kpi .sub{font-size:.72rem;color:var(--ink-3);margin-top:6px;}
 .kpi .up{color:var(--ok);font-weight:700;}
 /* graficas */
@@ -890,7 +890,7 @@ body.dark .toast{background:linear-gradient(135deg,#0A1B5C,var(--brand-500));}
 .adm-sidebar{background:var(--card,var(--white));border-right:1.5px solid var(--line);display:flex;flex-direction:column;position:sticky;top:0;height:100vh;overflow-y:auto;}
 .adm-sbrand{display:flex;gap:12px;align-items:center;padding:18px 16px 14px;border-bottom:1px solid var(--line);}
 .adm-sbrand .sb-logo{width:44px;height:44px;border-radius:13px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:#fff;font-weight:800;box-shadow:0 8px 20px -8px rgba(5,8,61,.5);flex-shrink:0;}
-.adm-sbrand .sb-txt{font-family:'Plus Jakarta Sans';font-weight:700;font-size:.92rem;line-height:1.2;color:var(--ink);}
+.adm-sbrand .sb-txt{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:700;font-size:.92rem;line-height:1.2;color:var(--ink);}
 .adm-sbrand .sb-sub{font-size:.68rem;color:var(--ink-3);margin-top:2px;}
 .adm-snav{flex:1;padding:8px 10px;display:flex;flex-direction:column;gap:2px;}
 .adm-snav-item{display:flex;align-items:center;gap:10px;width:100%;padding:10px 12px;background:none;border:0;border-radius:11px;color:var(--ink-2);cursor:pointer;text-align:left;font-size:.88rem;font-weight:500;transition:.18s;position:relative;}
@@ -953,6 +953,396 @@ body.dark .adm-login-card h2{color:#EEF3FF;}
 body.dark .adm-sfoot{border-top-color:#222B4B;}
 body.dark .adm-sbrand{border-bottom-color:#222B4B;}
 body.dark .adm-topbar h2{color:#EEF3FF;}
+
+/* ===== Ajustes: barra superior y modo oscuro legible ===== */
+.topbar{flex-wrap:nowrap;}
+.topbar .tb-left{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.topbar .tb-right{margin-left:auto;display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.topbar .tema-btn{margin-left:0;}
+.tb-short{display:none;}
+@media(max-width:560px){.tb-full{display:none;}.tb-short{display:inline;}.topbar .tb-wa{padding:6px 12px;}}
+@media(max-width:360px){.topbar .tb-left{display:none;}}
+
+body.dark .topbar{color:#DCE6FA;background:linear-gradient(90deg,#03051F,#081447);}
+body.dark .btn-p,body.dark .pill-nav.activa,body.dark .qa-item.on{color:#fff;}
+body.dark .btn-p{background:linear-gradient(135deg,#0F4FA8,#0A7FC8);box-shadow:0 6px 18px rgba(0,0,0,.35);}
+body.dark .btn-p:hover{background:linear-gradient(135deg,#1360C4,#0B93E0);}
+body.dark .pill-nav.activa,body.dark .qa-item.on{background:linear-gradient(135deg,#0F4FA8,#0A7FC8);box-shadow:0 6px 18px rgba(0,0,0,.35);}
+body.dark .pill-nav,body.dark .qa-item{color:#C9D4EA;border-color:#2B3757;}
+body.dark .pill-nav:hover,body.dark .qa-item:hover{color:#fff;border-color:#3A4A74;}
+body.dark .franja .f-item{color:#EEF3FF;}
+body.dark .hdr-logo img{filter:brightness(0) invert(1);}
+body.dark .admin-btn{background:#1A2644;border-color:#34446C;}
+body.dark .ab-item{background:#F1F5FB;border-radius:14px;padding:8px 16px;height:auto;}
+body.dark .ab-item img,body.dark .ab-item:hover img{filter:none;opacity:1;max-height:56px;}
+body.dark .aseg-card img,body.dark .aseg-card:hover img{filter:none;opacity:1;background:#F1F5FB;padding:8px 12px;border-radius:12px;box-sizing:content-box;}
+body.dark main p,body.dark main li{color:var(--ink-2);}
+body.dark main b,body.dark main strong{color:#EEF3FF;}
+body.dark .seg-card p,body.dark .tile span,body.dark .card p{color:#A9B5CD;}
+body.dark .seg-card .ver,body.dark a.ver{color:#6CC4FF;}
+body.dark .foot p,body.dark .foot a{color:#AEBBD6;}
+body.dark .foot h4{color:#EEF3FF;}
+body.dark .hero p b,body.dark .hero p strong{color:#fff;}
+body.dark .ck-banner p{color:#C9D4EA;}
+body.dark .finput{color:#EEF3FF;}
+body.dark .faq-a,body.dark .faq-a p{color:#B4BFD4;}
+body.dark .sd-hero p{color:#C9D4EA;}
+body.dark main table td{color:var(--ink-2);}
+
+
+.hdr-cta .btn,.hdr-cta .admin-btn{white-space:nowrap;}
+@media(max-width:420px){.hdr-cta .btn{padding:11px 14px;font-size:.8rem;}.hdr-cta .admin-btn{padding:10px 13px;}}
+
+/* =====================================================================
+   PORTAL ADMINISTRATIVO v2 — aplicación independiente (prefijo mx-)
+   ===================================================================== */
+#mxAdmin{display:none;}
+body.adm-mode{overflow:hidden;background:#F3F6FB;}
+body.adm-mode > *:not(#mxAdmin):not(script):not(style){display:none !important;}
+body.adm-mode #mxAdmin{display:block;}
+
+#mxAdmin{
+  --mx-bg:#F3F6FB; --mx-surface:#FFFFFF; --mx-surface-2:#F7F9FD; --mx-sunk:#EDF2F9;
+  --mx-ink:#0D1330; --mx-ink-2:#465170; --mx-ink-3:#7A85A3; --mx-line:#E2E8F2; --mx-line-2:#EDF1F7;
+  --mx-navy:#05083D; --mx-navy-2:#0A1B5C; --mx-blue:#007BC4; --mx-cyan:#00A7E8; --mx-royal:#246BFD;
+  --mx-ok:#0E8A55; --mx-ok-bg:#E4F6EE; --mx-warn:#A86A00; --mx-warn-bg:#FFF3D9; --mx-dan:#C4372B; --mx-dan-bg:#FDECEA;
+  --mx-info:#0B6FB0; --mx-info-bg:#E6F2FC;
+  --mx-sh-1:0 1px 2px rgba(5,8,61,.05),0 2px 8px rgba(5,8,61,.05);
+  --mx-sh-2:0 10px 30px -12px rgba(5,8,61,.22);
+  --mx-r:16px; --mx-r-sm:10px;
+  position:fixed;inset:0;z-index:5000;background:var(--mx-bg);color:var(--mx-ink);
+  font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:14px;line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+body.dark #mxAdmin{
+  --mx-bg:#080D1A; --mx-surface:#111A2E; --mx-surface-2:#152038; --mx-sunk:#0C1426;
+  --mx-ink:#EEF3FF; --mx-ink-2:#BAC5DC; --mx-ink-3:#8793B0; --mx-line:#223052; --mx-line-2:#1A2644;
+  --mx-ok:#4ADE9A; --mx-ok-bg:rgba(74,222,154,.12); --mx-warn:#FFC857; --mx-warn-bg:rgba(255,200,87,.12);
+  --mx-dan:#FF7A6E; --mx-dan-bg:rgba(255,122,110,.12); --mx-info:#6CC4FF; --mx-info-bg:rgba(108,196,255,.12);
+  --mx-sh-1:0 1px 2px rgba(0,0,0,.35); --mx-sh-2:0 14px 34px -14px rgba(0,0,0,.6);
+}
+body.dark.adm-mode{background:#080D1A;}
+#mxAdmin *{box-sizing:border-box;}
+#mxAdmin i{font-style:normal;}
+#mxAdmin h1,#mxAdmin h2,#mxAdmin h3,#mxAdmin h4{font-family:'Plus Jakarta Sans','Inter',system-ui,sans-serif;color:var(--mx-ink);letter-spacing:-.015em;line-height:1.2;}
+:where(#mxAdmin) :where(h1,h2,h3,h4,p){margin:0;}
+#mxAdmin .num{font-family:'Plus Jakarta Sans','Inter',sans-serif;font-variant-numeric:tabular-nums;}
+#mxAdmin button{font-family:inherit;}
+#mxAdmin a{color:inherit;text-decoration:none;}
+#mxAdmin :focus-visible{outline:2px solid var(--mx-cyan);outline-offset:2px;}
+
+/* ---------- LOGIN ---------- */
+.mx-login{position:absolute;inset:0;display:grid;grid-template-columns:1.05fr 1fr;overflow:auto;}
+.mx-login-art{background:radial-gradient(120% 90% at 0% 0%,#0F3E8C 0%,#05083D 55%,#030526 100%);color:#fff;padding:48px;display:flex;flex-direction:column;justify-content:flex-start;position:relative;overflow:hidden;}
+.mx-login-art::after{content:"";position:absolute;right:-120px;bottom:-120px;width:420px;height:420px;border-radius:50%;border:60px solid rgba(0,167,232,.12);}
+.mx-login-art img{height:54px;width:auto;filter:brightness(0) invert(1);align-self:flex-start;}
+.mx-login-art h1{color:#fff !important;font-size:clamp(1.8rem,3vw,2.6rem);max-width:15ch;margin-top:auto;}
+.mx-login-art p{color:#B9CBF0;max-width:42ch;margin:14px 0 0;}
+.mx-login-rail{display:flex;gap:6px;margin-top:28px;margin-bottom:auto;position:relative;z-index:1;flex-wrap:wrap;}
+.mx-login-rail span{font-size:.72rem;padding:6px 11px;border-radius:100px;background:rgba(255,255,255,.08);color:#DCE7FF;border:1px solid rgba(255,255,255,.12);}
+.mx-login-form{display:flex;align-items:center;justify-content:center;padding:40px 24px;background:var(--mx-bg);}
+.mx-login-card{width:100%;max-width:380px;}
+.mx-login-card h2{font-size:1.5rem;}
+.mx-login-card > p{color:var(--mx-ink-3);margin:6px 0 26px;}
+.mx-field{display:block;margin-bottom:14px;}
+.mx-field span{display:block;font-size:.78rem;font-weight:600;color:var(--mx-ink-2);margin-bottom:6px;}
+.mx-input,.mx-select{width:100%;border:1.5px solid var(--mx-line);background:var(--mx-surface);color:var(--mx-ink);border-radius:var(--mx-r-sm);padding:11px 13px;font:inherit;transition:border-color .15s,box-shadow .15s;}
+.mx-input:focus,.mx-select:focus{outline:none;border-color:var(--mx-blue);box-shadow:0 0 0 3px rgba(0,123,196,.16);}
+.mx-input::placeholder{color:var(--mx-ink-3);}
+.mx-err{display:none;background:var(--mx-dan-bg);color:var(--mx-dan);border-radius:var(--mx-r-sm);padding:10px 12px;font-size:.82rem;font-weight:600;margin-bottom:14px;}
+.mx-err.on{display:block;}
+.mx-back{display:inline-flex;align-items:center;gap:6px;margin-top:18px;color:var(--mx-ink-3);font-size:.84rem;cursor:pointer;background:none;border:0;padding:0;}
+.mx-back:hover{color:var(--mx-blue);}
+.mx-back svg{width:16px;height:16px;}
+.mx-demo-note{margin-top:22px;font-size:.76rem;color:var(--mx-ink-3);border-top:1px solid var(--mx-line);padding-top:14px;}
+
+/* ---------- BOTONES ---------- */
+.mx-btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:1.5px solid transparent;border-radius:var(--mx-r-sm);padding:9px 15px;font-weight:600;font-size:.84rem;cursor:pointer;transition:transform .12s,background .15s,border-color .15s,color .15s;white-space:nowrap;line-height:1.2;}
+.mx-btn:active{transform:scale(.97);}
+.mx-btn svg{width:16px;height:16px;flex-shrink:0;}
+.mx-btn-p{background:linear-gradient(135deg,var(--mx-navy-2),var(--mx-blue));color:#fff;}
+.mx-btn-p:hover{background:linear-gradient(135deg,var(--mx-navy),var(--mx-navy-2));}
+.mx-btn-s{background:var(--mx-surface);color:var(--mx-ink);border-color:var(--mx-line);}
+.mx-btn-s:hover{border-color:var(--mx-blue);color:var(--mx-blue);}
+.mx-btn-wa{background:#1FAF5A;color:#fff;}
+.mx-btn-wa:hover{background:#178F49;}
+.mx-btn-g{background:transparent;color:var(--mx-ink-2);}
+.mx-btn-g:hover{background:var(--mx-sunk);color:var(--mx-ink);}
+.mx-btn-sm{padding:6px 10px;font-size:.76rem;}
+.mx-btn-block{width:100%;padding:12px 16px;}
+.mx-ico{width:36px;height:36px;border-radius:10px;border:1.5px solid var(--mx-line);background:var(--mx-surface);color:var(--mx-ink-2);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:.15s;flex-shrink:0;}
+.mx-ico:hover{color:var(--mx-blue);border-color:var(--mx-blue);}
+.mx-ico svg{width:17px;height:17px;}
+
+/* ---------- APP SHELL ---------- */
+.mx-app{position:absolute;inset:0;display:none;grid-template-columns:260px minmax(0,1fr);}
+.mx-app.on{display:grid;}
+.mx-side{background:linear-gradient(185deg,#05083D 0%,#081650 60%,#0A1B5C 100%);color:#C9D6F2;display:flex;flex-direction:column;min-height:0;position:relative;z-index:30;}
+.mx-brand{display:flex;align-items:center;gap:10px;padding:20px 20px 18px;border-bottom:1px solid rgba(255,255,255,.08);}
+.mx-brand img{height:34px;width:auto;filter:brightness(0) invert(1);}
+.mx-brand small{display:block;font-size:.7rem;color:#8FA6D6;margin-top:2px;}
+.mx-nav{flex:1;overflow-y:auto;padding:14px 12px;}
+.mx-nav-g{font-size:.7rem;font-weight:600;color:#7F95C4;padding:14px 10px 6px;}
+.mx-nav-g:first-child{padding-top:4px;}
+.mx-nav-i{display:flex;align-items:center;gap:11px;width:100%;white-space:nowrap;padding:10px 12px;border-radius:10px;border:0;background:transparent;color:#C9D6F2;font-size:.88rem;font-weight:500;cursor:pointer;text-align:left;transition:background .15s,color .15s;position:relative;}
+.mx-nav-i svg{width:18px;height:18px;flex-shrink:0;opacity:.85;}
+.mx-nav-i:hover{background:rgba(255,255,255,.06);color:#fff;}
+.mx-nav-i.on{background:rgba(0,167,232,.16);color:#fff;font-weight:600;}
+.mx-nav-i.on::before{content:"";position:absolute;left:-12px;top:8px;bottom:8px;width:3px;border-radius:0 3px 3px 0;background:var(--mx-cyan);}
+.mx-nav-i .ct{margin-left:auto;font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:100px;background:rgba(255,255,255,.1);color:#fff;font-variant-numeric:tabular-nums;}
+.mx-nav-i .ct.warn{background:#F4B740;color:#3A2600;}
+.mx-side-foot{padding:14px 14px 16px;border-top:1px solid rgba(255,255,255,.08);}
+.mx-user{display:flex;align-items:center;gap:10px;}
+.mx-av{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;color:#fff;background:linear-gradient(135deg,var(--mx-cyan),var(--mx-royal));flex-shrink:0;}
+.mx-user b{display:block;color:#fff;font-size:.86rem;}
+.mx-user small{color:#8FA6D6;font-size:.72rem;}
+.mx-user button{margin-left:auto;background:rgba(255,255,255,.08);border:0;color:#C9D6F2;width:32px;height:32px;border-radius:9px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+.mx-user button:hover{background:rgba(255,255,255,.16);color:#fff;}
+.mx-user button svg{width:16px;height:16px;}
+.mx-credit{font-size:.68rem;color:#6F84B5;margin-top:12px;}
+.mx-credit b{color:#9FB3E0;}
+
+.mx-main{min-width:0;display:flex;flex-direction:column;min-height:0;}
+.mx-top{display:flex;align-items:center;gap:12px;padding:14px 26px;border-bottom:1px solid var(--mx-line);background:color-mix(in srgb,var(--mx-surface) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);position:relative;z-index:10;}
+.mx-top h1{font-size:1.2rem;}
+.mx-top .sub{font-size:.8rem;color:var(--mx-ink-3);margin-top:2px;}
+.mx-top-r{margin-left:auto;display:flex;align-items:center;gap:8px;}
+.mx-burger{display:none;}
+.mx-live{display:inline-flex;align-items:center;gap:7px;font-size:.74rem;font-weight:600;color:var(--mx-ink-2);padding:7px 11px;border-radius:100px;background:var(--mx-sunk);}
+.mx-live i{width:7px;height:7px;border-radius:50%;background:var(--mx-warn);box-shadow:0 0 0 3px var(--mx-warn-bg);}
+.mx-scroll{flex:1;overflow-y:auto;overflow-x:hidden;}
+.mx-content{padding:24px 26px 60px;max-width:1500px;}
+.mx-view{display:none;}
+.mx-view.on{display:block;animation:mxIn .28s cubic-bezier(.2,.8,.2,1);}
+@keyframes mxIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+
+/* ---------- COMPONENTES ---------- */
+.mx-grid{display:grid;gap:16px;}
+.mx-g-kpi{grid-template-columns:repeat(auto-fit,minmax(165px,1fr));margin-bottom:16px;}
+.mx-g-2{grid-template-columns:1.6fr 1fr;}
+.mx-g-2e{grid-template-columns:1fr 1fr;}
+.mx-g-3{grid-template-columns:repeat(3,minmax(0,1fr));}
+.mx-card{background:var(--mx-surface);border:1px solid var(--mx-line);border-radius:var(--mx-r);padding:18px 20px;box-shadow:var(--mx-sh-1);min-width:0;}
+.mx-card-h{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:14px;flex-wrap:wrap;}
+.mx-card-h h3{font-size:1rem;}
+.mx-card-h p{font-size:.8rem;color:var(--mx-ink-3);margin:3px 0 0;}
+.mx-mb{margin-bottom:16px;}
+
+.mx-kpi{background:var(--mx-surface);border:1px solid var(--mx-line);border-radius:var(--mx-r);padding:16px 18px;box-shadow:var(--mx-sh-1);display:flex;flex-direction:column;gap:6px;min-width:0;}
+.mx-kpi .l{font-size:.78rem;color:var(--mx-ink-3);font-weight:500;display:flex;align-items:center;gap:7px;}
+.mx-kpi .l svg{width:15px;height:15px;color:var(--mx-blue);}
+.mx-kpi .v{font-family:'Plus Jakarta Sans','Inter',sans-serif;font-size:1.65rem;font-weight:800;color:var(--mx-ink);font-variant-numeric:tabular-nums;letter-spacing:-.02em;line-height:1.1;}
+.mx-kpi .s{font-size:.74rem;color:var(--mx-ink-3);}
+.mx-kpi .s b{font-weight:700;}
+.mx-kpi.hero{background:linear-gradient(140deg,#05083D 0%,#0A1B5C 55%,#007BC4 130%);border-color:transparent;color:#fff;}
+.mx-kpi.hero .l,.mx-kpi.hero .s{color:#B7C9EE;}
+.mx-kpi.hero .l svg{color:#7FD6FF;}
+.mx-kpi.hero .v{color:#fff;}
+.up{color:var(--mx-ok);} .dn{color:var(--mx-dan);}
+.mx-kpi.hero .up{color:#7CF0B8;}
+
+.mx-badge{display:inline-flex;align-items:center;gap:5px;font-size:.72rem;font-weight:600;padding:3px 9px;border-radius:100px;white-space:nowrap;}
+.mx-badge i{width:6px;height:6px;border-radius:50%;background:currentColor;}
+.b-ok{background:var(--mx-ok-bg);color:var(--mx-ok);}
+.b-warn{background:var(--mx-warn-bg);color:var(--mx-warn);}
+.b-dan{background:var(--mx-dan-bg);color:var(--mx-dan);}
+.b-info{background:var(--mx-info-bg);color:var(--mx-info);}
+.b-mute{background:var(--mx-sunk);color:var(--mx-ink-3);}
+.mx-code{display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.02em;padding:2px 7px;border-radius:6px;color:#fff;font-variant-numeric:tabular-nums;}
+
+/* ---------- RIEL DE ETAPAS (elemento principal) ---------- */
+.mx-railwrap{overflow-x:auto;padding-bottom:6px;scrollbar-width:thin;}
+.mx-railwrap > *{min-width:max(100%,var(--rail-min,0px));}
+.mx-rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:0;}
+.mx-stage{position:relative;padding:14px 16px 12px 18px;background:var(--st-bg);color:#fff;cursor:pointer;min-height:92px;display:flex;flex-direction:column;justify-content:space-between;border:0;text-align:left;transition:filter .15s,transform .15s;
+  clip-path:polygon(0 0,calc(100% - 12px) 0,100% 50%,calc(100% - 12px) 100%,0 100%,12px 50%);margin-right:-6px;}
+.mx-stage:first-child{clip-path:polygon(0 0,calc(100% - 12px) 0,100% 50%,calc(100% - 12px) 100%,0 100%);border-radius:12px 0 0 12px;padding-left:16px;}
+.mx-stage:last-child{clip-path:polygon(0 0,100% 0,100% 100%,0 100%,12px 50%);border-radius:0 12px 12px 0;margin-right:0;}
+.mx-stage:hover{filter:brightness(1.12);}
+.mx-stage.sel{filter:brightness(1.2);box-shadow:inset 0 -3px 0 #fff;}
+.mx-stage .n{font-size:.66rem;font-weight:700;opacity:.75;font-variant-numeric:tabular-nums;}
+.mx-stage .t{font-size:.8rem;font-weight:600;line-height:1.25;margin:3px 0 6px;padding-right:6px;}
+.mx-stage .c{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.3rem;font-weight:800;font-variant-numeric:tabular-nums;line-height:1;}
+.mx-stage .m{font-size:.68rem;opacity:.8;margin-top:3px;font-variant-numeric:tabular-nums;}
+.mx-conv{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);margin-top:8px;font-size:.7rem;color:var(--mx-ink-3);}
+.mx-conv span{text-align:right;padding-right:2px;font-variant-numeric:tabular-nums;}
+.mx-conv span:last-child{visibility:hidden;}
+
+/* stepper compacto (en tarjetas y drawer) */
+.mx-steps{display:flex;gap:3px;margin:8px 0 4px;}
+.mx-steps i{flex:1;height:5px;border-radius:3px;background:var(--mx-line);}
+.mx-steps i.done{background:linear-gradient(90deg,var(--mx-blue),var(--mx-cyan));}
+.mx-steps i.cur{background:var(--mx-cyan);box-shadow:0 0 0 2px color-mix(in srgb,var(--mx-cyan) 30%,transparent);}
+.mx-steps-lbl{font-size:.7rem;color:var(--mx-ink-3);}
+.mx-vsteps{list-style:none;margin:0;padding:0;}
+.mx-vsteps li{display:flex;gap:12px;align-items:flex-start;padding:0 0 14px;position:relative;font-size:.84rem;color:var(--mx-ink-3);}
+.mx-vsteps li::before{content:"";position:absolute;left:10px;top:22px;bottom:0;width:2px;background:var(--mx-line);}
+.mx-vsteps li:last-child::before{display:none;}
+.mx-vsteps li i{width:22px;height:22px;border-radius:50%;border:2px solid var(--mx-line);background:var(--mx-surface);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:.66rem;font-weight:700;position:relative;z-index:1;}
+.mx-vsteps li.done{color:var(--mx-ink-2);}
+.mx-vsteps li.done i{background:var(--mx-blue);border-color:var(--mx-blue);color:#fff;}
+.mx-vsteps li.done::before{background:var(--mx-blue);}
+.mx-vsteps li.cur{color:var(--mx-ink);font-weight:600;}
+.mx-vsteps li.cur i{border-color:var(--mx-cyan);color:var(--mx-cyan);box-shadow:0 0 0 4px color-mix(in srgb,var(--mx-cyan) 20%,transparent);}
+
+/* ---------- FILTROS ---------- */
+.mx-toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px;}
+.mx-toolbar .mx-input{max-width:280px;padding:9px 12px;}
+.mx-toolbar .mx-select{width:auto;padding:9px 12px;}
+.mx-seg{display:inline-flex;background:var(--mx-sunk);border-radius:10px;padding:3px;max-width:100%;overflow-x:auto;scrollbar-width:none;}
+.mx-seg button{flex-shrink:0;}
+.mx-seg button{border:0;background:transparent;color:var(--mx-ink-2);padding:7px 12px;border-radius:8px;font-size:.8rem;font-weight:600;cursor:pointer;}
+.mx-seg button.on{background:var(--mx-surface);color:var(--mx-ink);box-shadow:var(--mx-sh-1);}
+.mx-chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:14px;scrollbar-width:thin;}
+.mx-chip{flex-shrink:0;display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--mx-line);background:var(--mx-surface);color:var(--mx-ink-2);font-size:.76rem;font-weight:600;padding:5px 10px 5px 6px;border-radius:100px;cursor:pointer;transition:.15s;}
+.mx-chip .mx-code{font-size:.6rem;}
+.mx-chip:hover{border-color:var(--mx-blue);}
+.mx-chip.on{border-color:var(--mx-blue);background:var(--mx-info-bg);color:var(--mx-ink);}
+.mx-chip.all{padding-left:10px;}
+
+/* ---------- KANBAN ---------- */
+.mx-board{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(262px,1fr);gap:12px;overflow-x:auto;padding-bottom:10px;align-items:start;scrollbar-width:thin;}
+.mx-col{background:var(--mx-sunk);border-radius:14px;padding:10px;min-height:180px;display:flex;flex-direction:column;gap:8px;transition:background .15s,outline-color .15s;outline:2px dashed transparent;outline-offset:-2px;}
+.mx-col.over{outline-color:var(--mx-cyan);background:var(--mx-info-bg);}
+.mx-col-h{display:flex;align-items:center;gap:8px;padding:4px 4px 6px;}
+.mx-col-h .dot{width:10px;height:10px;border-radius:3px;flex-shrink:0;}
+.mx-col-h b{font-size:.82rem;color:var(--mx-ink);line-height:1.2;}
+.mx-col-h .ct{margin-left:auto;font-size:.72rem;font-weight:700;color:var(--mx-ink-2);background:var(--mx-surface);padding:2px 8px;border-radius:100px;font-variant-numeric:tabular-nums;}
+.mx-col-sum{font-size:.72rem;color:var(--mx-ink-3);padding:0 4px 4px;font-variant-numeric:tabular-nums;}
+.mx-lead{background:var(--mx-surface);border:1px solid var(--mx-line);border-radius:12px;padding:11px 12px;cursor:grab;box-shadow:var(--mx-sh-1);transition:transform .12s,box-shadow .15s,border-color .15s;}
+.mx-lead:hover{border-color:color-mix(in srgb,var(--mx-blue) 50%,var(--mx-line));box-shadow:var(--mx-sh-2);}
+.mx-lead.drag{opacity:.45;}
+.mx-lead-top{display:flex;align-items:center;gap:6px;margin-bottom:6px;}
+.mx-lead-top .d{margin-left:auto;font-size:.68rem;font-weight:700;font-variant-numeric:tabular-nums;}
+.mx-lead h4{font-size:.88rem;margin-bottom:2px;}
+.mx-lead .r{font-size:.74rem;color:var(--mx-ink-3);}
+.mx-lead-bot{display:flex;align-items:center;gap:8px;margin-top:9px;padding-top:9px;border-top:1px solid var(--mx-line-2);font-size:.74rem;color:var(--mx-ink-2);}
+.mx-lead-bot .val{font-weight:700;color:var(--mx-ink);font-variant-numeric:tabular-nums;}
+.mx-lead-bot .as{margin-left:auto;width:24px;height:24px;border-radius:50%;font-size:.62rem;font-weight:700;color:#fff;display:flex;align-items:center;justify-content:center;}
+.as-M{background:linear-gradient(135deg,#0A1B5C,#007BC4);} .as-A{background:linear-gradient(135deg,#7C3AED,#EC4899);}
+.mx-src{display:inline-flex;align-items:center;gap:4px;font-size:.68rem;color:var(--mx-ink-3);}
+.mx-src i{width:6px;height:6px;border-radius:50%;}
+.mx-empty{font-size:.78rem;color:var(--mx-ink-3);text-align:center;padding:18px 8px;border:1.5px dashed var(--mx-line);border-radius:10px;}
+
+/* ---------- TABLAS ---------- */
+.mx-table-wrap{overflow-x:auto;border:1px solid var(--mx-line);border-radius:var(--mx-r);background:var(--mx-surface);box-shadow:var(--mx-sh-1);}
+.mx-card .mx-table-wrap{border:0;box-shadow:none;border-radius:0;margin:0 -20px -18px;}
+.mx-table{width:100%;border-collapse:collapse;font-size:.83rem;min-width:720px;}
+.mx-table th{text-align:left;font-size:.72rem;font-weight:600;color:var(--mx-ink-3);padding:11px 14px;background:var(--mx-surface-2);border-bottom:1px solid var(--mx-line);white-space:nowrap;position:sticky;top:0;}
+.mx-table td{padding:11px 14px;border-bottom:1px solid var(--mx-line-2);color:var(--mx-ink-2);vertical-align:middle;}
+.mx-table td b{color:var(--mx-ink);font-weight:600;}
+.mx-table tr:last-child td{border-bottom:0;}
+.mx-table tbody tr{transition:background .12s;}
+.mx-table tbody tr.click{cursor:pointer;}
+.mx-table tbody tr:hover td{background:var(--mx-surface-2);}
+.mx-table .r{text-align:right;font-variant-numeric:tabular-nums;}
+.mx-table small{display:block;color:var(--mx-ink-3);font-size:.72rem;}
+
+/* ---------- GRÁFICAS ---------- */
+.mx-chart svg{width:100%;height:auto;display:block;}
+.mx-chart text{font-family:'Inter',sans-serif;fill:var(--mx-ink-3);font-size:11px;}
+.mx-legend{display:flex;gap:14px;flex-wrap:wrap;font-size:.76rem;color:var(--mx-ink-2);}
+.mx-legend span{display:inline-flex;align-items:center;gap:6px;}
+.mx-legend i{width:10px;height:10px;border-radius:3px;}
+.mx-hbar{display:grid;grid-template-columns:minmax(90px,150px) 1fr auto;gap:10px;align-items:center;font-size:.8rem;margin-bottom:9px;color:var(--mx-ink-2);}
+.mx-hbar .tr{height:9px;background:var(--mx-sunk);border-radius:6px;overflow:hidden;}
+.mx-hbar .tr i{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,var(--mx-blue),var(--mx-cyan));}
+.mx-hbar b{color:var(--mx-ink);font-variant-numeric:tabular-nums;font-size:.78rem;}
+
+/* embudo */
+.mx-funnel{display:flex;flex-direction:column;gap:6px;}
+.mx-fn{display:grid;grid-template-columns:170px 1fr 92px;gap:12px;align-items:center;}
+.mx-fn .lb{font-size:.8rem;color:var(--mx-ink-2);}
+.mx-fn .lb small{display:block;color:var(--mx-ink-3);font-size:.7rem;}
+.mx-fn .bar{height:34px;display:flex;justify-content:center;}
+.mx-fn .bar i{display:flex;align-items:center;justify-content:center;height:100%;border-radius:8px;color:#fff;font-weight:700;font-size:.8rem;font-variant-numeric:tabular-nums;min-width:56px;transition:width .6s cubic-bezier(.2,.8,.2,1);}
+.mx-fn .pc{font-size:.74rem;color:var(--mx-ink-3);text-align:right;font-variant-numeric:tabular-nums;}
+.mx-fn .pc b{color:var(--mx-ink);display:block;font-size:.8rem;}
+
+/* alertas */
+.mx-alert{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--mx-line-2);}
+.mx-alert:last-child{border-bottom:0;padding-bottom:0;}
+.mx-alert .ic{width:32px;height:32px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.mx-alert .ic svg{width:16px;height:16px;}
+.mx-alert b{display:block;font-size:.84rem;color:var(--mx-ink);font-weight:600;}
+.mx-alert p{margin:2px 0 0;font-size:.76rem;color:var(--mx-ink-3);}
+.mx-alert .mx-btn{margin-left:auto;align-self:center;}
+
+/* campañas Meta */
+.mx-stagecols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;}
+.mx-sc{background:var(--mx-sunk);border-radius:14px;padding:12px;}
+.mx-sc-h{display:flex;align-items:center;gap:8px;margin-bottom:4px;}
+.mx-sc-h b{font-size:.86rem;color:var(--mx-ink);}
+.mx-sc-h .ct{margin-left:auto;font-size:.7rem;font-weight:700;background:var(--mx-surface);color:var(--mx-ink-2);padding:2px 8px;border-radius:100px;}
+.mx-sc > p{font-size:.72rem;color:var(--mx-ink-3);margin:0 0 10px;}
+.mx-camp{background:var(--mx-surface);border:1px solid var(--mx-line);border-radius:12px;padding:12px;margin-bottom:8px;cursor:pointer;transition:border-color .15s,box-shadow .15s;}
+.mx-camp:hover{border-color:var(--mx-blue);box-shadow:var(--mx-sh-2);}
+.mx-camp h4{font-size:.86rem;margin:6px 0 2px;}
+.mx-camp .o{font-size:.72rem;color:var(--mx-ink-3);}
+.mx-camp-m{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px;}
+.mx-camp-m div{font-size:.66rem;color:var(--mx-ink-3);}
+.mx-camp-m b{display:block;font-size:.84rem;color:var(--mx-ink);font-family:'Plus Jakarta Sans',sans-serif;font-variant-numeric:tabular-nums;}
+.mx-spark{width:100%;height:36px;display:block;margin-top:8px;}
+.mx-linkout{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:.74rem;word-break:break-all;background:var(--mx-sunk);color:var(--mx-ink-2);padding:12px;border-radius:10px;margin-top:12px;display:none;}
+.mx-linkout.on{display:block;}
+.mx-check{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--mx-line-2);font-size:.82rem;color:var(--mx-ink-2);}
+.mx-check:last-child{border-bottom:0;}
+.mx-check i{width:20px;height:20px;border-radius:6px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:.7rem;font-weight:700;}
+.mx-check b{color:var(--mx-ink);font-weight:600;display:block;}
+
+/* ---------- DRAWER ---------- */
+.mx-scrim{position:absolute;inset:0;background:rgba(5,8,30,.45);opacity:0;pointer-events:none;transition:opacity .2s;z-index:40;}
+.mx-scrim.on{opacity:1;pointer-events:auto;}
+.mx-drawer{position:absolute;top:0;right:0;bottom:0;width:min(460px,100%);background:var(--mx-surface);border-left:1px solid var(--mx-line);z-index:50;transform:translateX(102%);transition:transform .28s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column;visibility:hidden;}
+.mx-drawer.on{transform:none;visibility:visible;box-shadow:-20px 0 50px -20px rgba(5,8,61,.35);}
+.mx-dr-h{display:flex;align-items:flex-start;gap:12px;padding:20px 22px 16px;border-bottom:1px solid var(--mx-line);}
+.mx-dr-h h3{font-size:1.1rem;}
+.mx-dr-h p{margin:3px 0 0;font-size:.8rem;color:var(--mx-ink-3);}
+.mx-dr-h .mx-ico{margin-left:auto;}
+.mx-dr-b{flex:1;overflow-y:auto;padding:18px 22px;}
+.mx-dr-f{padding:14px 22px;border-top:1px solid var(--mx-line);display:flex;gap:8px;flex-wrap:wrap;}
+.mx-dl{display:grid;grid-template-columns:130px 1fr;gap:8px 12px;font-size:.83rem;margin-bottom:18px;}
+.mx-dl dt{color:var(--mx-ink-3);}
+.mx-dl dd{margin:0;color:var(--mx-ink);font-weight:500;}
+.mx-sec{font-size:.78rem;font-weight:700;color:var(--mx-ink-2);margin:4px 0 10px;}
+.mx-note{background:var(--mx-sunk);border-radius:10px;padding:10px 12px;font-size:.8rem;color:var(--mx-ink-2);margin-bottom:16px;}
+
+.mx-toast{position:absolute;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--mx-navy);color:#fff;padding:11px 18px;border-radius:12px;font-size:.84rem;font-weight:600;opacity:0;pointer-events:none;transition:.25s;z-index:60;box-shadow:var(--mx-sh-2);}
+.mx-toast.on{opacity:1;transform:translate(-50%,0);}
+body.dark .mx-toast{background:#1E2C4E;}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:1180px){.mx-g-2{grid-template-columns:1fr;} .mx-stagecols{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media (max-width:980px){
+  .mx-app{grid-template-columns:1fr;}
+  .mx-side{position:absolute;top:0;bottom:0;left:0;width:272px;transform:translateX(-102%);transition:transform .25s cubic-bezier(.2,.8,.2,1);z-index:45;}
+  .mx-side.open{transform:none;box-shadow:20px 0 50px -10px rgba(0,0,0,.4);}
+  .mx-burger{display:inline-flex;}
+  .mx-g-3,.mx-g-2e{grid-template-columns:1fr;}
+  .mx-login{grid-template-columns:1fr;}
+  .mx-login-art{min-height:auto;padding:28px 24px;}
+  .mx-login-art h1{margin-top:28px;font-size:1.6rem;}
+  .mx-login-art::after{display:none;}
+}
+@media (max-width:640px){
+  .mx-top{padding:12px 14px;gap:8px;}
+  .mx-top .sub,.mx-live,.mx-top .hide-sm{display:none;}
+  .mx-top h1{font-size:1.02rem;}
+  .mx-content{padding:16px 14px 50px;}
+  .mx-g-kpi{grid-template-columns:1fr 1fr;gap:10px;}
+  .mx-kpi{padding:13px 14px;} .mx-kpi .v{font-size:1.3rem;}
+  .mx-card{padding:15px 15px;}
+  .mx-card .mx-table-wrap{margin:0 -15px -15px;}
+  .mx-stagecols{grid-template-columns:1fr;}
+  .mx-fn{grid-template-columns:104px 1fr 58px;gap:8px;}
+  .mx-fn .lb small{display:none;}
+  .mx-hbar{grid-template-columns:90px 1fr auto;}
+  .mx-board{grid-auto-columns:minmax(240px,82vw);}
+  .mx-toolbar .mx-input{max-width:none;flex:1 1 100%;}
+  .mx-dl{grid-template-columns:110px 1fr;}
+  .mx-table td{white-space:nowrap;}
+}
+@media (prefers-reduced-motion:reduce){#mxAdmin *{animation:none !important;transition:none !important;}}
 </style>
 </head>
 <body>
@@ -964,8 +1354,8 @@ body.dark .adm-topbar h2{color:#EEF3FF;}
 
 
 <div class="topbar">
-  <div class="tb-left"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.5-1.1a2 2 0 012.1-.5c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"/></svg> 311 657 4219 · 310 864 6019 · Ibagué</div>
-  <a href="https://wa.me/573108646019" target="_blank" rel="noopener" class="tb-wa"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.5.7 4.8 1.9 6.8L3 29l6.7-2.1c1.9 1 4 1.6 6.3 1.6 7 0 12.7-5.7 12.7-12.7S23 3 16 3zm0 23.1c-2 0-3.9-.5-5.5-1.5l-.4-.2-4 1.2 1.3-3.9-.3-.4a10.3 10.3 0 01-1.6-5.6c0-5.7 4.7-10.4 10.4-10.4S26.4 10 26.4 15.7 21.7 26.1 16 26.1zm5.7-7.8c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.3-.7.1a8.4 8.4 0 01-2.5-1.5 9.4 9.4 0 01-1.7-2.1c-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.4-.6s.1-.4 0-.6-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.8 5.1.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 2-.8 2.2-1.6.3-.8.3-1.5.2-1.6s-.3-.2-.6-.4z"/></svg> WhatsApp</a><button class="tema-btn" id="temaBtn" aria-label="Cambiar tema">🌙</button>
+  <div class="tb-left"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.5-1.1a2 2 0 012.1-.5c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"/></svg> <span class="tb-full">311 657 4219 · 310 864 6019 · Ibagué</span><span class="tb-short">310 864 6019 · Ibagué</span></div>
+  <div class="tb-right"><a href="https://wa.me/573108646019" target="_blank" rel="noopener" class="tb-wa"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.5.7 4.8 1.9 6.8L3 29l6.7-2.1c1.9 1 4 1.6 6.3 1.6 7 0 12.7-5.7 12.7-12.7S23 3 16 3zm0 23.1c-2 0-3.9-.5-5.5-1.5l-.4-.2-4 1.2 1.3-3.9-.3-.4a10.3 10.3 0 01-1.6-5.6c0-5.7 4.7-10.4 10.4-10.4S26.4 10 26.4 15.7 21.7 26.1 16 26.1zm5.7-7.8c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.3-.7.1a8.4 8.4 0 01-2.5-1.5 9.4 9.4 0 01-1.7-2.1c-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.4-.6s.1-.4 0-.6-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.8 5.1.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 2-.8 2.2-1.6.3-.8.3-1.5.2-1.6s-.3-.2-.6-.4z"/></svg> WhatsApp</a><button class="tema-btn" id="temaBtn" aria-label="Cambiar tema">🌙</button></div>
 </div>
 
 <header class="site-header">
@@ -1017,9 +1407,9 @@ body.dark .adm-topbar h2{color:#EEF3FF;}
 </div>
 
 <div class="page" data-pg="seguros">
-  <div class="phead"><div class="wrap"><div class="crumb">Inicio · <b>Seguros</b></div><h1>¿Qué quieres proteger?</h1><p>Explora nuestro portafolio de <b>28 seguros</b> organizados por categoría. Haz clic en cualquiera para conocer los detalles. 🛡️</p></div></div>
+  <div class="phead"><div class="wrap"><div class="crumb">Inicio · <b>Seguros</b></div><h1>¿Qué quieres proteger?</h1><p>Explora nuestro portafolio de <b>32 seguros</b> organizados por categoría. Haz clic en cualquiera para conocer los detalles. 🛡️</p></div></div>
   <div class="cat-filtros"><button class="cat-btn on" data-cat="todos"><span class="em">✨</span> Todos</button><button class="cat-btn" data-cat="vida"><span class="em">🛡️</span> Vida</button><button class="cat-btn" data-cat="educativos"><span class="em">🎓</span> Educativos</button><button class="cat-btn" data-cat="empresariales"><span class="em">🏢</span> Empresariales</button><button class="cat-btn" data-cat="transporte"><span class="em">🚚</span> Transporte</button><button class="cat-btn" data-cat="salud"><span class="em">❤️</span> Salud</button><button class="cat-btn" data-cat="generales"><span class="em">📋</span> Generales</button></div>
-  <div class="seg-grid"><div class="seg-card rv" data-cat="vida" data-page="sg-vida-individual"><span class="em-big">🛡️</span><span class="cat-tag">🛡️ Vida</span><h3>Seguro de Vida Individual</h3><p>Un respaldo económico para tu familia si tú llegas a faltar.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="vida" data-page="sg-vida-deudor"><span class="em-big">🏦</span><span class="cat-tag">🛡️ Vida</span><h3>Seguro de Vida Deudor Individual</h3><p>Protege tu crédito para que la deuda no recaiga en tu familia.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="vida" data-page="sg-ap-individual"><span class="em-big">⚡</span><span class="cat-tag">🛡️ Vida</span><h3>Seguro de Accidentes Personales (AP)</h3><p>Cobertura ante accidentes: muerte, invalidez y gastos médicos.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="vida" data-page="sg-capital-futuro"><span class="em-big">🌱</span><span class="cat-tag">🛡️ Vida</span><h3>Plan Capital Futuro</h3><p>Protección de vida combinada con acumulación de capital.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="vida" data-page="sg-exequial"><span class="em-big">🕊️</span><span class="cat-tag">🛡️ Vida</span><h3>Seguro Exequial</h3><p>Cubre los servicios funerarios para que tu familia no cargue con ese gasto.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="vida" data-page="sg-vida-ahorro"><span class="em-big">💰</span><span class="cat-tag">🛡️ Vida</span><h3>Seguro de Vida con Ahorro e Inversión</h3><p>Protección de vida más un componente de inversión que crece con el tiempo.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="educativos" data-page="sg-educativo"><span class="em-big">🎓</span><span class="cat-tag">🎓 Educativos</span><h3>Seguro Educativo</h3><p>Asegura que la educación de tus hijos continúe pase lo que pase.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-millon-vida"><span class="em-big">💼</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro Millón Vida</h3><p>Amparo de vida de alta suma asegurada para perfiles ejecutivos.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-pyme"><span class="em-big">🏪</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro PYME</h3><p>Protección integral para pequeñas y medianas empresas en una sola póliza.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-vida-colectivo"><span class="em-big">👥</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro de Vida Colectivo</h3><p>Un solo contrato que ampara a todos los empleados de la empresa.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-ap-colectivo"><span class="em-big">⚙️</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro de Accidentes Personales Colectivo</h3><p>Cobertura de accidentes para todo un grupo o equipo de trabajo.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-vg-deudor"><span class="em-big">🏛️</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro de Vida Grupo Deudor</h3><p>Ampara la cartera de créditos de la entidad ante el fallecimiento del deudor.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-vg-aportes"><span class="em-big">🤝</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro de Vida Grupo Aportes</h3><p>Protege los aportes de los asociados de cooperativas y fondos.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-copropiedad-residencial"><span class="em-big">🏘️</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro de Copropiedad Residencial</h3><p>Póliza obligatoria para conjuntos y edificios de vivienda.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-copropiedad-comercial"><span class="em-big">🏬</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro de Copropiedad Comercial</h3><p>Protección para centros comerciales y edificios de oficinas.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-decenal"><span class="em-big">🏗️</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro Decenal</h3><p>Garantía de estabilidad de la obra por diez años.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-autos-colectivo"><span class="em-big">🚗</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro de Autos Colectivo</h3><p>Cobertura para toda una flota de vehículos en un solo contrato.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-cumplimiento"><span class="em-big">📜</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro de Cumplimiento</h3><p>Garantiza ante el contratante que cumplirás lo pactado.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-arl"><span class="em-big">🦺</span><span class="cat-tag">🏢 Empresariales</span><h3>ARL — Riesgos Laborales</h3><p>Afiliación obligatoria que protege al trabajador ante accidentes y enfermedades laborales.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-salud-colectiva"><span class="em-big">🏥</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro de Salud Colectiva</h3><p>Plan de salud complementario para todo el equipo de trabajo.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-trc"><span class="em-big">🧱</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro Todo Riesgo Construcción</h3><p>Protege la obra civil durante toda su ejecución.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-trm"><span class="em-big">🔧</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro Todo Riesgo Montaje</h3><p>Cubre el montaje de maquinaria e instalaciones industriales.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="transporte" data-page="sg-transporte-carga"><span class="em-big">📦</span><span class="cat-tag">🚚 Transporte</span><h3>Seguro de Transporte de Carga</h3><p>Protege la mercancía mientras viaja, desde el origen hasta el destino.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="transporte" data-page="sg-transporte-mercancias"><span class="em-big">🚛</span><span class="cat-tag">🚚 Transporte</span><h3>Seguro de Transporte de Mercancías</h3><p>Cobertura para el transportador sobre la mercancía que moviliza.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="transporte" data-page="sg-rcc-rce-pasajeros"><span class="em-big">🚌</span><span class="cat-tag">🚚 Transporte</span><h3>RCC y RCE — Servicio Público de Pasajeros</h3><p>Pólizas obligatorias para el transporte público de personas.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="salud" data-page="sg-salud"><span class="em-big">❤️</span><span class="cat-tag">❤️ Salud</span><h3>Seguro de Salud</h3><p>Acceso a mejor red médica y tiempos de atención más cortos.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="generales" data-page="sg-rc-medica"><span class="em-big">🩺</span><span class="cat-tag">📋 Generales</span><h3>Seguro de Responsabilidad Civil Médica</h3><p>Protege al profesional de la salud ante reclamaciones por su ejercicio.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="generales" data-page="sg-viaje"><span class="em-big">✈️</span><span class="cat-tag">📋 Generales</span><h3>Seguro de Viaje</h3><p>Asistencia médica y respaldo durante tus viajes dentro y fuera del país.</p><span class="ver">Ver detalles →</span></div></div>
+  <div class="seg-grid"><div class="seg-card rv" data-cat="vida" data-page="sg-vida-individual"><span class="em-big">🛡️</span><span class="cat-tag">🛡️ Vida</span><h3>Seguro de Vida Individual</h3><p>Un respaldo económico para tu familia si tú llegas a faltar.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="vida" data-page="sg-vida-deudor"><span class="em-big">🏦</span><span class="cat-tag">🛡️ Vida</span><h3>Seguro de Vida Deudor Individual</h3><p>Protege tu crédito para que la deuda no recaiga en tu familia.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="vida" data-page="sg-ap-individual"><span class="em-big">⚡</span><span class="cat-tag">🛡️ Vida</span><h3>Seguro de Accidentes Personales (AP)</h3><p>Cobertura ante accidentes: muerte, invalidez y gastos médicos.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="vida" data-page="sg-capital-futuro"><span class="em-big">🌱</span><span class="cat-tag">🛡️ Vida</span><h3>Plan Capital Futuro</h3><p>Protección de vida combinada con acumulación de capital.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="vida" data-page="sg-exequial"><span class="em-big">🕊️</span><span class="cat-tag">🛡️ Vida</span><h3>Seguro Exequial</h3><p>Cubre los servicios funerarios para que tu familia no cargue con ese gasto.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="vida" data-page="sg-vida-ahorro"><span class="em-big">💰</span><span class="cat-tag">🛡️ Vida</span><h3>Seguro de Vida con Ahorro e Inversión</h3><p>Protección de vida más un componente de inversión que crece con el tiempo.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="educativos" data-page="sg-educativo"><span class="em-big">🎓</span><span class="cat-tag">🎓 Educativos</span><h3>Seguro Educativo</h3><p>Asegura que la educación de tus hijos continúe pase lo que pase.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-millon-vida"><span class="em-big">💼</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro Millón Vida</h3><p>Amparo de vida de alta suma asegurada para perfiles ejecutivos.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-pyme"><span class="em-big">🏪</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro PYME</h3><p>Protección integral para pequeñas y medianas empresas en una sola póliza.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-vida-colectivo"><span class="em-big">👥</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro de Vida Colectivo</h3><p>Un solo contrato que ampara a todos los empleados de la empresa.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-ap-colectivo"><span class="em-big">⚙️</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro de Accidentes Personales Colectivo</h3><p>Cobertura de accidentes para todo un grupo o equipo de trabajo.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-vg-deudor"><span class="em-big">🏛️</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro de Vida Grupo Deudor</h3><p>Ampara la cartera de créditos de la entidad ante el fallecimiento del deudor.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-vg-aportes"><span class="em-big">🤝</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro de Vida Grupo Aportes</h3><p>Protege los aportes de los asociados de cooperativas y fondos.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-copropiedad-residencial"><span class="em-big">🏘️</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro de Copropiedad Residencial</h3><p>Póliza obligatoria para conjuntos y edificios de vivienda.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-copropiedad-comercial"><span class="em-big">🏬</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro de Copropiedad Comercial</h3><p>Protección para centros comerciales y edificios de oficinas.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-decenal"><span class="em-big">🏗️</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro Decenal</h3><p>Garantía de estabilidad de la obra por diez años.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-autos-colectivo"><span class="em-big">🚗</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro de Autos Colectivo</h3><p>Cobertura para toda una flota de vehículos en un solo contrato.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-cumplimiento"><span class="em-big">📜</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro de Cumplimiento</h3><p>Garantiza ante el contratante que cumplirás lo pactado.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-arl"><span class="em-big">🦺</span><span class="cat-tag">🏢 Empresariales</span><h3>ARL — Riesgos Laborales</h3><p>Afiliación obligatoria que protege al trabajador ante accidentes y enfermedades laborales.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-salud-colectiva"><span class="em-big">🏥</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro de Salud Colectiva</h3><p>Plan de salud complementario para todo el equipo de trabajo.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-trc"><span class="em-big">🧱</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro Todo Riesgo Construcción</h3><p>Protege la obra civil durante toda su ejecución.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="empresariales" data-page="sg-trm"><span class="em-big">🔧</span><span class="cat-tag">🏢 Empresariales</span><h3>Seguro Todo Riesgo Montaje</h3><p>Cubre el montaje de maquinaria e instalaciones industriales.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="transporte" data-page="sg-transporte-carga"><span class="em-big">📦</span><span class="cat-tag">🚚 Transporte</span><h3>Seguro de Transporte de Carga</h3><p>Protege la mercancía mientras viaja, desde el origen hasta el destino.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="transporte" data-page="sg-transporte-mercancias"><span class="em-big">🚛</span><span class="cat-tag">🚚 Transporte</span><h3>Seguro de Transporte de Mercancías</h3><p>Cobertura para el transportador sobre la mercancía que moviliza.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="transporte" data-page="sg-rcc-rce-pasajeros"><span class="em-big">🚌</span><span class="cat-tag">🚚 Transporte</span><h3>RCC y RCE — Servicio Público de Pasajeros</h3><p>Pólizas obligatorias para el transporte público de personas.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="salud" data-page="sg-salud"><span class="em-big">❤️</span><span class="cat-tag">❤️ Salud</span><h3>Seguro de Salud</h3><p>Acceso a mejor red médica y tiempos de atención más cortos.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="generales" data-page="sg-rc-medica"><span class="em-big">🩺</span><span class="cat-tag">📋 Generales</span><h3>Seguro de Responsabilidad Civil Médica</h3><p>Protege al profesional de la salud ante reclamaciones por su ejercicio.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="generales" data-page="sg-viaje"><span class="em-big">✈️</span><span class="cat-tag">📋 Generales</span><h3>Seguro de Viaje</h3><p>Asistencia médica y respaldo durante tus viajes dentro y fuera del país.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="generales" data-page="sg-auto-todo-riesgo"><span class="em-big">🚗</span><span class="cat-tag">📋 Generales</span><h3>Seguro de Autos Todo Riesgo</h3><p>Tu tranquilidad al volante. La protección más completa para tu vehículo.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="generales" data-page="sg-hogar"><span class="em-big">🏠</span><span class="cat-tag">📋 Generales</span><h3>Seguro de Hogar</h3><p>Protege tu casa y lo que hay dentro ante cualquier imprevisto.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="generales" data-page="sg-judicial"><span class="em-big">⚖️</span><span class="cat-tag">📋 Generales</span><h3>Seguro Judicial</h3><p>Garantía para procesos judiciales y cauciones.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="generales" data-page="sg-ap-escolar"><span class="em-big">🎒</span><span class="cat-tag">📋 Generales</span><h3>Seguro AP Escolar</h3><p>Protección de accidentes para estudiantes en instituciones educativas.</p><span class="ver">Ver detalles →</span></div></div>
 </div>
 <div class="page" data-pg="nosotros">
   <div class="phead"><div class="wrap"><div class="crumb">Inicio · <b>¿Por qué Mateo?</b></div><h1>No se trata solo de comprar un seguro</h1><p>Se trata de contar con alguien que pueda orientarte cuando realmente lo necesitas.</p></div></div>
@@ -1146,7 +1536,7 @@ body.dark .adm-topbar h2{color:#EEF3FF;}
     <h3>Nuestra ubicación</h3>
     <div class="dir"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Centro Comercial La Quinta, Primer Piso, Local 128 — Ibagué, Tolima</div>
     <iframe class="cont-mapa" src="https://www.google.com/maps?q=Centro+Comercial+La+Quinta+Ibague+Tolima&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación Mateo Herrera Seguros"></iframe>
-  <div class="seg-card rv" data-cat="generales" data-page="sg-auto-todo-riesgo"><span class="em-big">🚗</span><span class="cat-tag">📋 Generales</span><h3>Seguro de Autos Todo Riesgo</h3><p>Tu tranquilidad al volante. La protección más completa para tu vehículo.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="generales" data-page="sg-hogar"><span class="em-big">🏠</span><span class="cat-tag">📋 Generales</span><h3>Seguro de Hogar</h3><p>Protege tu casa y lo que hay dentro ante cualquier imprevisto.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="generales" data-page="sg-judicial"><span class="em-big">⚖️</span><span class="cat-tag">📋 Generales</span><h3>Seguro Judicial</h3><p>Garantía para procesos judiciales y cauciones.</p><span class="ver">Ver detalles →</span></div><div class="seg-card rv" data-cat="generales" data-page="sg-ap-escolar"><span class="em-big">🎒</span><span class="cat-tag">📋 Generales</span><h3>Seguro AP Escolar</h3><p>Protección de accidentes para estudiantes en instituciones educativas.</p><span class="ver">Ver detalles →</span></div></div>
+  </div>
 </div>
 
 <div class="page" data-pg="sg-vida-individual"><div class="phead"><div class="wrap"><div class="crumb">Inicio · Seguros · <b>Seguro de Vida Individual</b></div></div></div><div class="seg-detalle"><div class="sd-hero rv"><span class="em-hero">🛡️</span><h2>Seguro de Vida Individual</h2><p>Un respaldo económico para tu familia si tú llegas a faltar.</p></div><div class="sd-body rv"><span class="volver" data-page="seguros"><svg viewBox="0 0 24 24" style="width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Volver a seguros</span>
@@ -1431,160 +1821,7 @@ body.dark .adm-topbar h2{color:#EEF3FF;}
   <div class="sd-nota" style="max-width:820px;margin:26px auto 0;">💡 <b>La ventaja de un corredor:</b> en lugar de cotizar con una sola compañía, comparamos entre varias para que elijas con información clara. Ese comparativo es lo que no puedes hacer solo.</div>
   <div class="sd-cta" style="margin-top:22px;"><a href="https://wa.me/573108646019?text=%C2%A1Hola%20*Mateo%20Herrera*!%20%F0%9F%9B%A1%EF%B8%8F%0A%0AQuiero%20*cotizar%20un%20seguro*%20comparando%20aseguradoras.%0A%0A%C2%BFMe%20ayudas%3F%20%F0%9F%99%8C" target="_blank" rel="noopener" class="btn btn-p">Comparar aseguradoras 💬</a></div>
 </div>
-<div class="page" data-pg="admin">
-  <div id="admLogin">
-    <div class="adm-login">
-      <div class="adm-login-card">
-        <div class="lock">🔐</div>
-        <h2>Portal Administrativo</h2>
-        <p>Acceso exclusivo para el equipo de <b>Mateo Herrera Seguros</b></p>
-        <div class="adm-err" id="admErr">❌ Usuario o contraseña incorrectos</div>
-        <label for="admUser">Usuario</label>
-        <input type="text" id="admUser" class="finput" placeholder="Ingresa tu usuario" autocomplete="off">
-        <label for="admPass">Contraseña</label>
-        <input type="password" id="admPass" class="finput" placeholder="Ingresa tu contraseña">
-        <button class="btn btn-p" id="admEntrar" style="width:100%;justify-content:center;margin-top:6px;">Ingresar al portal</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="adm-shell" id="admShell">
-    <div class="adm-scrim" id="admScrim"></div>
-    <div class="adm-app">
-      <aside class="adm-sidebar" id="admSidebar">
-        <div class="adm-sbrand">
-          <div class="sb-logo">MH</div>
-          <div><div class="sb-txt">Mateo Herrera Seguros</div><div class="sb-sub">Panel de gestión</div></div>
-        </div>
-        <div class="adm-snav" id="admSnav">
-          <button class="adm-snav-item on" data-av="dash"><span class="snem">📊</span> Dashboard <span class="spill">5</span></button>
-          <button class="adm-snav-item" data-av="pipe"><span class="snem">🎯</span> Pipeline de ventas <span class="spill">47</span></button>
-          <button class="adm-snav-item" data-av="cli"><span class="snem">👥</span> Clientes <span class="spill">16</span></button>
-          <button class="adm-snav-item" data-av="renov"><span class="snem">🔄</span> Renovaciones <span class="spill alert" style="background:var(--warn-bg);color:var(--warn);">8</span></button>
-          <button class="adm-snav-item" data-av="cotiz"><span class="snem">📝</span> Cotizaciones <span class="spill">32</span></button>
-          <button class="adm-snav-item" data-av="camp"><span class="snem">📣</span> Campañas WhatsApp</button>
-          <button class="adm-snav-item" data-av="config"><span class="snem">⚙️</span> Configuración</button>
-        </div>
-        <div class="adm-scred">Powered by <b>PubliFuturo</b></div>
-        <div class="adm-sfoot">
-          <div class="sav">MH</div>
-          <div style="flex:1;"><div class="swho">Mateo Herrera</div><div class="srole">Administrador</div></div>
-          <button class="icon-btn" id="admSalir" title="Cerrar sesión" style="background:none;border:none;cursor:pointer;color:var(--ink-3);font-size:.9rem;">🚪</button>
-        </div>
-      </aside>
-
-      <div class="main" style="min-width:0;display:flex;flex-direction:column;">
-        <div class="adm-topbar">
-          <div>
-            <h2><span class="snem">📊</span> <span id="avTitulo">Dashboard</span></h2>
-            <div class="atdate">martes, 23 de septiembre de 2026</div>
-          </div>
-          <div style="display:flex;align-items:center;gap:10px;">
-            <button class="smenu-btn icon-btn" id="smenuBtn" style="font-size:1.1rem;">☰</button>
-            <div class="astatus"><i></i> Sesión activa · Demo</div>
-          </div>
-        </div>
-        <div class="adm-content">
-          <div class="adm-view on" data-av="dash">
-      <div class="kpi-grid">
-        <div class="kpi"><div class="lbl">📄 Pólizas vendidas</div><div class="val">147</div><div class="sub"><span class="up">▲ 12%</span> vs mes anterior</div></div>
-        <div class="kpi"><div class="lbl">📝 Cotizaciones creadas</div><div class="val">432</div><div class="sub"><span class="up">▲ 8%</span> vs mes anterior</div></div>
-        <div class="kpi"><div class="lbl">✅ Convertidas a póliza</div><div class="val">147</div><div class="sub">de 432 cotizaciones</div></div>
-        <div class="kpi"><div class="lbl">💰 Cartera total</div><div class="val">$74M</div><div class="sub"><span class="up">▲ 21%</span> acumulado</div></div>
-      </div>
-          <div class="adm-view" data-av="pipe">
-      <div class="chart-box" style="margin-bottom:16px;">
-        <h3>🏷️ Filtrar por unidad de negocio</h3>
-        <div class="pipe-legend"><span class="pl-chip" data-r="VID" style="background:#1A57E022;color:#1A57E0;border-color:#1A57E055;">VID</span><span class="pl-chip" data-r="VDE" style="background:#3B82F622;color:#3B82F6;border-color:#3B82F655;">VDE</span><span class="pl-chip" data-r="APS" style="background:#F59E0B22;color:#F59E0B;border-color:#F59E0B55;">APS</span><span class="pl-chip" data-r="CAP" style="background:#10B98122;color:#10B981;border-color:#10B98155;">CAP</span><span class="pl-chip" data-r="EXE" style="background:#64748B22;color:#64748B;border-color:#64748B55;">EXE</span><span class="pl-chip" data-r="VAI" style="background:#8B5CF622;color:#8B5CF6;border-color:#8B5CF655;">VAI</span><span class="pl-chip" data-r="EDU" style="background:#EC489922;color:#EC4899;border-color:#EC489955;">EDU</span><span class="pl-chip" data-r="MVI" style="background:#0EA5E922;color:#0EA5E9;border-color:#0EA5E955;">MVI</span><span class="pl-chip" data-r="PYM" style="background:#1E3A8A22;color:#1E3A8A;border-color:#1E3A8A55;">PYM</span><span class="pl-chip" data-r="VCO" style="background:#06B6D422;color:#06B6D4;border-color:#06B6D455;">VCO</span><span class="pl-chip" data-r="ACO" style="background:#F9731622;color:#F97316;border-color:#F9731655;">ACO</span><span class="pl-chip" data-r="CRE" style="background:#14B8A622;color:#14B8A6;border-color:#14B8A655;">CRE</span><span class="pl-chip" data-r="CCO" style="background:#0891B222;color:#0891B2;border-color:#0891B255;">CCO</span><span class="pl-chip" data-r="DEC" style="background:#92400E22;color:#92400E;border-color:#92400E55;">DEC</span><span class="pl-chip" data-r="AUC" style="background:#DC262622;color:#DC2626;border-color:#DC262655;">AUC</span><span class="pl-chip" data-r="CUM" style="background:#7C3AED22;color:#7C3AED;border-color:#7C3AED55;">CUM</span><span class="pl-chip" data-r="ARL" style="background:#EA580C22;color:#EA580C;border-color:#EA580C55;">ARL</span><span class="pl-chip" data-r="SCO" style="background:#05966922;color:#059669;border-color:#05966955;">SCO</span><span class="pl-chip" data-r="TRC" style="background:#B4530922;color:#B45309;border-color:#B4530955;">TRC</span><span class="pl-chip" data-r="TRM" style="background:#78716C22;color:#78716C;border-color:#78716C55;">TRM</span><span class="pl-chip" data-r="TCA" style="background:#0369A122;color:#0369A1;border-color:#0369A155;">TCA</span><span class="pl-chip" data-r="TME" style="background:#155E7522;color:#155E75;border-color:#155E7555;">TME</span><span class="pl-chip" data-r="RCP" style="background:#4338CA22;color:#4338CA;border-color:#4338CA55;">RCP</span><span class="pl-chip" data-r="SAL" style="background:#E11D4822;color:#E11D48;border-color:#E11D4855;">SAL</span><span class="pl-chip" data-r="RCM" style="background:#2DD4BF22;color:#2DD4BF;border-color:#2DD4BF55;">RCM</span><span class="pl-chip" data-r="VIA" style="background:#A855F722;color:#A855F7;border-color:#A855F755;">VIA</span></div>
-        <div style="font-size:.76rem;color:var(--ink-3);">Haz clic en un código para filtrar el tablero. Vuelve a hacer clic para quitar el filtro.</div>
-      </div>
-          <div class="adm-view" data-av="cli">
-      <div class="chart-box" style="margin-bottom:14px;"><h3>👥 Base de datos de clientes</h3>
-        <input type="text" class="finput" id="cliBuscar" placeholder="🔎 Buscar por nombre, documento o ramo..." style="max-width:420px;">
-      </div>
-      <div class="tabla-wrap"><table class="adm-tabla" id="tablaCli">
-        <tr><th>Cliente</th><th>Documento</th><th>Ramo</th><th>Aseguradora</th><th>Prima</th><th>Asesor</th><th>Estado</th></tr>
-        <tr><td><b>Carlos Ramírez</b></td><td>41.296.294</td><td><span class="cod" style="background:#A855F7;padding:2px 8px;border-radius:100px;color:#fff;font-size:.62rem;font-family:IBM Plex Mono">VIA</span> Viaje</td><td>AXA</td><td>$1200k</td><td>Andrea</td><td><span class="badge b-ok">Vigente</span></td></tr><tr><td><b>Laura Gómez</b></td><td>69.355.995</td><td><span class="cod" style="background:#8B5CF6;padding:2px 8px;border-radius:100px;color:#fff;font-size:.62rem;font-family:IBM Plex Mono">VAI</span> Vida ahorro</td><td>HDI</td><td>$3600k</td><td>Mateo</td><td><span class="badge b-dan">Vencida</span></td></tr><tr><td><b>Andrés Peña</b></td><td>21.871.969</td><td><span class="cod" style="background:#3B82F6;padding:2px 8px;border-radius:100px;color:#fff;font-size:.62rem;font-family:IBM Plex Mono">VDE</span> Vida deudor</td><td>Positiva</td><td>$1200k</td><td>Andrea</td><td><span class="badge b-ok">Vigente</span></td></tr><tr><td><b>Marcela Ruiz</b></td><td>37.985.510</td><td><span class="cod" style="background:#7C3AED;padding:2px 8px;border-radius:100px;color:#fff;font-size:.62rem;font-family:IBM Plex Mono">CUM</span> Cumplimiento</td><td>Mapfre</td><td>$1200k</td><td>Andrea</td><td><span class="badge b-inf">Expedida</span></td></tr><tr><td><b>Jorge Castillo</b></td><td>43.902.903</td><td><span class="cod" style="background:#1A57E0;padding:2px 8px;border-radius:100px;color:#fff;font-size:.62rem;font-family:IBM Plex Mono">VID</span> Vida individual</td><td>AXA</td><td>$2400k</td><td>Andrea</td><td><span class="badge b-inf">Expedida</span></td></tr><tr><td><b>Diana Torres</b></td><td>29.294.403</td><td><span class="cod" style="background:#4338CA;padding:2px 8px;border-radius:100px;color:#fff;font-size:.62rem;font-family:IBM Plex Mono">RCP</span> RCC/RCE pasajeros</td><td>Positiva</td><td>$850k</td><td>Mateo</td><td><span class="badge b-inf">Expedida</span></td></tr><tr><td><b>Felipe Ortiz</b></td><td>17.151.698</td><td><span class="cod" style="background:#E11D48;padding:2px 8px;border-radius:100px;color:#fff;font-size:.62rem;font-family:IBM Plex Mono">SAL</span> Salud</td><td>AXA</td><td>$5400k</td><td>Mateo</td><td><span class="badge b-dan">Vencida</span></td></tr><tr><td><b>Sandra Molina</b></td><td>33.170.709</td><td><span class="cod" style="background:#3B82F6;padding:2px 8px;border-radius:100px;color:#fff;font-size:.62rem;font-family:IBM Plex Mono">VDE</span> Vida deudor</td><td>HDI</td><td>$8200k</td><td>Mateo</td><td><span class="badge b-ok">Vigente</span></td></tr><tr><td><b>Ricardo Vargas</b></td><td>82.352.692</td><td><span class="cod" style="background:#0891B2;padding:2px 8px;border-radius:100px;color:#fff;font-size:.62rem;font-family:IBM Plex Mono">CCO</span> Copropiedad com.</td><td>Mapfre</td><td>$5400k</td><td>Mateo</td><td><span class="badge b-ok">Vigente</span></td></tr><tr><td><b>Paola Herrera</b></td><td>43.309.785</td><td><span class="cod" style="background:#92400E;padding:2px 8px;border-radius:100px;color:#fff;font-size:.62rem;font-family:IBM Plex Mono">DEC</span> Decenal</td><td>Equidad</td><td>$1200k</td><td>Andrea</td><td><span class="badge b-dan">Vencida</span></td></tr><tr><td><b>Julián Mesa</b></td><td>95.760.407</td><td><span class="cod" style="background:#0891B2;padding:2px 8px;border-radius:100px;color:#fff;font-size:.62rem;font-family:IBM Plex Mono">CCO</span> Copropiedad com.</td><td>AXA</td><td>$2400k</td><td>Mateo</td><td><span class="badge b-warn">Por vencer</span></td></tr><tr><td><b>Natalia Rojas</b></td><td>89.676.202</td><td><span class="cod" style="background:#1A57E0;padding:2px 8px;border-radius:100px;color:#fff;font-size:.62rem;font-family:IBM Plex Mono">VID</span> Vida individual</td><td>HDI</td><td>$5400k</td><td>Mateo</td><td><span class="badge b-inf">Expedida</span></td></tr><tr><td><b>Óscar Duarte</b></td><td>26.457.170</td><td><span class="cod" style="background:#EA580C;padding:2px 8px;border-radius:100px;color:#fff;font-size:.62rem;font-family:IBM Plex Mono">ARL</span> ARL</td><td>Positiva</td><td>$2400k</td><td>Andrea</td><td><span class="badge b-dan">Vencida</span></td></tr><tr><td><b>Camila Suárez</b></td><td>79.820.409</td><td><span class="cod" style="background:#8B5CF6;padding:2px 8px;border-radius:100px;color:#fff;font-size:.62rem;font-family:IBM Plex Mono">VAI</span> Vida ahorro</td><td>Mapfre</td><td>$8200k</td><td>Andrea</td><td><span class="badge b-inf">Expedida</span></td></tr><tr><td><b>Hernán Lozano</b></td><td>27.370.218</td><td><span class="cod" style="background:#155E75;padding:2px 8px;border-radius:100px;color:#fff;font-size:.62rem;font-family:IBM Plex Mono">TME</span> Transporte merc.</td><td>HDI</td><td>$8200k</td><td>Mateo</td><td><span class="badge b-ok">Vigente</span></td></tr><tr><td><b>Adriana Silva</b></td><td>87.315.834</td><td><span class="cod" style="background:#1E3A8A;padding:2px 8px;border-radius:100px;color:#fff;font-size:.62rem;font-family:IBM Plex Mono">PYM</span> PYME</td><td>Equidad</td><td>$1200k</td><td>Andrea</td><td><span class="badge b-dan">Vencida</span></td></tr>
-      </table></div>
-    </div>
-
-          <div class="adm-view" data-av="renov">
-            <div class="chart-box" style="margin-bottom:16px;">
-              <h3>🔄 Renovaciones próximas</h3>
-              <p style="font-size:.85rem;color:var(--ink-3);margin-bottom:16px;">Pólizas que vencen en los próximos 60 días. El semáforo indica la urgencia.</p>
-            </div>
-            <div class="tabla-wrap"><table class="adm-tabla">
-              <tr><th>Cliente</th><th>Póliza</th><th>Aseguradora</th><th>Vence</th><th>Días</th><th>Estado</th><th>Acción</th></tr>
-              <tr><td><b>Carlos Ramírez</b></td><td>Auto Todo Riesgo</td><td>Mapfre</td><td>28/09/2026</td><td>5</td><td><span class="badge b-dan">🔴 Urgente</span></td><td><a href="https://wa.me/573108646019" target="_blank" class="btn btn-p" style="padding:6px 12px;font-size:.72rem;">💬 WhatsApp</a></td></tr>
-              <tr><td><b>Laura Gómez</b></td><td>Seguro de Vida</td><td>HDI</td><td>05/10/2026</td><td>12</td><td><span class="badge b-warn">🟡 Por vencer</span></td><td><a href="https://wa.me/573108646019" target="_blank" class="btn btn-p" style="padding:6px 12px;font-size:.72rem;">💬 WhatsApp</a></td></tr>
-              <tr><td><b>Andrés Peña</b></td><td>Hogar</td><td>Estado</td><td>10/10/2026</td><td>17</td><td><span class="badge b-warn">🟡 Por vencer</span></td><td><a href="https://wa.me/573108646019" target="_blank" class="btn btn-p" style="padding:6px 12px;font-size:.72rem;">💬 WhatsApp</a></td></tr>
-              <tr><td><b>Marcela Ruiz</b></td><td>Seguro PYME</td><td>Positiva</td><td>18/10/2026</td><td>25</td><td><span class="badge b-inf">🔵 Próxima</span></td><td><a href="https://wa.me/573108646019" target="_blank" class="btn btn-p" style="padding:6px 12px;font-size:.72rem;">💬 WhatsApp</a></td></tr>
-              <tr><td><b>Jorge Castillo</b></td><td>Copropiedad</td><td>Equidad</td><td>25/10/2026</td><td>32</td><td><span class="badge b-inf">🔵 Próxima</span></td><td><a href="https://wa.me/573108646019" target="_blank" class="btn btn-p" style="padding:6px 12px;font-size:.72rem;">💬 WhatsApp</a></td></tr>
-            </table></div>
-          </div>
-
-          <div class="adm-view" data-av="cotiz">
-            <div class="chart-box" style="margin-bottom:16px;">
-              <h3>📝 Registro de cotizaciones</h3>
-              <p style="font-size:.85rem;color:var(--ink-3);margin-bottom:16px;">Cotizaciones realizadas por los asesores con su estado actual.</p>
-            </div>
-            <div class="tabla-wrap"><table class="adm-tabla">
-              <tr><th>#</th><th>Cliente</th><th>Ramo</th><th>Aseguradora</th><th>Prima</th><th>Asesor</th><th>Estado</th><th>Fecha</th></tr>
-              <tr><td>COT-047</td><td><b>Diana Torres</b></td><td>Auto Todo Riesgo</td><td>Mapfre</td><td>$2.400k</td><td>Mateo</td><td><span class="badge b-ok">✅ Expedida</span></td><td>22/09</td></tr>
-              <tr><td>COT-046</td><td><b>Felipe Ortiz</b></td><td>Seguro de Vida</td><td>HDI</td><td>$1.200k</td><td>Andrea</td><td><span class="badge b-warn">⏳ En revisión</span></td><td>21/09</td></tr>
-              <tr><td>COT-045</td><td><b>Sandra Molina</b></td><td>PYME</td><td>Positiva</td><td>$6.500k</td><td>Mateo</td><td><span class="badge b-ok">✅ Expedida</span></td><td>20/09</td></tr>
-              <tr><td>COT-044</td><td><b>Ricardo Vargas</b></td><td>Hogar</td><td>AXA</td><td>$850k</td><td>Andrea</td><td><span class="badge b-dan">❌ Rechazada</span></td><td>19/09</td></tr>
-              <tr><td>COT-043</td><td><b>Paola Herrera</b></td><td>Salud</td><td>Mundial</td><td>$3.200k</td><td>Mateo</td><td><span class="badge b-inf">📋 Cotizada</span></td><td>18/09</td></tr>
-            </table></div>
-          </div>
-
-          <div class="adm-view" data-av="camp">
-      <div class="chart-box" style="margin-bottom:16px;">
-        <h3>📣 Simulador de campaña a WhatsApp</h3>
-        <p style="font-size:.85rem;color:var(--ink-3);margin-bottom:16px;">Arma el mensaje y el enlace de la campaña. El enlace generado se puede usar en anuncios de Meta, historias o el perfil de Instagram.</p>
-        <label style="display:block;font-size:.78rem;font-weight:700;margin-bottom:6px;">Ramo a promocionar</label>
-        <select class="finput" id="cpRamo" style="max-width:340px;margin-bottom:14px;">
-          <option>Seguro de Auto</option><option>Seguro de Vida Individual</option><option>Seguro de Hogar</option>
-          <option>Seguro de Salud</option><option>SOAT</option><option>Seguro PYME</option><option>ARL</option>
-        </select>
-        <label style="display:block;font-size:.78rem;font-weight:700;margin-bottom:6px;">Mensaje que llegará escrito</label>
-        <textarea class="finput" id="cpMsg" rows="3" style="width:100%;max-width:560px;">¡Hola *Mateo Herrera*! 🛡️ Vi su campaña y quiero cotizar mi seguro.</textarea>
-        <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
-          <button class="btn btn-p" id="cpGen">Generar enlace 🔗</button>
-          <button class="btn btn-s" id="cpCopy">Copiar</button>
-        </div>
-        <div id="cpOut" style="margin-top:14px;font-family:'IBM Plex Mono';font-size:.74rem;word-break:break-all;background:var(--brand-50);padding:12px;border-radius:10px;color:var(--brand-800);display:none;"></div>
-      </div>
-      <div class="chart-box"><h3>📊 Campañas simuladas</h3>
-        <div class="tabla-wrap" style="border:0;"><table class="adm-tabla">
-          <tr><th>Campaña</th><th>Ramo</th><th>Canal</th><th>Clics</th><th>Chats</th><th>Cotizaciones</th><th>Estado</th></tr>
-          <tr><td><b>Auto Septiembre</b></td><td>Auto</td><td>Meta Ads</td><td>1.240</td><td>86</td><td>34</td><td><span class="badge b-ok">Activa</span></td></tr>
-          <tr><td><b>Vida Familiar</b></td><td>Vida</td><td>Instagram</td><td>820</td><td>51</td><td>19</td><td><span class="badge b-ok">Activa</span></td></tr>
-          <tr><td><b>PYME Empresas</b></td><td>PYME</td><td>Meta Ads</td><td>430</td><td>22</td><td>8</td><td><span class="badge b-warn">Pausada</span></td></tr>
-          <tr><td><b>Renovación SOAT</b></td><td>SOAT</td><td>WhatsApp</td><td>2.150</td><td>310</td><td>128</td><td><span class="badge b-inf">Finalizada</span></td></tr>
-        </table></div>
-      </div>
-    </div>
-
-          <div class="adm-view" data-av="config">
-            <div class="chart-box">
-              <h3>⚙️ Configuración del portal</h3>
-              <p style="color:var(--ink-3);font-size:.88rem;margin-bottom:18px;">Estas configuraciones se aplicarán cuando el portal esté conectado a <b>Supabase</b>.</p>
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-                <div class="kpi"><div class="lbl">🔐 Autenticación</div><div style="font-size:.88rem;font-weight:600;">Demo (credenciales en código)</div><div class="sub">Migrar a Supabase Auth para producción</div></div>
-                <div class="kpi"><div class="lbl">💾 Base de datos</div><div style="font-size:.88rem;font-weight:600;">Datos de demostración</div><div class="sub">Se requiere Project URL + anon key de Supabase</div></div>
-                <div class="kpi"><div class="lbl">👥 Asesores</div><div style="font-size:.88rem;font-weight:600;">Mateo Herrera · Andrea</div><div class="sub">2 asesores registrados</div></div>
-                <div class="kpi"><div class="lbl">🛡️ Ramos activos</div><div style="font-size:.88rem;font-weight:600;">32 seguros en 6 categorías</div><div class="sub">Catálogo completo configurado</div></div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
+<div class="page" data-pg="admin"></div>
 
 <div class="page" data-pg="sg-auto-todo-riesgo"><div class="phead"><div class="wrap"><div class="crumb">Inicio · Seguros · <b>Seguro de Autos Todo Riesgo</b></div></div></div><div class="seg-detalle"><div class="sd-hero rv"><span class="em-hero">🚗</span><h2>Seguro de Autos Todo Riesgo</h2><p>Tu tranquilidad al volante. La protección más completa para tu vehículo.</p></div><div class="sd-body rv"><span class="volver" data-page="seguros"><svg viewBox="0 0 24 24" style="width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Volver a seguros</span><p>Manejar por la ciudad o salir a carretera debe ser una experiencia tranquila, no una fuente de estrés. Con una <b>póliza</b> de autos todo riesgo, proteges tu <b>patrimonio</b>, tu carro y, lo más importante, a las personas que viajan contigo ante cualquier imprevisto en la vía.</p>
 <h3><span class="em">💡</span> ¿Qué es y para qué te protege?</h3>
@@ -1663,6 +1900,89 @@ body.dark .adm-topbar h2{color:#EEF3FF;}
   </div>
 </div>
 
+
+<!-- ================= PORTAL ADMINISTRATIVO (aplicación independiente) ================= -->
+<div id="mxAdmin" aria-label="Portal administrativo">
+
+  <!-- Login -->
+  <div class="mx-login" id="mxLogin">
+    <div class="mx-login-art">
+      <img id="mxLoginLogo" alt="Mateo Herrera Seguros">
+      <h1>Todo el negocio en un solo tablero</h1>
+      <p>Pipeline de ventas, clientes, renovaciones, cotizaciones y campañas de Meta para el equipo de Mateo Herrera Seguros.</p>
+      <div class="mx-login-rail"><span>Pipeline de 9 etapas</span><span>Campañas Meta</span><span>Renovaciones</span><span>Cotizaciones</span></div>
+    </div>
+    <div class="mx-login-form">
+      <div class="mx-login-card">
+        <h2>Ingresa al portal</h2>
+        <p>Acceso exclusivo para Mateo y Andrea.</p>
+        <div class="mx-err" id="mxErr">Usuario o contraseña incorrectos. Revisa los datos e inténtalo de nuevo.</div>
+        <label class="mx-field"><span>Usuario</span><input class="mx-input" id="mxUser" autocomplete="off" placeholder="Tu usuario"></label>
+        <label class="mx-field"><span>Contraseña</span><input class="mx-input" id="mxPass" type="password" placeholder="Tu contraseña"></label>
+        <button class="mx-btn mx-btn-p mx-btn-block" id="mxEntrar">Ingresar al portal</button>
+        <button class="mx-back" data-mx-site><span data-ico="arrowL"></span> Volver al sitio web</button>
+        <div class="mx-demo-note">Versión de demostración: los datos que ves son de ejemplo. El acceso real se activa al conectar la base de datos.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Aplicación -->
+  <div class="mx-app" id="mxApp">
+    <aside class="mx-side" id="mxSide">
+      <div class="mx-brand"><img id="mxBrandLogo" alt="Mateo Herrera"></div>
+      <nav class="mx-nav" id="mxNav">
+        <div class="mx-nav-g">Operación</div>
+        <button class="mx-nav-i on" data-v="dash"><span data-ico="grid"></span>Resumen</button>
+        <button class="mx-nav-i" data-v="pipe"><span data-ico="flow"></span>Pipeline de ventas<span class="ct" id="ctPipe">0</span></button>
+        <button class="mx-nav-i" data-v="cli"><span data-ico="users"></span>Clientes<span class="ct" id="ctCli">0</span></button>
+        <button class="mx-nav-i" data-v="cot"><span data-ico="doc"></span>Cotizaciones<span class="ct" id="ctCot">0</span></button>
+        <button class="mx-nav-i" data-v="ren"><span data-ico="refresh"></span>Renovaciones<span class="ct warn" id="ctRen">0</span></button>
+        <div class="mx-nav-g">Marketing</div>
+        <button class="mx-nav-i" data-v="meta"><span data-ico="mega"></span>Campañas Meta<span class="ct" id="ctMeta">0</span></button>
+        <button class="mx-nav-i" data-v="links"><span data-ico="link"></span>Enlaces de WhatsApp</button>
+        <div class="mx-nav-g">Sistema</div>
+        <button class="mx-nav-i" data-v="conf"><span data-ico="gear"></span>Configuración</button>
+      </nav>
+      <div class="mx-side-foot">
+        <div class="mx-user"><div class="mx-av">MH</div><div><b>Mateo Herrera</b><small>Administrador</small></div><button id="mxSalir" title="Cerrar sesión" aria-label="Cerrar sesión"><span data-ico="logout"></span></button></div>
+        <div class="mx-credit">Desarrollado por <b>PubliFuturo</b></div>
+      </div>
+    </aside>
+
+    <div class="mx-main">
+      <header class="mx-top">
+        <button class="mx-ico mx-burger" id="mxBurger" aria-label="Abrir menú"><span data-ico="menu"></span></button>
+        <div><h1 id="mxTitle">Resumen</h1><div class="sub" id="mxSub"></div></div>
+        <div class="mx-top-r">
+          <span class="mx-live"><i></i>Datos de demostración</span>
+          <button class="mx-ico" id="mxTheme" aria-label="Cambiar tema" title="Modo claro / oscuro"><span data-ico="moon"></span></button>
+          <button class="mx-btn mx-btn-s" data-mx-site><span data-ico="globe"></span><span class="hide-sm">Ver sitio web</span></button>
+        </div>
+      </header>
+      <div class="mx-scroll" id="mxScroll">
+        <div class="mx-content">
+          <section class="mx-view on" data-v="dash" id="vDash"></section>
+          <section class="mx-view" data-v="pipe" id="vPipe"></section>
+          <section class="mx-view" data-v="cli" id="vCli"></section>
+          <section class="mx-view" data-v="cot" id="vCot"></section>
+          <section class="mx-view" data-v="ren" id="vRen"></section>
+          <section class="mx-view" data-v="meta" id="vMeta"></section>
+          <section class="mx-view" data-v="links" id="vLinks"></section>
+          <section class="mx-view" data-v="conf" id="vConf"></section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mx-scrim" id="mxScrim"></div>
+  <aside class="mx-drawer" id="mxDrawer" aria-hidden="true">
+    <div class="mx-dr-h"><div><h3 id="mxDrT"></h3><p id="mxDrS"></p></div><button class="mx-ico" id="mxDrX" aria-label="Cerrar"><span data-ico="x"></span></button></div>
+    <div class="mx-dr-b" id="mxDrB"></div>
+    <div class="mx-dr-f" id="mxDrF"></div>
+  </aside>
+  <div class="mx-toast" id="mxToast"></div>
+</div>
+
 <script>
   var PAGES = {
     inicio:{t:'Mateo Herrera | Asesor de Seguros con 29 años de experiencia',d:'Asesoría personalizada en seguros de auto, hogar, vida, salud y más en Ibagué.'},
@@ -1718,6 +2038,7 @@ body.dark .adm-topbar h2{color:#EEF3FF;}
   function goPage(id, push){
     if(push===undefined)push=true;
     if(!PAGES[id])id='inicio';
+    document.body.classList.toggle('adm-mode',id==='admin');
     document.querySelectorAll('.page').forEach(function(p){p.classList.toggle('on',p.dataset.pg===id);});
     document.querySelectorAll('[data-page]').forEach(function(a){a.classList.toggle('activa',a.dataset.page===id);a.classList.toggle('on',a.dataset.page===id);});
     document.title=PAGES[id].t;
@@ -1775,110 +2096,6 @@ body.dark .adm-topbar h2{color:#EEF3FF;}
     setTimeout(function(){ s.classList.add('off'); setTimeout(function(){ s.remove(); },600); }, 1600);
   })();
 
-
-  // ============ PORTAL ADMIN CON SIDEBAR ============
-  (function(){
-    var CLAVE='93412108';
-    var login=document.getElementById('admLogin'), shell=document.getElementById('admShell');
-    var sidebar=document.getElementById('admSidebar'), scrim=document.getElementById('admScrim');
-    if(!login) return;
-
-    // Login
-    function entrar(){
-      var u=document.getElementById('admUser').value.trim(), p=document.getElementById('admPass').value.trim();
-      if(u===CLAVE && p===CLAVE){
-        login.style.display='none'; shell.classList.add('on');
-        try{sessionStorage.setItem('adm','1');}catch(e){}
-        document.getElementById('admErr').classList.remove('ver');
-      } else { document.getElementById('admErr').classList.add('ver'); }
-    }
-    document.getElementById('admEntrar').addEventListener('click',entrar);
-    ['admUser','admPass'].forEach(function(id){
-      document.getElementById(id).addEventListener('keydown',function(e){ if(e.key==='Enter') entrar(); });
-    });
-    document.getElementById('admSalir').addEventListener('click',function(){
-      shell.classList.remove('on'); login.style.display=''; goPage('inicio');
-      document.getElementById('admUser').value=''; document.getElementById('admPass').value='';
-      try{sessionStorage.removeItem('adm');}catch(e){}
-    });
-    try{ if(sessionStorage.getItem('adm')==='1'){ login.style.display='none'; shell.classList.add('on'); } }catch(e){}
-
-    // Sidebar navigation
-    var titulos = {dash:'📊 Dashboard',pipe:'🎯 Pipeline de ventas',cli:'👥 Clientes',
-      renov:'🔄 Renovaciones',cotiz:'📝 Cotizaciones',camp:'📣 Campañas WhatsApp',config:'⚙️ Configuración'};
-    document.querySelectorAll('.adm-snav-item').forEach(function(item){
-      item.addEventListener('click',function(){
-        var av = item.dataset.av;
-        document.querySelectorAll('.adm-snav-item').forEach(function(x){x.classList.remove('on');});
-        item.classList.add('on');
-        document.querySelectorAll('.adm-view').forEach(function(v){
-          v.classList.toggle('on', v.dataset.av===av);
-        });
-        var tit = document.getElementById('avTitulo');
-        if(tit && titulos[av]) tit.innerHTML = titulos[av].split(' ').slice(1).join(' ');
-        var topEm = document.querySelector('.adm-topbar h2 .snem');
-        if(topEm && titulos[av]) topEm.textContent = titulos[av].split(' ')[0];
-        // cerrar sidebar en móvil
-        if(sidebar) sidebar.classList.remove('open');
-        if(scrim) scrim.classList.remove('on');
-      });
-    });
-
-    // Sidebar móvil
-    var menuBtn = document.getElementById('smenuBtn');
-    if(menuBtn){
-      menuBtn.addEventListener('click',function(){
-        sidebar.classList.toggle('open');
-        scrim.classList.toggle('on');
-      });
-    }
-    if(scrim){
-      scrim.addEventListener('click',function(){
-        sidebar.classList.remove('open');
-        scrim.classList.remove('on');
-      });
-    }
-
-    // Filtro del pipeline
-    var filtroR=null;
-    document.querySelectorAll('.pl-chip').forEach(function(c){
-      c.addEventListener('click',function(){
-        var r=c.dataset.r;
-        filtroR = (filtroR===r) ? null : r;
-        document.querySelectorAll('.pl-chip').forEach(function(x){
-          x.classList.toggle('off', filtroR!==null && x.dataset.r!==filtroR);
-        });
-        document.querySelectorAll('.lead').forEach(function(l){
-          l.style.display = (!filtroR || l.dataset.r===filtroR) ? '' : 'none';
-        });
-      });
-    });
-
-    // Buscador de clientes
-    var bc=document.getElementById('cliBuscar');
-    if(bc) bc.addEventListener('input',function(){
-      var q=bc.value.toLowerCase();
-      document.querySelectorAll('#tablaCli tr').forEach(function(tr,i){
-        if(i===0) return;
-        tr.style.display = tr.textContent.toLowerCase().indexOf(q)>-1 ? '' : 'none';
-      });
-    });
-
-    // Campañas WhatsApp
-    var gen=document.getElementById('cpGen');
-    if(gen) gen.addEventListener('click',function(){
-      var msg=document.getElementById('cpMsg').value;
-      var ramo=document.getElementById('cpRamo').value;
-      var url='https://wa.me/573108646019?text='+encodeURIComponent(msg+'\n\nRamo: *'+ramo+'*');
-      var out=document.getElementById('cpOut'); out.textContent=url; out.style.display='block';
-    });
-    var cp=document.getElementById('cpCopy');
-    if(cp) cp.addEventListener('click',function(){
-      var out=document.getElementById('cpOut');
-      if(out.textContent){ navigator.clipboard.writeText(out.textContent); cp.textContent='¡Copiado! ✅';
-        setTimeout(function(){cp.textContent='Copiar';},1600); }
-    });
-  })();
 
   // Modo claro / oscuro
   (function(){
@@ -1991,5 +2208,468 @@ body.dark .adm-topbar h2{color:#EEF3FF;}
 </script>
 
 
+<script>
+/* ================= PORTAL ADMINISTRATIVO v2 ================= */
+(function(){
+  var root=document.getElementById('mxAdmin'); if(!root) return;
+  var CLAVE='93412108';
+  function $(s,c){return (c||root).querySelector(s);} function $$(s,c){return Array.prototype.slice.call((c||root).querySelectorAll(s));}
+
+  /* ---------- íconos ---------- */
+  var P='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">';
+  var IC={
+    grid:P+'<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>',
+    flow:P+'<path d="M3 6h5l3 6-3 6H3l3-6z"/><path d="M13 6h5l3 6-3 6h-5l3-6z"/></svg>',
+    users:P+'<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><path d="M16 4.6a3.5 3.5 0 010 6.8M18.5 14.8c1.6.8 2.6 2.6 3 5.2"/></svg>',
+    doc:P+'<path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>',
+    refresh:P+'<path d="M20 11a8 8 0 00-14.3-4.9L4 8M4 4v4h4M4 13a8 8 0 0014.3 4.9L20 16M20 20v-4h-4"/></svg>',
+    mega:P+'<path d="M3 11v2a1 1 0 001 1h2l5 4V6L6 10H4a1 1 0 00-1 1z"/><path d="M15.5 8.5a5 5 0 010 7M18.5 5.5a9 9 0 010 13"/></svg>',
+    link:P+'<path d="M10 14a4.5 4.5 0 006.4 0l3-3a4.5 4.5 0 00-6.4-6.4l-1 1"/><path d="M14 10a4.5 4.5 0 00-6.4 0l-3 3a4.5 4.5 0 006.4 6.4l1-1"/></svg>',
+    gear:P+'<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 00.3 1.8l.1.1a2 2 0 11-2.8 2.8l-.1-.1a1.7 1.7 0 00-1.8-.3 1.7 1.7 0 00-1 1.5V21a2 2 0 11-4 0v-.1a1.7 1.7 0 00-1.1-1.5 1.7 1.7 0 00-1.8.3l-.1.1a2 2 0 11-2.8-2.8l.1-.1a1.7 1.7 0 00.3-1.8 1.7 1.7 0 00-1.5-1H3a2 2 0 110-4h.1a1.7 1.7 0 001.5-1.1 1.7 1.7 0 00-.3-1.8l-.1-.1a2 2 0 112.8-2.8l.1.1a1.7 1.7 0 001.8.3H9a1.7 1.7 0 001-1.5V3a2 2 0 114 0v.1a1.7 1.7 0 001 1.5 1.7 1.7 0 001.8-.3l.1-.1a2 2 0 112.8 2.8l-.1.1a1.7 1.7 0 00-.3 1.8V9a1.7 1.7 0 001.5 1H21a2 2 0 110 4h-.1a1.7 1.7 0 00-1.5 1z"/></svg>',
+    logout:P+'<path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></svg>',
+    menu:P+'<path d="M4 7h16M4 12h16M4 17h16"/></svg>',
+    moon:P+'<path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>',
+    sun:P+'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>',
+    globe:P+'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>',
+    x:P+'<path d="M18 6L6 18M6 6l12 12"/></svg>',
+    arrowL:P+'<path d="M19 12H5M12 19l-7-7 7-7"/></svg>',
+    money:P+'<rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 12h.01M18 12h.01"/></svg>',
+    shield:P+'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+    target:P+'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>',
+    chat:P+'<path d="M21 11.5a8.4 8.4 0 01-12.2 7.5L3 21l2-5.6A8.4 8.4 0 1121 11.5z"/></svg>',
+    alert:P+'<path d="M10.3 3.9L1.8 18a2 2 0 001.7 3h17a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>',
+    clock:P+'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+    trend:P+'<path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>',
+    wa:'<svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.5.7 4.8 1.9 6.8L3 29l6.7-2.1c1.9 1 4 1.6 6.3 1.6 7 0 12.7-5.7 12.7-12.7S23 3 16 3zm0 23.1c-2 0-3.9-.5-5.5-1.5l-.4-.2-4 1.2 1.3-3.9-.3-.4a10.3 10.3 0 01-1.6-5.6c0-5.7 4.7-10.4 10.4-10.4S26.4 10 26.4 15.7 21.7 26.1 16 26.1zm5.7-7.8c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.3-.7.1a8.4 8.4 0 01-2.5-1.5 9.4 9.4 0 01-1.7-2.1c-.2-.3 0-.5.1-.7l.5-.6.4-.6c.1-.2.1-.4 0-.6s-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.8 1.2 3.3 1.4 3.5 2.4 3.6 5.8 5.1c.8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>',
+    plus:P+'<path d="M12 5v14M5 12h14"/></svg>',
+    copy:P+'<rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 01-1-1V4a1 1 0 011-1h10a1 1 0 011 1v1"/></svg>',
+    next:P+'<path d="M5 12h14M13 5l7 7-7 7"/></svg>'
+  };
+  function ico(n){return IC[n]||'';}
+  function paintIcons(scope){$$('[data-ico]',scope).forEach(function(e){if(!e.dataset.done){e.innerHTML=ico(e.dataset.ico);e.style.display='inline-flex';e.dataset.done='1';}});}
+
+  /* ---------- utilidades ---------- */
+  var seed=20260923; function rnd(){seed|=0;seed=seed+0x6D2B79F5|0;var t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;}
+  function pick(a){return a[Math.floor(rnd()*a.length)];}
+  function rint(a,b){return Math.floor(a+rnd()*(b-a+1));}
+  function cop(n){return '$'+Math.round(n).toLocaleString('es-CO');}
+  function copM(n){if(n>=1e6)return '$'+(n/1e6).toLocaleString('es-CO',{maximumFractionDigits:1})+' M';if(n>=1e3)return '$'+Math.round(n/1e3).toLocaleString('es-CO')+' mil';return cop(n);}
+  function nf(n){return Math.round(n).toLocaleString('es-CO');}
+  function pct(a,b){return b?(a/b*100).toLocaleString('es-CO',{maximumFractionDigits:1})+'%':'—';}
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  var HOY=new Date(); HOY.setHours(0,0,0,0);
+  function addD(d){var x=new Date(HOY);x.setDate(x.getDate()+d);return x;}
+  function fch(d){return d.toLocaleDateString('es-CO',{day:'2-digit',month:'short'});}
+  function fchL(d){return d.toLocaleDateString('es-CO',{day:'2-digit',month:'short',year:'numeric'});}
+  function waLink(tel,msg){return 'https://wa.me/'+tel+'?text='+encodeURIComponent(msg);}
+  function toast(t){var el=$('#mxToast');el.textContent=t;el.classList.add('on');clearTimeout(el._t);el._t=setTimeout(function(){el.classList.remove('on');},2200);}
+
+  /* ---------- catálogo ---------- */
+  var RAMOS={
+    ATR:['Auto Todo Riesgo','#2563EB'],HOG:['Hogar','#D97706'],VID:['Vida Individual','#1A57E0'],VDE:['Vida Deudor','#3B82F6'],APS:['Accidentes Personales','#F59E0B'],
+    CAP:['Capital Futuro','#10B981'],EXE:['Exequial','#64748B'],VAI:['Vida Ahorro e Inversión','#8B5CF6'],EDU:['Educativo','#EC4899'],MVI:['Millón Vida','#0EA5E9'],
+    PYM:['PYME','#1E3A8A'],VCO:['Vida Colectivo','#06B6D4'],ACO:['AP Colectivo','#F97316'],CRE:['Copropiedad Residencial','#14B8A6'],CCO:['Copropiedad Comercial','#0891B2'],
+    DEC:['Decenal','#92400E'],AUC:['Autos Colectivo','#DC2626'],CUM:['Cumplimiento','#7C3AED'],ARL:['ARL','#EA580C'],SCO:['Salud Colectiva','#059669'],
+    TRC:['Todo Riesgo Construcción','#B45309'],TRM:['Todo Riesgo Montaje','#78716C'],TCA:['Transporte de Carga','#0369A1'],TME:['Transporte de Mercancías','#155E75'],
+    RCP:['RCC/RCE Pasajeros','#4338CA'],SAL:['Salud','#E11D48'],RCM:['RC Médica','#0D9488'],VIA:['Viaje','#A855F7'],JUD:['Judicial','#475569'],APE:['AP Escolar','#DB2777']
+  };
+  var PRIMA={ATR:[1.6,4.2],HOG:[.35,1.1],VID:[.8,3],VDE:[.3,1.2],APS:[.12,.5],CAP:[1.5,5],EXE:[.18,.5],VAI:[2,8],EDU:[1.2,4],MVI:[3,9],PYM:[2.5,12],VCO:[4,15],ACO:[1,4],
+    CRE:[3,18],CCO:[5,22],DEC:[6,25],AUC:[8,30],CUM:[.6,4],ARL:[1,6],SCO:[6,28],TRC:[4,20],TRM:[3,14],TCA:[2,9],TME:[1.5,7],RCP:[3,12],SAL:[2,7],RCM:[1.2,4],VIA:[.15,.6],JUD:[.3,2],APE:[.8,3]};
+  function code(c){var r=RAMOS[c]||['Varios','#475569'];return '<span class="mx-code" style="background:'+r[1]+'">'+c+'</span>';}
+  function ramoN(c){return (RAMOS[c]||['Varios'])[0];}
+  function prima(c){var r=PRIMA[c]||[.5,2];return Math.round((r[0]+rnd()*(r[1]-r[0]))*1e6/10000)*10000;}
+
+  var ETAPAS=['Nuevo cliente','Cliente potencial','Seguimiento','Acuerdo consensual','Firma de solicitud','Expedición de cotización','Póliza paga','Proceso completado','Venta cruzada'];
+  var ET_DESC=['Llegó el contacto; aún no se ha hablado','Mostró interés real y tiene la necesidad','Se envió información y se hace seguimiento','Cliente y asesor acordaron el producto','El cliente firmó la solicitud','La aseguradora expide la póliza','El cliente pagó la prima','Póliza entregada y cliente activo','Se ofrece un segundo ramo al cliente'];
+  var ET_COL=['#0A1650','#0C2266','#0E307D','#0F3E8C','#0B55A6','#0869B8','#0580C9','#0395D6','#00A7E8'];
+  var ASES={M:'Mateo Herrera',A:'Andrea'};
+  var ORIG={meta:['Meta Ads','#246BFD'],wa:['WhatsApp directo','#1FAF5A'],ref:['Referido','#F59E0B'],ig:['Instagram orgánico','#C026D3'],web:['Sitio web','#0EA5E9'],tel:['Llamada','#64748B']};
+  var ASEG=['Mapfre','HDI','Confianza','Seguros del Estado','Positiva','Seguros Mundial','Equidad','Solidaria','AXA Colpatria','Qualitas','SMI'];
+  var NOMBRES=['Carlos Ramírez','Laura Gómez','Andrés Peña','Marcela Ruiz','Jorge Castillo','Diana Torres','Felipe Ortiz','Sandra Molina','Ricardo Vargas','Paola Herrera','Juan Camilo Rojas','Natalia Cárdenas','Sebastián Lozano','Valentina Prada','Óscar Bermúdez','Luisa Fernanda Díaz','Hernán Quintero','Catalina Varón','Mauricio Guzmán','Daniela Oviedo','Fabián Rincón','Gloria Aguirre','Cristian Barrios','Mónica Salazar','Esteban Murillo','Liliana Cruz','Álvaro Méndez','Yuliana Parra','Camilo Tovar','Adriana Leal','Transportes El Tolima SAS','Constructora Ambalá','Conjunto La Arboleda','Clínica Dental Sonríe','Ferretería El Tornillo','Cooperativa Coopemtol','Edificio Torre Quinta','Distribuidora La 60','Dr. Mario Suárez','Colegio San Simón','Julián Arango','Tatiana Ospina','Nelson Cuéllar','Brenda Lozada','Iván Perdomo','Rocío Saavedra','Wilson Trujillo','Karen Montealegre'];
+  var CIUD=['Ibagué','Ibagué','Ibagué','Ibagué','Espinal','Melgar','Honda','Mariquita','Chaparral','Bogotá'];
+  var EMPRESA=/SAS|Constructora|Conjunto|Clínica|Ferretería|Cooperativa|Edificio|Distribuidora|Colegio/;
+  var RAMO_EMP=['PYM','VCO','ACO','CRE','CCO','DEC','AUC','CUM','ARL','SCO','TRC','TRM','TCA','TME','RCP','APE'];
+  var RAMO_PER=['ATR','ATR','ATR','HOG','HOG','VID','VID','VDE','APS','CAP','EXE','VAI','EDU','MVI','SAL','SAL','RCM','VIA','JUD'];
+
+  /* ---------- campañas Meta ---------- */
+  var FUNNEL_ET=[['Reconocimiento','Darse a conocer: alcance y reproducciones de video'],['Consideración','Generar interés: interacción y mensajes'],['Conversión','Pedir la cotización: mensajes a WhatsApp y formularios'],['Remarketing','Volver a impactar a quien ya escribió o visitó']];
+  var CICLO=['Planeación','Creativos','Revisión de Meta','Aprendizaje','Optimización','Escalado','Cierre'];
+  var CAMP=[
+    {id:'C1',n:'Auto Todo Riesgo · Ibagué',ramo:'ATR',fe:2,obj:'Mensajes (WhatsApp)',pub:'Ibagué +15 km · 25-60 años · intereses: vehículos, concesionarios',pd:35000,g:812000,imp:96400,alc:41200,cl:2310,conv:164,cot:58,pol:17,pri:24650000,st:'Activa',ci:5,fmt:'Reel 9:16 + carrusel'},
+    {id:'C2',n:'Vida familiar · Video testimonio',ramo:'VID',fe:0,obj:'Reproducciones de video',pub:'Tolima · 28-55 años · padres de familia',pd:20000,g:540000,imp:182000,alc:88500,cl:1020,conv:38,cot:11,pol:4,pri:7200000,st:'Activa',ci:4,fmt:'Video 30 s'},
+    {id:'C3',n:'Hogar seguro · Carrusel',ramo:'HOG',fe:1,obj:'Interacción → mensajes',pub:'Ibagué · 27-60 años · propietarios de vivienda',pd:18000,g:396000,imp:64800,alc:30100,cl:1380,conv:72,cot:21,pol:6,pri:4100000,st:'En aprendizaje',ci:3,fmt:'Carrusel 4 tarjetas'},
+    {id:'C4',n:'PYME protegida · Formulario',ramo:'PYM',fe:2,obj:'Clientes potenciales',pub:'Tolima · dueños de negocio · administradores',pd:30000,g:610000,imp:48300,alc:22700,cl:890,conv:46,cot:19,pol:5,pri:18900000,st:'Activa',ci:4,fmt:'Imagen + formulario instantáneo'},
+    {id:'C5',n:'Remarketing · Chats y visitantes',ramo:'VAR',fe:3,obj:'Mensajes (público personalizado)',pub:'Personas que escribieron o visitaron la web en 30 días',pd:12000,g:214000,imp:21600,alc:6900,cl:640,conv:58,cot:24,pol:9,pri:11300000,st:'Activa',ci:5,fmt:'Reel testimonio'},
+    {id:'C6',n:'Copropiedades · Administradores',ramo:'CRE',fe:1,obj:'Interacción → mensajes',pub:'Ibagué · administradores de propiedad horizontal',pd:15000,g:165000,imp:18200,alc:9400,cl:310,conv:12,cot:5,pol:1,pri:6800000,st:'Pausada',ci:4,fmt:'Imagen estática'},
+    {id:'C7',n:'Educativo · Regreso a clases',ramo:'EDU',fe:2,obj:'Mensajes (WhatsApp)',pub:'Tolima · 30-50 años · padres con hijos en colegio',pd:16000,g:480000,imp:71300,alc:35800,cl:1190,conv:64,cot:22,pol:7,pri:15400000,st:'Finalizada',ci:6,fmt:'Reel + historia'},
+    {id:'C8',n:'Salud colectiva · Empresas',ramo:'SCO',fe:0,obj:'Alcance',pub:'Tolima · cargos de talento humano',pd:14000,g:0,imp:0,alc:0,cl:0,conv:0,cot:0,pol:0,pri:0,st:'Borrador',ci:1,fmt:'Video en producción'}
+  ];
+
+  /* ---------- datos demo ---------- */
+  var LEADS=[],CLIENTES=[],COTIZ=[],RENOV=[];
+  function genData(){
+    var dist=[8,7,7,6,5,5,4,3,3],k=0,nIdx=0;
+    dist.forEach(function(n,et){for(var i=0;i<n;i++){
+      var nom=NOMBRES[nIdx++%NOMBRES.length]; var emp=EMPRESA.test(nom);
+      var r=emp?pick(RAMO_EMP):pick(RAMO_PER); var o=pick(['meta','meta','meta','wa','ref','ref','ig','web','tel']);
+      var camp=null; if(o==='meta'){var cs=CAMP.filter(function(c){return c.g>0&&(c.ramo===r||c.ramo==='VAR');}); camp=(cs.length?pick(cs):pick(CAMP.slice(0,5))).n;}
+      var dias=rint(0,et<3?9:6);
+      LEADS.push({id:'L'+(100+k++),n:nom,tel:'573'+rint(10,22)+rint(1000000,9999999),ciudad:pick(CIUD),ramo:r,o:o,camp:camp,as:rnd()<.55?'M':'A',et:et,v:prima(r),dias:dias,prox:addD(rint(-2,6)),aseg:et>=4?pick(ASEG):'Por definir',nota:pick(['Pidió comparar 3 aseguradoras','Prefiere pago mensual','Tiene póliza vigente que vence pronto','Llamar después de las 5 p. m.','Quiere cobertura para su familia','Pregunta por el deducible','Referido por un cliente actual','Solicitó cotización por WhatsApp'])});
+    }});
+    for(var c=0;c<34;c++){
+      var nom=NOMBRES[(c*7+3)%NOMBRES.length]; var emp=EMPRESA.test(nom); var np=rint(1,emp?3:2); var pols=[];
+      for(var j=0;j<np;j++){var r=emp?pick(RAMO_EMP):pick(RAMO_PER);var d=rint(-20,340);pols.push({ramo:r,aseg:pick(ASEG),prima:prima(r),vence:addD(d),dias:d,num:'POL-'+rint(10000,99999)});}
+      CLIENTES.push({id:'CL'+(200+c),n:nom,doc:emp?(rint(800,901)+'.'+rint(100,999)+'.'+rint(100,999)+'-'+rint(1,9)):(rint(10,99)+'.'+rint(100,999)+'.'+rint(100,999)),tel:'573'+rint(10,22)+rint(1000000,9999999),ciudad:pick(CIUD),as:rnd()<.55?'M':'A',tipo:emp?'Empresa':'Persona',pols:pols,desde:2017+rint(0,9)});
+    }
+    // renovaciones: pólizas que vencen en ≤60 días
+    CLIENTES.forEach(function(cl){cl.pols.forEach(function(p){if(p.dias<=60){RENOV.push({cl:cl,p:p,et:p.dias<0?4:(p.dias<=10?pick([1,2,3]):(p.dias<=30?pick([0,1,2]):0))});}});});
+    // forzar suficientes renovaciones para la demo
+    var extra=[3,8,14,19,26,33,41,52];
+    extra.forEach(function(d,i){var cl=CLIENTES[i*3+1];var r=cl.tipo==='Empresa'?pick(RAMO_EMP):pick(RAMO_PER);var p={ramo:r,aseg:pick(ASEG),prima:prima(r),vence:addD(d),dias:d,num:'POL-'+rint(10000,99999)};cl.pols.push(p);RENOV.push({cl:cl,p:p,et:d<=10?pick([1,2,3]):(d<=30?pick([0,1,2]):0)});});
+    RENOV=RENOV.filter(function(r){return r.p.dias>=-15;}).sort(function(a,b){return a.p.dias-b.p.dias;});
+    // cotizaciones
+    var COT_ET=[0,0,1,1,1,2,2,2,2,3,3,4,4,4,4,5,5,2,1,3];
+    COT_ET.forEach(function(et,i){var l=LEADS[(i*5+2)%LEADS.length];var n=rint(2,4);var as=[];while(as.length<n){var a=pick(ASEG);if(as.indexOf(a)<0)as.push(a);}
+      var base=l.v;var ofertas=as.map(function(a){return {a:a,v:Math.round(base*(.82+rnd()*.4)/10000)*10000};}).sort(function(x,y){return x.v-y.v;});
+      COTIZ.push({id:'COT-'+(120-i),l:l,et:et,of:ofertas,fecha:addD(-i-rint(0,2)),as:l.as});});
+  }
+  var COT_ETAPAS=['Solicitada','En cotización','Enviada al cliente','Aprobada','Expedida','No aceptada'];
+  var REN_ETAPAS=['Aviso enviado','Cliente contactado','Recotización','Renovación aceptada','Renovada'];
+
+  /* ---------- componentes ---------- */
+  function rail(etapas,counts,sub,colors,onSel,sel,cum){
+    var h='<div class="mx-railwrap" style="--rail-min:'+(etapas.length*112)+'px"><div class="mx-rail">';
+    etapas.forEach(function(e,i){h+='<button class="mx-stage'+(sel===i?' sel':'')+'" data-i="'+i+'" style="--st-bg:'+(colors?colors[i]:ET_COL[Math.round(i*(ET_COL.length-1)/Math.max(1,etapas.length-1))])+'"><span class="n">Etapa '+(i+1)+'</span><span class="t">'+e+'</span><span><span class="c">'+counts[i]+'</span>'+(sub?'<span class="m">'+sub[i]+'</span>':'')+'</span></button>';});
+    h+='</div>';
+    if(cum){var reach=counts.map(function(c,i){return counts.slice(i).reduce(function(a,b){return a+b;},0);});
+      h+='<div class="mx-conv">'+etapas.map(function(e,i){return '<span>'+(i<etapas.length-1&&reach[i]?'avanza '+Math.round(reach[i+1]/reach[i]*100)+'% →':'')+'</span>';}).join('')+'</div>';}
+    return h+'</div>';
+  }
+  function steps(total,cur){var h='<div class="mx-steps">';for(var i=0;i<total;i++)h+='<i class="'+(i<cur?'done':(i===cur?'cur':''))+'"></i>';return h+'</div>';}
+  function vsteps(list,cur){return '<ol class="mx-vsteps">'+list.map(function(s,i){return '<li class="'+(i<cur?'done':(i===cur?'cur':''))+'"><i>'+(i<cur?'✓':i+1)+'</i><span>'+s+'</span></li>';}).join('')+'</ol>';}
+  function kpi(l,v,s,icn,hero){return '<div class="mx-kpi'+(hero?' hero':'')+'"><div class="l">'+ico(icn)+l+'</div><div class="v">'+v+'</div><div class="s">'+s+'</div></div>';}
+  function badgeDias(d){var c=d>=7?'dan':(d>=4?'warn':'ok');return '<span class="d" style="color:var(--mx-'+c+')">'+d+' d</span>';}
+  function src(o){var x=ORIG[o];return '<span class="mx-src"><i style="background:'+x[1]+'"></i>'+x[0]+'</span>';}
+  function asAv(a){return '<span class="as as-'+a+'" title="'+ASES[a]+'">'+(a==='M'?'MH':'AN')+'</span>';}
+  function stBadge(s){var m={'Activa':'ok','En aprendizaje':'info','Pausada':'warn','Finalizada':'mute','Borrador':'mute'};return '<span class="mx-badge b-'+m[s]+'"><i></i>'+s+'</span>';}
+
+  /* ---------- drawer ---------- */
+  function openDrawer(t,s,body,foot){$('#mxDrT').textContent=t;$('#mxDrS').innerHTML=s||'';$('#mxDrB').innerHTML=body;$('#mxDrF').innerHTML=foot||'';$('#mxDrawer').classList.add('on');$('#mxScrim').classList.add('on');$('#mxDrawer').setAttribute('aria-hidden','false');paintIcons($('#mxDrawer'));}
+  function closeDrawer(){$('#mxDrawer').classList.remove('on');$('#mxDrawer').setAttribute('aria-hidden','true');if(!$('#mxSide').classList.contains('open'))$('#mxScrim').classList.remove('on');}
+
+  /* ================= VISTAS ================= */
+  var TOTALS={};
+  function calcMeta(){var t={g:0,imp:0,alc:0,cl:0,conv:0,cot:0,pol:0,pri:0};CAMP.forEach(function(c){for(var k in t)t[k]+=c[k];});return t;}
+
+  /* ---- Resumen ---- */
+  function renderDash(){
+    var mt=calcMeta(); var pipeCount=LEADS.filter(function(l){return l.et<6;}).length; var pipeVal=LEADS.filter(function(l){return l.et<6;}).reduce(function(a,l){return a+l.v;},0);
+    var cerr=LEADS.filter(function(l){return l.et>=6;}).length; var ren30=RENOV.filter(function(r){return r.p.dias<=30&&r.et<4;}).length;
+    var primasMes=LEADS.filter(function(l){return l.et>=6;}).reduce(function(a,l){return a+l.v;},0)+42300000;
+    var polAct=CLIENTES.reduce(function(a,c){return a+c.pols.length;},0);
+    var h='<div class="mx-grid mx-g-kpi">'+
+      kpi('Primas emitidas este mes',copM(primasMes),'<b class="up">▲ 14%</b> frente al mes anterior','money',true)+
+      kpi('Pólizas activas',nf(polAct),'en '+CLIENTES.length+' clientes','shield')+
+      kpi('Negocios abiertos',nf(pipeCount),copM(pipeVal)+' en primas posibles','flow')+
+      kpi('Tasa de cierre',pct(cerr,LEADS.length),cerr+' de '+LEADS.length+' contactos','target')+
+      kpi('Renovaciones ≤ 30 días',ren30,'requieren gestión','refresh')+
+      kpi('Costo por conversación Meta',cop(mt.g/Math.max(1,mt.conv)),nf(mt.conv)+' chats · '+copM(mt.g)+' invertidos','mega')+
+    '</div>';
+    // riel pipeline
+    var cnt=ETAPAS.map(function(e,i){return LEADS.filter(function(l){return l.et===i;}).length;});
+    var val=ETAPAS.map(function(e,i){return copM(LEADS.filter(function(l){return l.et===i;}).reduce(function(a,l){return a+l.v;},0));});
+    h+='<div class="mx-card mx-mb"><div class="mx-card-h"><div><h3>Pipeline de ventas por etapa</h3><p>Toca una etapa para abrir el tablero filtrado.</p></div><button class="mx-btn mx-btn-s mx-btn-sm" data-go="pipe">Abrir pipeline '+ico('next')+'</button></div><div id="dRail">'+rail(ETAPAS,cnt,val,null,null,null,true)+'</div></div>';
+    // gráfica + alertas
+    h+='<div class="mx-grid mx-g-2 mx-mb"><div class="mx-card"><div class="mx-card-h"><div><h3>Producción mensual por asesor</h3><p>Primas emitidas, últimos 6 meses (millones de pesos)</p></div><div class="mx-legend"><span><i style="background:#0F3E8C"></i>Mateo</span><span><i style="background:#00A7E8"></i>Andrea</span></div></div><div class="mx-chart">'+barChart()+'</div></div>';
+    h+='<div class="mx-card"><div class="mx-card-h"><div><h3>Acciones de hoy</h3><p>Lo que no puede esperar</p></div></div>'+alertas()+'</div></div>';
+    // ramos + origen
+    var byR={};LEADS.forEach(function(l){byR[l.ramo]=(byR[l.ramo]||0)+l.v;});var top=Object.keys(byR).sort(function(a,b){return byR[b]-byR[a];}).slice(0,7);var mx=byR[top[0]];
+    h+='<div class="mx-grid mx-g-2e"><div class="mx-card"><div class="mx-card-h"><div><h3>Ramos con más valor en el pipeline</h3><p>Suma de primas posibles por unidad de negocio</p></div></div>'+top.map(function(r){return '<div class="mx-hbar"><span>'+code(r)+' '+ramoN(r)+'</span><span class="tr"><i style="width:'+(byR[r]/mx*100)+'%"></i></span><b>'+copM(byR[r])+'</b></div>';}).join('')+'</div>';
+    var byO={};LEADS.forEach(function(l){byO[l.o]=(byO[l.o]||0)+1;});
+    h+='<div class="mx-card"><div class="mx-card-h"><div><h3>De dónde llegan los contactos</h3><p>'+LEADS.length+' contactos en el pipeline</p></div></div><div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap;"><div class="mx-chart" style="width:170px;flex-shrink:0;">'+donut(byO)+'</div><div class="mx-legend" style="flex-direction:column;gap:8px;">'+Object.keys(ORIG).filter(function(o){return byO[o];}).map(function(o){return '<span><i style="background:'+ORIG[o][1]+'"></i>'+ORIG[o][0]+' · <b>'+byO[o]+'</b> ('+pct(byO[o],LEADS.length)+')</span>';}).join('')+'</div></div></div></div>';
+    $('#vDash').innerHTML=h;
+    $$('#dRail .mx-stage').forEach(function(b){b.addEventListener('click',function(){pipeState.et=+b.dataset.i;go('pipe');});});
+  }
+  function barChart(){
+    var meses=[];for(var i=5;i>=0;i--){var d=new Date(HOY);d.setMonth(d.getMonth()-i);meses.push(d.toLocaleDateString('es-CO',{month:'short'}).replace('.',''));}
+    var M=[18.4,21.2,19.8,24.6,23.1,27.9],A=[12.1,14.8,16.2,15.4,19.7,21.3];
+    var W=560,H=230,pl=34,pb=26,pt=10,max=30,bw=18,gw=(W-pl-10)/6;
+    var s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Producción mensual">';
+    for(var g=0;g<=3;g++){var y=pt+(H-pt-pb)*(1-g/3);s+='<line x1="'+pl+'" x2="'+(W-6)+'" y1="'+y+'" y2="'+y+'" stroke="var(--mx-line)" stroke-dasharray="3 4"/><text x="'+(pl-8)+'" y="'+(y+4)+'" text-anchor="end">'+(max*g/3)+'</text>';}
+    meses.forEach(function(m,i){var x=pl+gw*i+gw/2;var hm=(H-pt-pb)*M[i]/max,ha=(H-pt-pb)*A[i]/max;
+      s+='<rect x="'+(x-bw-2)+'" y="'+(H-pb-hm)+'" width="'+bw+'" height="'+hm+'" rx="5" fill="#0F3E8C"><title>Mateo '+M[i]+' M</title></rect>';
+      s+='<rect x="'+(x+2)+'" y="'+(H-pb-ha)+'" width="'+bw+'" height="'+ha+'" rx="5" fill="#00A7E8"><title>Andrea '+A[i]+' M</title></rect>';
+      s+='<text x="'+x+'" y="'+(H-8)+'" text-anchor="middle">'+m+'</text>';});
+    return s+'</svg>';
+  }
+  function donut(byO){var tot=0;for(var k in byO)tot+=byO[k];var a=0,s='<svg viewBox="0 0 120 120">',r=46,C=2*Math.PI*r;
+    Object.keys(ORIG).forEach(function(o){if(!byO[o])return;var f=byO[o]/tot;s+='<circle cx="60" cy="60" r="'+r+'" fill="none" stroke="'+ORIG[o][1]+'" stroke-width="16" stroke-dasharray="'+(f*C)+' '+C+'" stroke-dashoffset="'+(-a*C)+'" transform="rotate(-90 60 60)"/>';a+=f;});
+    return s+'<text x="60" y="58" text-anchor="middle" style="font-size:20px;font-weight:800;fill:var(--mx-ink);font-family:Plus Jakarta Sans,sans-serif">'+tot+'</text><text x="60" y="74" text-anchor="middle" style="font-size:9px">contactos</text></svg>';}
+  function alertas(){
+    var frios=LEADS.filter(function(l){return l.dias>=7&&l.et<6;});var urg=RENOV.filter(function(r){return r.p.dias<=10&&r.et<4;});
+    var cotEsp=COTIZ.filter(function(c){return c.et===2;});var camp=CAMP.filter(function(c){return c.st==='En aprendizaje';})[0];
+    var L=[
+      ['dan','clock',frios.length+' contactos llevan 7 días o más sin avanzar','Escríbeles hoy para no perder el negocio.','pipe','Ver'],
+      ['warn','refresh',urg.length+' pólizas vencen en 10 días o menos','Confirma la renovación antes del vencimiento.','ren','Gestionar'],
+      ['info','doc',cotEsp.length+' cotizaciones esperan respuesta del cliente','Haz seguimiento a las enviadas hace más de 2 días.','cot','Revisar'],
+      ['info','mega','"'+(camp?camp.n:'')+'" está en fase de aprendizaje','No cambies presupuesto ni público durante 7 días.','meta','Ver campaña']
+    ];
+    return L.map(function(a){return '<div class="mx-alert"><span class="ic" style="background:var(--mx-'+a[0]+'-bg);color:var(--mx-'+a[0]+')">'+ico(a[1])+'</span><div><b>'+esc(a[2])+'</b><p>'+a[3]+'</p></div><button class="mx-btn mx-btn-s mx-btn-sm" data-go="'+a[4]+'">'+a[5]+'</button></div>';}).join('');
+  }
+
+  /* ---- Pipeline ---- */
+  var pipeState={ramo:null,as:'',o:'',q:'',vista:'tablero',et:null};
+  function leadsFiltrados(){return LEADS.filter(function(l){
+    if(pipeState.ramo&&l.ramo!==pipeState.ramo)return false; if(pipeState.as&&l.as!==pipeState.as)return false; if(pipeState.o&&l.o!==pipeState.o)return false;
+    if(pipeState.q){var q=pipeState.q.toLowerCase();if((l.n+' '+ramoN(l.ramo)+' '+l.ciudad+' '+(l.camp||'')).toLowerCase().indexOf(q)<0)return false;}return true;});}
+  function renderPipe(){
+    var F=leadsFiltrados();
+    var cnt=ETAPAS.map(function(e,i){return F.filter(function(l){return l.et===i;}).length;});
+    var val=ETAPAS.map(function(e,i){return copM(F.filter(function(l){return l.et===i;}).reduce(function(a,l){return a+l.v;},0));});
+    var usados={};LEADS.forEach(function(l){usados[l.ramo]=(usados[l.ramo]||0)+1;});
+    var h='<div class="mx-card mx-mb"><div class="mx-card-h"><div><h3>Recorrido del cliente</h3><p>9 etapas desde el primer contacto hasta la venta cruzada. El porcentaje indica qué parte de los contactos que llegaron a una etapa siguió avanzando.</p></div>'+(pipeState.et!==null?'<button class="mx-btn mx-btn-s mx-btn-sm" id="pClrEt">Ver todas las etapas</button>':'')+'</div><div id="pRail">'+rail(ETAPAS,cnt,val,null,null,pipeState.et,true)+'</div></div>';
+    h+='<div class="mx-toolbar"><input class="mx-input" id="pQ" placeholder="Buscar cliente, ramo, ciudad o campaña" value="'+esc(pipeState.q)+'">'+
+      '<select class="mx-select" id="pAs"><option value="">Todos los asesores</option><option value="M"'+(pipeState.as==='M'?' selected':'')+'>Mateo Herrera</option><option value="A"'+(pipeState.as==='A'?' selected':'')+'>Andrea</option></select>'+
+      '<select class="mx-select" id="pO"><option value="">Todos los orígenes</option>'+Object.keys(ORIG).map(function(o){return '<option value="'+o+'"'+(pipeState.o===o?' selected':'')+'>'+ORIG[o][0]+'</option>';}).join('')+'</select>'+
+      '<div class="mx-seg" id="pVista"><button data-v="tablero" class="'+(pipeState.vista==='tablero'?'on':'')+'">Tablero</button><button data-v="lista" class="'+(pipeState.vista==='lista'?'on':'')+'">Lista</button></div>'+
+      '<button class="mx-btn mx-btn-p" id="pNew" style="margin-left:auto">'+ico('plus')+'Nuevo contacto</button></div>';
+    h+='<div class="mx-chips" id="pChips"><button class="mx-chip all'+(!pipeState.ramo?' on':'')+'" data-r="">Todos los ramos</button>'+Object.keys(RAMOS).map(function(r){return '<button class="mx-chip'+(pipeState.ramo===r?' on':'')+'" data-r="'+r+'" title="'+RAMOS[r][0]+'">'+code(r)+RAMOS[r][0]+(usados[r]?' <span style="opacity:.6">'+usados[r]+'</span>':'')+'</button>';}).join('')+'</div>';
+    if(pipeState.vista==='tablero'){
+      h+='<div class="mx-board" id="pBoard">';
+      ETAPAS.forEach(function(e,i){if(pipeState.et!==null&&pipeState.et!==i)return;var ls=F.filter(function(l){return l.et===i;});
+        h+='<div class="mx-col" data-et="'+i+'"><div class="mx-col-h"><span class="dot" style="background:'+ET_COL[i]+'"></span><b>'+(i+1)+'. '+e+'</b><span class="ct">'+ls.length+'</span></div><div class="mx-col-sum">'+ET_DESC[i]+' · '+copM(ls.reduce(function(a,l){return a+l.v;},0))+'</div>';
+        h+=ls.length?ls.map(leadCard).join(''):'<div class="mx-empty">Arrastra aquí un contacto</div>';h+='</div>';});
+      h+='</div><p style="font-size:.76rem;color:var(--mx-ink-3);margin-top:8px;">Arrastra una tarjeta a otra columna para cambiarla de etapa, o ábrela para ver el detalle.</p>';
+    } else {
+      h+='<div class="mx-table-wrap"><table class="mx-table"><thead><tr><th>Contacto</th><th>Ramo</th><th>Etapa</th><th>Origen</th><th>Asesor</th><th class="r">Prima posible</th><th>Días en etapa</th><th>Próximo contacto</th></tr></thead><tbody>'+
+        F.filter(function(l){return pipeState.et===null||l.et===pipeState.et;}).sort(function(a,b){return a.et-b.et;}).map(function(l){return '<tr class="click" data-id="'+l.id+'"><td><b>'+esc(l.n)+'</b><small>'+l.ciudad+'</small></td><td>'+code(l.ramo)+' '+ramoN(l.ramo)+'</td><td>'+(l.et+1)+'. '+ETAPAS[l.et]+steps(9,l.et)+'</td><td>'+src(l.o)+'</td><td>'+ASES[l.as]+'</td><td class="r"><b>'+cop(l.v)+'</b></td><td>'+badgeDias(l.dias).replace('class="d"','')+'</td><td>'+fch(l.prox)+'</td></tr>';}).join('')+'</tbody></table></div>';
+    }
+    $('#vPipe').innerHTML=h;
+    // eventos
+    $$('#pRail .mx-stage').forEach(function(b){b.addEventListener('click',function(){var i=+b.dataset.i;pipeState.et=(pipeState.et===i?null:i);renderPipe();});});
+    var clr=$('#pClrEt');if(clr)clr.addEventListener('click',function(){pipeState.et=null;renderPipe();});
+    var q=$('#pQ');q.addEventListener('input',function(){pipeState.q=q.value;clearTimeout(q._t);q._t=setTimeout(function(){renderPipe();var n=$('#pQ');n.focus();n.setSelectionRange(n.value.length,n.value.length);},250);});
+    $('#pAs').addEventListener('change',function(e){pipeState.as=e.target.value;renderPipe();});
+    $('#pO').addEventListener('change',function(e){pipeState.o=e.target.value;renderPipe();});
+    $$('#pVista button').forEach(function(b){b.addEventListener('click',function(){pipeState.vista=b.dataset.v;renderPipe();});});
+    $$('#pChips .mx-chip').forEach(function(c){c.addEventListener('click',function(){pipeState.ramo=c.dataset.r||null;if(pipeState.ramo===c.dataset.r&&c.classList.contains('on')&&c.dataset.r)pipeState.ramo=null;renderPipe();});});
+    $('#pNew').addEventListener('click',nuevoLead);
+    $$('#vPipe [data-id]').forEach(function(el){el.addEventListener('click',function(){leadDrawer(el.dataset.id);});});
+    // drag & drop
+    $$('#pBoard .mx-lead').forEach(function(c){c.addEventListener('dragstart',function(e){c.classList.add('drag');e.dataTransfer.setData('text/plain',c.dataset.id);e.dataTransfer.effectAllowed='move';});c.addEventListener('dragend',function(){c.classList.remove('drag');});});
+    $$('#pBoard .mx-col').forEach(function(col){
+      col.addEventListener('dragover',function(e){e.preventDefault();col.classList.add('over');});
+      col.addEventListener('dragleave',function(e){if(!col.contains(e.relatedTarget))col.classList.remove('over');});
+      col.addEventListener('drop',function(e){e.preventDefault();col.classList.remove('over');var id=e.dataTransfer.getData('text/plain');moverLead(id,+col.dataset.et);});
+    });
+  }
+  function leadCard(l){return '<div class="mx-lead" draggable="true" data-id="'+l.id+'"><div class="mx-lead-top">'+code(l.ramo)+src(l.o)+badgeDias(l.dias)+'</div><h4>'+esc(l.n)+'</h4><div class="r">'+ramoN(l.ramo)+' · '+l.ciudad+'</div>'+steps(9,l.et)+'<div class="mx-lead-bot"><span class="val">'+copM(l.v)+'</span><span>Próx. '+fch(l.prox)+'</span>'+asAv(l.as)+'</div></div>';}
+  function moverLead(id,et){var l=LEADS.filter(function(x){return x.id===id;})[0];if(!l||l.et===et)return;l.et=et;l.dias=0;if(et>=4&&l.aseg==='Por definir')l.aseg=pick(ASEG);toast(l.n+' pasó a «'+ETAPAS[et]+'»');refreshAll();}
+  function leadDrawer(id){var l=LEADS.filter(function(x){return x.id===id;})[0];if(!l)return;
+    var msg='Hola '+l.n.split(' ')[0]+', te saluda '+ASES[l.as]+' de Mateo Herrera Seguros. Te escribo por tu '+ramoN(l.ramo).toLowerCase()+'. ¿Tienes un momento?';
+    var b='<div class="mx-sec">Etapa actual</div>'+vsteps(ETAPAS,l.et)+
+      '<div class="mx-sec">Datos del contacto</div><dl class="mx-dl"><dt>Ramo</dt><dd>'+code(l.ramo)+' '+ramoN(l.ramo)+'</dd><dt>Prima posible</dt><dd>'+cop(l.v)+'</dd><dt>Aseguradora</dt><dd>'+l.aseg+'</dd><dt>Origen</dt><dd>'+ORIG[l.o][0]+(l.camp?'<br><small style="color:var(--mx-ink-3)">Campaña: '+esc(l.camp)+'</small>':'')+'</dd><dt>Asesor</dt><dd>'+ASES[l.as]+'</dd><dt>Ciudad</dt><dd>'+l.ciudad+'</dd><dt>Teléfono</dt><dd>+'+l.tel.slice(0,2)+' '+l.tel.slice(2,5)+' '+l.tel.slice(5)+'</dd><dt>Días en la etapa</dt><dd>'+l.dias+'</dd><dt>Próximo contacto</dt><dd>'+fchL(l.prox)+'</dd></dl>'+
+      '<div class="mx-sec">Nota</div><div class="mx-note">'+esc(l.nota)+'</div>'+
+      '<label class="mx-field"><span>Mover a la etapa</span><select class="mx-select" id="drEt">'+ETAPAS.map(function(e,i){return '<option value="'+i+'"'+(i===l.et?' selected':'')+'>'+(i+1)+'. '+e+'</option>';}).join('')+'</select></label>';
+    var f='<a class="mx-btn mx-btn-wa" target="_blank" rel="noopener" href="'+waLink(l.tel,msg)+'">'+ico('wa')+'Escribir por WhatsApp</a>'+(l.et<8?'<button class="mx-btn mx-btn-p" id="drNext">Avanzar a «'+ETAPAS[l.et+1]+'»</button>':'');
+    openDrawer(l.n,code(l.ramo)+' '+ramoN(l.ramo)+' · Etapa '+(l.et+1)+' de 9',b,f);
+    $('#drEt').addEventListener('change',function(e){moverLead(l.id,+e.target.value);leadDrawer(l.id);});
+    var nx=$('#drNext');if(nx)nx.addEventListener('click',function(){moverLead(l.id,l.et+1);leadDrawer(l.id);});
+  }
+  function nuevoLead(){
+    var b='<label class="mx-field"><span>Nombre del cliente</span><input class="mx-input" id="nlN" placeholder="Ej. María López"></label><label class="mx-field"><span>WhatsApp</span><input class="mx-input" id="nlT" placeholder="310 000 0000" inputmode="tel"></label>'+
+      '<label class="mx-field"><span>Ramo de interés</span><select class="mx-select" id="nlR">'+Object.keys(RAMOS).map(function(r){return '<option value="'+r+'">'+RAMOS[r][0]+'</option>';}).join('')+'</select></label>'+
+      '<label class="mx-field"><span>Origen</span><select class="mx-select" id="nlO">'+Object.keys(ORIG).map(function(o){return '<option value="'+o+'">'+ORIG[o][0]+'</option>';}).join('')+'</select></label>'+
+      '<label class="mx-field"><span>Asesor</span><select class="mx-select" id="nlA"><option value="M">Mateo Herrera</option><option value="A">Andrea</option></select></label>'+
+      '<div class="mx-note">En esta versión de demostración el contacto se guarda solo mientras la página esté abierta.</div>';
+    openDrawer('Nuevo contacto','Entra al pipeline en la etapa 1 · Nuevo cliente',b,'<button class="mx-btn mx-btn-p" id="nlSave">Agregar al pipeline</button>');
+    $('#nlSave').addEventListener('click',function(){var n=$('#nlN').value.trim();if(!n){$('#nlN').focus();$('#nlN').style.borderColor='var(--mx-dan)';return;}
+      var r=$('#nlR').value;LEADS.unshift({id:'L'+Date.now(),n:n,tel:'57'+($('#nlT').value.replace(/\D/g,'')||'3100000000'),ciudad:'Ibagué',ramo:r,o:$('#nlO').value,camp:null,as:$('#nlA').value,et:0,v:prima(r),dias:0,prox:addD(1),aseg:'Por definir',nota:'Contacto creado desde el portal.'});
+      closeDrawer();toast('Contacto agregado a «Nuevo cliente»');refreshAll();});
+  }
+
+  /* ---- Clientes ---- */
+  var cliQ='';
+  function renderCli(){
+    var F=CLIENTES.filter(function(c){if(!cliQ)return true;var s=(c.n+' '+c.doc+' '+c.ciudad+' '+c.pols.map(function(p){return ramoN(p.ramo)+' '+p.aseg;}).join(' ')).toLowerCase();return s.indexOf(cliQ.toLowerCase())>-1;});
+    var tot=CLIENTES.reduce(function(a,c){return a+c.pols.reduce(function(x,p){return x+p.prima;},0);},0);var emp=CLIENTES.filter(function(c){return c.tipo==='Empresa';}).length;
+    var mono=CLIENTES.filter(function(c){return c.pols.length===1;}).length;
+    var h='<div class="mx-grid mx-g-kpi">'+kpi('Clientes activos',CLIENTES.length,emp+' empresas · '+(CLIENTES.length-emp)+' personas','users',true)+kpi('Primas anuales en cartera',copM(tot),'suma de pólizas vigentes','money')+kpi('Pólizas por cliente',(CLIENTES.reduce(function(a,c){return a+c.pols.length;},0)/CLIENTES.length).toLocaleString('es-CO',{maximumFractionDigits:1}),'promedio','shield')+kpi('Clientes con un solo ramo',mono,'oportunidad de venta cruzada','trend')+'</div>';
+    h+='<div class="mx-toolbar"><input class="mx-input" id="cQ" placeholder="Buscar por nombre, documento, ramo o aseguradora" value="'+esc(cliQ)+'"></div>';
+    h+='<div class="mx-table-wrap"><table class="mx-table"><thead><tr><th>Cliente</th><th>Documento</th><th>Pólizas</th><th>Aseguradoras</th><th class="r">Primas anuales</th><th>Asesor</th><th>Próximo vencimiento</th></tr></thead><tbody>'+
+      F.map(function(c){var pr=c.pols.reduce(function(a,p){return a+p.prima;},0);var nx=c.pols.slice().sort(function(a,b){return a.dias-b.dias;})[0];var bc=nx.dias<=15?'dan':(nx.dias<=45?'warn':'ok');
+        return '<tr class="click" data-cl="'+c.id+'"><td><b>'+esc(c.n)+'</b><small>'+c.tipo+' · '+c.ciudad+'</small></td><td>'+c.doc+'</td><td>'+c.pols.map(function(p){return code(p.ramo);}).join(' ')+'</td><td>'+c.pols.map(function(p){return p.aseg;}).filter(function(v,i,a){return a.indexOf(v)===i;}).join(', ')+'</td><td class="r"><b>'+cop(pr)+'</b></td><td>'+ASES[c.as]+'</td><td><span class="mx-badge b-'+bc+'"><i></i>'+fch(nx.vence)+(nx.dias<0?' · vencida':'')+'</span></td></tr>';}).join('')+
+      (F.length?'':'<tr><td colspan="7" style="text-align:center;padding:28px">No hay clientes que coincidan con «'+esc(cliQ)+'». Prueba con otro nombre o documento.</td></tr>')+'</tbody></table></div>';
+    $('#vCli').innerHTML=h;
+    var q=$('#cQ');q.addEventListener('input',function(){cliQ=q.value;clearTimeout(q._t);q._t=setTimeout(function(){renderCli();var n=$('#cQ');n.focus();n.setSelectionRange(n.value.length,n.value.length);},250);});
+    $$('#vCli [data-cl]').forEach(function(tr){tr.addEventListener('click',function(){cliDrawer(tr.dataset.cl);});});
+  }
+  function cliDrawer(id){var c=CLIENTES.filter(function(x){return x.id===id;})[0];
+    var tiene=c.pols.map(function(p){return p.ramo;});var sug=(c.tipo==='Empresa'?['PYM','VCO','ARL','SCO','CUM','AUC']:['VID','HOG','SAL','EDU','ATR','EXE']).filter(function(r){return tiene.indexOf(r)<0;}).slice(0,3);
+    var b='<dl class="mx-dl"><dt>Documento</dt><dd>'+c.doc+'</dd><dt>Tipo</dt><dd>'+c.tipo+'</dd><dt>Ciudad</dt><dd>'+c.ciudad+'</dd><dt>Asesor</dt><dd>'+ASES[c.as]+'</dd><dt>Cliente desde</dt><dd>'+c.desde+'</dd></dl>'+
+      '<div class="mx-sec">Pólizas ('+c.pols.length+')</div>'+c.pols.map(function(p){return '<div class="mx-note" style="display:flex;gap:10px;align-items:center;"><div style="flex:1">'+code(p.ramo)+' <b style="color:var(--mx-ink)">'+ramoN(p.ramo)+'</b><br><small>'+p.aseg+' · '+p.num+' · vence '+fchL(p.vence)+'</small></div><b class="num" style="color:var(--mx-ink)">'+copM(p.prima)+'</b></div>';}).join('')+
+      '<div class="mx-sec">Sugerencia de venta cruzada</div><div class="mx-note">Este cliente aún no tiene: '+sug.map(function(r){return code(r)+' '+ramoN(r);}).join(', ')+'.</div>';
+    openDrawer(c.n,c.tipo+' · '+c.pols.length+' póliza(s)',b,'<a class="mx-btn mx-btn-wa" target="_blank" rel="noopener" href="'+waLink(c.tel,'Hola '+c.n.split(' ')[0]+', te saluda '+ASES[c.as]+' de Mateo Herrera Seguros.')+'">'+ico('wa')+'Escribir por WhatsApp</a>');
+  }
+
+  /* ---- Cotizaciones ---- */
+  var cotEt=null;
+  function renderCot(){
+    var cnt=COT_ETAPAS.map(function(e,i){return COTIZ.filter(function(c){return c.et===i;}).length;});
+    var F=COTIZ.filter(function(c){return cotEt===null||c.et===cotEt;});
+    var exp=COTIZ.filter(function(c){return c.et===4;});var env=COTIZ.filter(function(c){return c.et>=2;}).length;
+    var h='<div class="mx-grid mx-g-kpi">'+kpi('Cotizaciones del mes',COTIZ.length,'solicitadas por clientes','doc',true)+kpi('Expedidas',exp.length,pct(exp.length,env)+' de las enviadas','shield')+kpi('Prima expedida',copM(exp.reduce(function(a,c){return a+c.of[0].v;},0)),'mejor oferta aceptada','money')+kpi('Aseguradoras comparadas',(COTIZ.reduce(function(a,c){return a+c.of.length;},0)/COTIZ.length).toLocaleString('es-CO',{maximumFractionDigits:1}),'promedio por cotización','target')+'</div>';
+    h+='<div class="mx-card mx-mb"><div class="mx-card-h"><div><h3>Etapas de la cotización</h3><p>Toca una etapa para filtrar la tabla.</p></div>'+(cotEt!==null?'<button class="mx-btn mx-btn-s mx-btn-sm" id="cClr">Ver todas</button>':'')+'</div><div id="cRail">'+rail(COT_ETAPAS,cnt,null,['#0C2266','#0F3E8C','#0869B8','#0395D6','#0E8A55','#8A94AD'],null,cotEt)+'</div></div>';
+    h+='<div class="mx-table-wrap"><table class="mx-table"><thead><tr><th>N.º</th><th>Cliente</th><th>Ramo</th><th>Etapa</th><th>Aseguradoras comparadas</th><th class="r">Mejor oferta</th><th>Asesor</th><th>Fecha</th></tr></thead><tbody>'+
+      F.map(function(c){var bc=['b-mute','b-info','b-warn','b-info','b-ok','b-dan'][c.et];return '<tr class="click" data-cot="'+c.id+'"><td><b>'+c.id+'</b></td><td><b>'+esc(c.l.n)+'</b></td><td>'+code(c.l.ramo)+' '+ramoN(c.l.ramo)+'</td><td><span class="mx-badge '+bc+'"><i></i>'+COT_ETAPAS[c.et]+'</span>'+(c.et<5?steps(5,c.et):'')+'</td><td>'+c.of.map(function(o){return o.a;}).join(', ')+'</td><td class="r"><b>'+cop(c.of[0].v)+'</b><small>'+c.of[0].a+'</small></td><td>'+ASES[c.as]+'</td><td>'+fch(c.fecha)+'</td></tr>';}).join('')+'</tbody></table></div>';
+    $('#vCot').innerHTML=h;
+    $$('#cRail .mx-stage').forEach(function(b){b.addEventListener('click',function(){var i=+b.dataset.i;cotEt=(cotEt===i?null:i);renderCot();});});
+    var cl=$('#cClr');if(cl)cl.addEventListener('click',function(){cotEt=null;renderCot();});
+    $$('#vCot [data-cot]').forEach(function(tr){tr.addEventListener('click',function(){cotDrawer(tr.dataset.cot);});});
+  }
+  function cotDrawer(id){var c=COTIZ.filter(function(x){return x.id===id;})[0];var mx=c.of[c.of.length-1].v;
+    var b='<div class="mx-sec">Etapa</div>'+vsteps(COT_ETAPAS.slice(0,5),c.et===5?2:c.et)+(c.et===5?'<div class="mx-note" style="color:var(--mx-dan)">El cliente no aceptó la propuesta. Puedes reactivarla en 60 días.</div>':'')+
+      '<div class="mx-sec">Comparativo de aseguradoras</div>'+c.of.map(function(o,i){return '<div class="mx-hbar"><span>'+(i===0?'<b>'+o.a+'</b>':o.a)+'</span><span class="tr"><i style="width:'+(o.v/mx*100)+'%;'+(i===0?'':'background:var(--mx-ink-3);opacity:.45')+'"></i></span><b>'+cop(o.v)+'</b></div>';}).join('')+
+      '<div class="mx-note">La mejor oferta ('+c.of[0].a+') ahorra '+cop(mx-c.of[0].v)+' frente a la más costosa.</div>'+
+      '<dl class="mx-dl"><dt>Cliente</dt><dd>'+esc(c.l.n)+'</dd><dt>Ramo</dt><dd>'+ramoN(c.l.ramo)+'</dd><dt>Asesor</dt><dd>'+ASES[c.as]+'</dd><dt>Fecha</dt><dd>'+fchL(c.fecha)+'</dd></dl>';
+    openDrawer(c.id,esc(c.l.n)+' · '+COT_ETAPAS[c.et],b,'<a class="mx-btn mx-btn-wa" target="_blank" rel="noopener" href="'+waLink(c.l.tel,'Hola '+c.l.n.split(' ')[0]+', ya tengo tu cotización de '+ramoN(c.l.ramo).toLowerCase()+'. La mejor opción es '+c.of[0].a+' por '+cop(c.of[0].v)+' al año.')+'">'+ico('wa')+'Enviar al cliente</a>');
+  }
+
+  /* ---- Renovaciones ---- */
+  var renEt=null;
+  function renderRen(){
+    var cnt=REN_ETAPAS.map(function(e,i){return RENOV.filter(function(r){return r.et===i;}).length;});
+    var F=RENOV.filter(function(r){return renEt===null||r.et===renEt;});
+    var rojo=RENOV.filter(function(r){return r.p.dias<=15&&r.et<4;}),amb=RENOV.filter(function(r){return r.p.dias>15&&r.p.dias<=30&&r.et<4;}),azul=RENOV.filter(function(r){return r.p.dias>30&&r.et<4;});
+    var h='<div class="mx-grid mx-g-kpi">'+kpi('Por renovar en 60 días',RENOV.filter(function(r){return r.et<4;}).length,copM(RENOV.reduce(function(a,r){return a+(r.et<4?r.p.prima:0);},0))+' en primas','refresh',true)+
+      '<div class="mx-kpi"><div class="l"><span class="mx-badge b-dan"><i></i>≤ 15 días</span></div><div class="v">'+rojo.length+'</div><div class="s">urgentes</div></div>'+
+      '<div class="mx-kpi"><div class="l"><span class="mx-badge b-warn"><i></i>16 a 30 días</span></div><div class="v">'+amb.length+'</div><div class="s">por vencer</div></div>'+
+      '<div class="mx-kpi"><div class="l"><span class="mx-badge b-info"><i></i>31 a 60 días</span></div><div class="v">'+azul.length+'</div><div class="s">con tiempo</div></div></div>';
+    h+='<div class="mx-card mx-mb"><div class="mx-card-h"><div><h3>Etapas de la renovación</h3><p>En seguros, conservar al cliente vale más que conseguir uno nuevo.</p></div>'+(renEt!==null?'<button class="mx-btn mx-btn-s mx-btn-sm" id="rClr">Ver todas</button>':'')+'</div><div id="rRail">'+rail(REN_ETAPAS,cnt,null,['#0C2266','#0F3E8C','#0869B8','#0395D6','#0E8A55'],null,renEt,true)+'</div></div>';
+    h+='<div class="mx-table-wrap"><table class="mx-table"><thead><tr><th>Cliente</th><th>Póliza</th><th>Aseguradora</th><th>Vence</th><th>Semáforo</th><th>Etapa</th><th class="r">Prima</th><th>Acción</th></tr></thead><tbody>'+
+      F.map(function(r,idx){var d=r.p.dias;var bc=d<0?'b-dan':(d<=15?'b-dan':(d<=30?'b-warn':'b-info'));var lb=d<0?'Vencida hace '+(-d)+' d':(d===0?'Vence hoy':d+' días');
+        var msg='Hola '+r.cl.n.split(' ')[0]+', te saluda '+ASES[r.cl.as]+' de Mateo Herrera Seguros. Tu póliza de '+ramoN(r.p.ramo).toLowerCase()+' con '+r.p.aseg+' vence el '+fchL(r.p.vence)+'. ¿Te preparo la renovación?';
+        return '<tr><td><b>'+esc(r.cl.n)+'</b><small>'+ASES[r.cl.as]+'</small></td><td>'+code(r.p.ramo)+' '+ramoN(r.p.ramo)+'<small>'+r.p.num+'</small></td><td>'+r.p.aseg+'</td><td>'+fchL(r.p.vence)+'</td><td><span class="mx-badge '+(r.et===4?'b-ok':bc)+'"><i></i>'+(r.et===4?'Renovada':lb)+'</span></td><td><select class="mx-select" data-ren="'+RENOV.indexOf(r)+'" style="padding:6px 8px;font-size:.78rem;min-width:170px">'+REN_ETAPAS.map(function(e,i){return '<option value="'+i+'"'+(i===r.et?' selected':'')+'>'+(i+1)+'. '+e+'</option>';}).join('')+'</select></td><td class="r"><b>'+cop(r.p.prima)+'</b></td><td><a class="mx-btn mx-btn-wa mx-btn-sm" target="_blank" rel="noopener" href="'+waLink(r.cl.tel,msg)+'">'+ico('wa')+'Avisar</a></td></tr>';}).join('')+'</tbody></table></div>';
+    $('#vRen').innerHTML=h;
+    $$('#rRail .mx-stage').forEach(function(b){b.addEventListener('click',function(){var i=+b.dataset.i;renEt=(renEt===i?null:i);renderRen();});});
+    var cl=$('#rClr');if(cl)cl.addEventListener('click',function(){renEt=null;renderRen();});
+    $$('#vRen [data-ren]').forEach(function(s){s.addEventListener('change',function(){RENOV[+s.dataset.ren].et=+s.value;toast('Renovación actualizada a «'+REN_ETAPAS[+s.value]+'»');refreshAll();});});
+  }
+
+  /* ---- Campañas Meta ---- */
+  var metaFe=null;
+  function spark(seedN,up){var pts=[],v=40;for(var i=0;i<14;i++){v+=Math.sin(i*1.3+seedN)*8+(up?2.2:-.5);pts.push(Math.max(6,Math.min(34,v/2)));}var s='';pts.forEach(function(y,i){s+=(i?'L':'M')+(i*(200/13)).toFixed(1)+' '+(36-y).toFixed(1);});return '<svg class="mx-spark" viewBox="0 0 200 36" preserveAspectRatio="none"><path d="'+s+'" fill="none" stroke="var(--mx-cyan)" stroke-width="2"/></svg>';}
+  function renderMeta(){
+    var t=calcMeta();var act=CAMP.filter(function(c){return c.st==='Activa'||c.st==='En aprendizaje';}).length;
+    var h='<div class="mx-grid mx-g-kpi">'+kpi('Inversión del mes',copM(t.g),act+' campañas en circulación','money',true)+kpi('Personas alcanzadas',nf(t.alc),nf(t.imp)+' impresiones','users')+kpi('Conversaciones de WhatsApp',nf(t.conv),'costo promedio '+cop(t.g/Math.max(1,t.conv)),'chat')+kpi('Pólizas atribuidas',t.pol,pct(t.pol,t.conv)+' de las conversaciones','shield')+kpi('Retorno sobre la inversión',(t.pri/Math.max(1,t.g)).toLocaleString('es-CO',{maximumFractionDigits:1})+'x',copM(t.pri)+' en primas generadas','trend')+'</div>';
+    // embudo
+    var steps2=[['Impresiones','Veces que se mostró un anuncio',t.imp],['Alcance','Personas únicas',t.alc],['Clics al enlace','Abrieron WhatsApp o el formulario',t.cl],['Conversaciones','Chats iniciados con el asesor',t.conv],['Contactos calificados','Tienen necesidad real',Math.round(t.conv*.62)],['Cotizaciones','Se les envió propuesta',t.cot],['Pólizas pagadas','Clientes nuevos',t.pol]];
+    var cols=['#0A1650','#0C2266','#0F3E8C','#0869B8','#0580C9','#0395D6','#00A7E8'];
+    h+='<div class="mx-card mx-mb"><div class="mx-card-h"><div><h3>Embudo de Meta a póliza pagada</h3><p>Del anuncio al cliente: cada barra muestra cuántos pasan a la siguiente etapa.</p></div></div><div class="mx-funnel">'+
+      steps2.map(function(s,i){var w=Math.max(8,Math.pow(s[2]/steps2[0][2],.28)*100);return '<div class="mx-fn"><div class="lb">'+s[0]+'<small>'+s[1]+'</small></div><div class="bar"><i style="width:'+w+'%;background:'+cols[i]+'">'+nf(s[2])+'</i></div><div class="pc">'+(i?'<b>'+pct(s[2],steps2[i-1][2])+'</b>de la anterior':'<b>100%</b>base')+'</div></div>';}).join('')+'</div></div>';
+    // etapas del embudo publicitario
+    h+='<div class="mx-card mx-mb"><div class="mx-card-h"><div><h3>Campañas por etapa del embudo</h3><p>Cada campaña cumple un papel distinto. Toca una para ver sus conjuntos de anuncios y su ciclo.</p></div><div class="mx-seg" id="mFe"><button data-f="" class="'+(metaFe===null?'on':'')+'">Todas</button>'+FUNNEL_ET.map(function(f,i){return '<button data-f="'+i+'" class="'+(metaFe===i?'on':'')+'">'+f[0]+'</button>';}).join('')+'</div></div><div class="mx-stagecols">'+
+      FUNNEL_ET.map(function(f,i){if(metaFe!==null&&metaFe!==i)return '';var cs=CAMP.filter(function(c){return c.fe===i;});
+        return '<div class="mx-sc"><div class="mx-sc-h"><span class="mx-code" style="background:'+cols[i*2]+'">'+(i+1)+'</span><b>'+f[0]+'</b><span class="ct">'+cs.length+'</span></div><p>'+f[1]+'</p>'+
+          cs.map(function(c){return '<div class="mx-camp" data-camp="'+c.id+'"><div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">'+stBadge(c.st)+(c.ramo!=='VAR'?code(c.ramo):'<span class="mx-code" style="background:#475569">VAR</span>')+'</div><h4>'+esc(c.n)+'</h4><div class="o">'+c.obj+'</div>'+steps(CICLO.length,c.ci)+'<div class="mx-steps-lbl">Ciclo: '+CICLO[c.ci]+'</div>'+
+            '<div class="mx-camp-m"><div>Gasto<b>'+copM(c.g)+'</b></div><div>Chats<b>'+nf(c.conv)+'</b></div><div>Pólizas<b>'+c.pol+'</b></div></div>'+(c.g?spark(c.id.charCodeAt(1),c.st==='Activa'):'')+'</div>';}).join('')+(cs.length?'':'<div class="mx-empty">Sin campañas en esta etapa</div>')+'</div>';}).join('')+'</div></div>';
+    // tabla detallada
+    h+='<div class="mx-card mx-mb"><div class="mx-card-h"><div><h3>Rendimiento por campaña</h3><p>Métricas del administrador de anuncios y resultado comercial en el pipeline</p></div></div><div class="mx-table-wrap"><table class="mx-table" style="min-width:1080px"><thead><tr><th>Campaña</th><th>Etapa</th><th>Estado</th><th class="r">Presupuesto/día</th><th class="r">Gasto</th><th class="r">Impresiones</th><th class="r">CTR</th><th class="r">CPM</th><th class="r">Chats</th><th class="r">Costo por chat</th><th class="r">Cotizaciones</th><th class="r">Pólizas</th><th class="r">Retorno</th></tr></thead><tbody>'+
+      CAMP.map(function(c){return '<tr class="click" data-camp="'+c.id+'"><td><b>'+esc(c.n)+'</b><small>'+c.obj+'</small></td><td>'+FUNNEL_ET[c.fe][0]+'</td><td>'+stBadge(c.st)+'</td><td class="r">'+cop(c.pd)+'</td><td class="r"><b>'+cop(c.g)+'</b></td><td class="r">'+nf(c.imp)+'</td><td class="r">'+pct(c.cl,c.imp)+'</td><td class="r">'+(c.imp?cop(c.g/c.imp*1000):'—')+'</td><td class="r">'+nf(c.conv)+'</td><td class="r">'+(c.conv?cop(c.g/c.conv):'—')+'</td><td class="r">'+c.cot+'</td><td class="r"><b>'+c.pol+'</b></td><td class="r">'+(c.g?(c.pri/c.g).toLocaleString('es-CO',{maximumFractionDigits:1})+'x':'—')+'</td></tr>';}).join('')+
+      '</tbody><tfoot><tr><td><b>Total</b></td><td></td><td></td><td class="r">'+cop(CAMP.reduce(function(a,c){return a+(c.st==='Activa'||c.st==='En aprendizaje'?c.pd:0);},0))+'</td><td class="r"><b>'+cop(t.g)+'</b></td><td class="r">'+nf(t.imp)+'</td><td class="r">'+pct(t.cl,t.imp)+'</td><td class="r">'+cop(t.g/t.imp*1000)+'</td><td class="r">'+nf(t.conv)+'</td><td class="r">'+cop(t.g/t.conv)+'</td><td class="r">'+t.cot+'</td><td class="r"><b>'+t.pol+'</b></td><td class="r">'+(t.pri/t.g).toLocaleString('es-CO',{maximumFractionDigits:1})+'x</td></tr></tfoot></table></div></div>';
+    // ciclo + checklist
+    var cicloCnt=CICLO.map(function(e,i){return CAMP.filter(function(c){return c.ci===i;}).length;});
+    h+='<div class="mx-grid mx-g-2e"><div class="mx-card"><div class="mx-card-h"><div><h3>Ciclo de vida de las campañas</h3><p>En qué fase está cada campaña, de la planeación al cierre</p></div></div>'+rail(CICLO,cicloCnt,null,['#0A1650','#0C2266','#0F3E8C','#0869B8','#0580C9','#00A7E8','#8A94AD'])+'</div>';
+    var CK=[['ok','Píxel y conjunto de datos','Instalado en el sitio web; mide visitas y clics a WhatsApp.'],['ok','Número de WhatsApp Business conectado','310 864 6019 vinculado a la página de Facebook.'],['warn','API de conversiones','Pendiente: envía a Meta los contactos que se convierten en póliza.'],['warn','Categoría especial de anuncios','Revisa si aplica «servicios financieros»: limita la segmentación por edad, género y ubicación.'],['ok','Públicos personalizados','Chats de 30 días y visitantes del sitio para remarketing.'],['warn','Pruebas A/B de creativos','Sugerido: probar video testimonio contra carrusel en Auto.']];
+    h+='<div class="mx-card"><div class="mx-card-h"><div><h3>Lista de control de Meta</h3><p>Configuración que sostiene la medición</p></div></div>'+CK.map(function(k){return '<div class="mx-check"><i style="background:var(--mx-'+k[0]+'-bg);color:var(--mx-'+k[0]+')">'+(k[0]==='ok'?'✓':'!')+'</i><div><b>'+k[1]+'</b>'+k[2]+'</div></div>';}).join('')+'</div></div>';
+    $('#vMeta').innerHTML=h;
+    $$('#mFe button').forEach(function(b){b.addEventListener('click',function(){metaFe=b.dataset.f===''?null:+b.dataset.f;renderMeta();});});
+    $$('#vMeta [data-camp]').forEach(function(el){el.addEventListener('click',function(){campDrawer(el.dataset.camp);});});
+  }
+  function campDrawer(id){var c=CAMP.filter(function(x){return x.id===id;})[0];
+    var sets=[{n:'Público principal',p:.62},{n:c.fe===3?'Públicos similares':'Intereses ampliados',p:.38}];
+    var ads=[c.fmt.split('+')[0].trim(),'Versión B · texto corto','Historia 9:16'];
+    var b='<div class="mx-sec">Ciclo de la campaña</div>'+vsteps(CICLO,c.ci)+
+      '<dl class="mx-dl"><dt>Etapa del embudo</dt><dd>'+FUNNEL_ET[c.fe][0]+'</dd><dt>Objetivo en Meta</dt><dd>'+c.obj+'</dd><dt>Público</dt><dd>'+c.pub+'</dd><dt>Formato</dt><dd>'+c.fmt+'</dd><dt>Presupuesto diario</dt><dd>'+cop(c.pd)+'</dd><dt>Estado</dt><dd>'+stBadge(c.st)+'</dd></dl>'+
+      '<div class="mx-sec">Conjuntos de anuncios</div>'+(c.g?sets.map(function(s,i){return '<div class="mx-note"><b style="color:var(--mx-ink)">'+s.n+'</b><br><small>Gasto '+cop(c.g*s.p)+' · '+nf(c.conv*s.p)+' chats · costo por chat '+cop(c.g/Math.max(1,c.conv))+'</small><div style="margin-top:8px">'+ads.slice(0,i?2:3).map(function(a){return '<span class="mx-badge b-info" style="margin:0 4px 4px 0">'+a+'</span>';}).join('')+'</div></div>';}).join(''):'<div class="mx-note">La campaña aún no está publicada. Sigue la etapa «'+CICLO[c.ci]+'».</div>')+
+      '<div class="mx-sec">Resultado comercial</div><dl class="mx-dl"><dt>Conversaciones</dt><dd>'+nf(c.conv)+'</dd><dt>Cotizaciones</dt><dd>'+c.cot+'</dd><dt>Pólizas pagadas</dt><dd>'+c.pol+'</dd><dt>Primas generadas</dt><dd>'+cop(c.pri)+'</dd><dt>Retorno</dt><dd>'+(c.g?(c.pri/c.g).toLocaleString('es-CO',{maximumFractionDigits:1})+'x':'—')+'</dd></dl>';
+    openDrawer(c.n,FUNNEL_ET[c.fe][0]+' · '+c.obj,b,'<button class="mx-btn mx-btn-s" data-camp-link="'+c.id+'">'+ico('link')+'Crear enlace de WhatsApp</button><button class="mx-btn mx-btn-p" data-camp-leads="'+esc(c.n)+'">Ver sus contactos en el pipeline</button>');
+    $('[data-camp-link]').addEventListener('click',function(){closeDrawer();linkCamp=c.id;go('links');});
+    $('[data-camp-leads]').addEventListener('click',function(){closeDrawer();pipeState.q=c.n;pipeState.et=null;go('pipe');});
+  }
+
+  /* ---- Enlaces WhatsApp ---- */
+  var linkCamp=null;
+  function renderLinks(){
+    var h='<div class="mx-grid mx-g-2"><div class="mx-card"><div class="mx-card-h"><div><h3>Generador de enlaces para anuncios</h3><p>El enlace abre WhatsApp con el mensaje escrito y un código que identifica la campaña, para saber de dónde vino cada contacto.</p></div></div>'+
+      '<label class="mx-field"><span>Campaña</span><select class="mx-select" id="lkC">'+CAMP.map(function(c){return '<option value="'+c.id+'"'+(linkCamp===c.id?' selected':'')+'>'+esc(c.n)+'</option>';}).join('')+'</select></label>'+
+      '<label class="mx-field"><span>Número que recibe</span><select class="mx-select" id="lkN"><option value="573108646019">WhatsApp principal · 310 864 6019</option><option value="573116574219">Gerencia · 311 657 4219</option></select></label>'+
+      '<label class="mx-field"><span>Mensaje que llegará escrito</span><textarea class="mx-input" id="lkM" rows="3">¡Hola Mateo! Vi su anuncio y quiero cotizar mi seguro.</textarea></label>'+
+      '<div style="display:flex;gap:8px;flex-wrap:wrap"><button class="mx-btn mx-btn-p" id="lkGen">'+ico('link')+'Generar enlace</button><button class="mx-btn mx-btn-s" id="lkCopy">'+ico('copy')+'Copiar enlace</button><a class="mx-btn mx-btn-wa" id="lkTest" target="_blank" rel="noopener" style="display:none">'+ico('wa')+'Probar</a></div><div class="mx-linkout" id="lkOut"></div></div>'+
+      '<div class="mx-card"><div class="mx-card-h"><div><h3>Dónde usarlo</h3><p>El mismo enlace sirve en todos estos lugares</p></div></div>'+
+      [['Anuncio de Meta','Destino «Sitio web» con este enlace, o el botón «Enviar mensaje de WhatsApp».'],['Biografía de Instagram','Pega el enlace en «Enlaces» del perfil.'],['Historias','Usa el sticker de enlace.'],['Tarjetas y volantes','Convierte el enlace en código QR.']].map(function(k,i){return '<div class="mx-check"><i style="background:var(--mx-info-bg);color:var(--mx-info)">'+(i+1)+'</i><div><b>'+k[0]+'</b>'+k[1]+'</div></div>';}).join('')+'</div></div>';
+    $('#vLinks').innerHTML=h;
+    function gen(){var c=CAMP.filter(function(x){return x.id===$('#lkC').value;})[0];var url=waLink($('#lkN').value,$('#lkM').value+'\n\n(Ref: '+c.id+' · '+c.n+')');var o=$('#lkOut');o.textContent=url;o.classList.add('on');var t=$('#lkTest');t.href=url;t.style.display='inline-flex';return url;}
+    $('#lkGen').addEventListener('click',gen);
+    $('#lkCopy').addEventListener('click',function(){var u=$('#lkOut').textContent||gen();try{navigator.clipboard.writeText(u).then(function(){toast('Enlace copiado');},function(){toast('Selecciona el enlace y cópialo');});}catch(e){toast('Selecciona el enlace y cópialo');}});
+    if(linkCamp)gen();
+  }
+
+  /* ---- Configuración ---- */
+  function renderConf(){
+    var h='<div class="mx-grid mx-g-2e mx-mb"><div class="mx-card"><div class="mx-card-h"><div><h3>Equipo</h3><p>Personas con acceso al portal</p></div></div>'+
+      '<div class="mx-alert"><span class="mx-av">MH</span><div><b>Mateo Herrera Puentes</b><p>Administrador · ve todo el negocio</p></div><span class="mx-badge b-ok" style="margin-left:auto"><i></i>Activo</span></div>'+
+      '<div class="mx-alert"><span class="mx-av" style="background:linear-gradient(135deg,#7C3AED,#EC4899)">AN</span><div><b>Andrea</b><p>Asesora comercial · ve sus clientes y su pipeline</p></div><span class="mx-badge b-ok" style="margin-left:auto"><i></i>Activa</span></div></div>'+
+      '<div class="mx-card"><div class="mx-card-h"><div><h3>Estado de la plataforma</h3><p>Lo que falta para trabajar con datos reales</p></div></div>'+
+      '<div class="mx-check"><i style="background:var(--mx-warn-bg);color:var(--mx-warn)">!</i><div><b>Inicio de sesión</b>Hoy es de demostración (la clave está en el código). Se reemplaza por usuarios reales con Supabase.</div></div>'+
+      '<div class="mx-check"><i style="background:var(--mx-warn-bg);color:var(--mx-warn)">!</i><div><b>Base de datos compartida</b>Necesita la Project URL y la anon key de Supabase para que Mateo y Andrea vean la misma información.</div></div>'+
+      '<div class="mx-check"><i style="background:var(--mx-warn-bg);color:var(--mx-warn)">!</i><div><b>Datos de clientes reales</b>No los cargues hasta activar el acceso seguro (Ley 1581 de 2012).</div></div>'+
+      '<div class="mx-check"><i style="background:var(--mx-ok-bg);color:var(--mx-ok)">✓</i><div><b>Catálogo de ramos</b>'+Object.keys(RAMOS).length+' unidades de negocio configuradas como filtros del pipeline.</div></div></div></div>';
+    h+='<div class="mx-grid mx-g-3"><div class="mx-card"><div class="mx-card-h"><div><h3>Etapas del pipeline</h3></div></div>'+vsteps(ETAPAS,99)+'</div><div class="mx-card"><div class="mx-card-h"><div><h3>Etapas de cotización</h3></div></div>'+vsteps(COT_ETAPAS,99)+'</div><div class="mx-card"><div class="mx-card-h"><div><h3>Etapas de renovación y campañas</h3></div></div>'+vsteps(REN_ETAPAS,99)+'<div class="mx-sec" style="margin-top:6px">Ciclo de campañas Meta</div>'+vsteps(CICLO,99)+'</div></div>';
+    $('#vConf').innerHTML=h;
+  }
+
+  /* ================= NAVEGACIÓN ================= */
+  var TIT={dash:['Resumen','Cómo va el negocio hoy'],pipe:['Pipeline de ventas','9 etapas, del primer contacto a la venta cruzada'],cli:['Clientes','Cartera de clientes y sus pólizas'],cot:['Cotizaciones','Comparativo entre aseguradoras y su avance'],ren:['Renovaciones','Pólizas que vencen en los próximos 60 días'],meta:['Campañas Meta','Facebook e Instagram: del anuncio a la póliza'],links:['Enlaces de WhatsApp','Enlaces con código de campaña para tus anuncios'],conf:['Configuración','Equipo, etapas y estado de la plataforma']};
+  var RENDER={dash:renderDash,pipe:renderPipe,cli:renderCli,cot:renderCot,ren:renderRen,meta:renderMeta,links:renderLinks,conf:renderConf};
+  var cur='dash';
+  function go(v){cur=v;$$('.mx-nav-i').forEach(function(b){b.classList.toggle('on',b.dataset.v===v);});$$('.mx-view').forEach(function(s){s.classList.toggle('on',s.dataset.v===v);});
+    $('#mxTitle').textContent=TIT[v][0];$('#mxSub').textContent=TIT[v][1]+' · '+HOY.toLocaleDateString('es-CO',{weekday:'long',day:'numeric',month:'long'});
+    RENDER[v]();bindGo();$('#mxScroll').scrollTop=0;$('#mxSide').classList.remove('open');if(!$('#mxDrawer').classList.contains('on'))$('#mxScrim').classList.remove('on');
+    try{sessionStorage.setItem('mxView',v);}catch(e){}}
+  function bindGo(){$$('[data-go]').forEach(function(b){if(b._g)return;b._g=1;b.addEventListener('click',function(){go(b.dataset.go);});});}
+  function counts(){$('#ctPipe').textContent=LEADS.filter(function(l){return l.et<6;}).length;$('#ctCli').textContent=CLIENTES.length;$('#ctCot').textContent=COTIZ.filter(function(c){return c.et<4;}).length;$('#ctRen').textContent=RENOV.filter(function(r){return r.p.dias<=30&&r.et<4;}).length;$('#ctMeta').textContent=CAMP.filter(function(c){return c.st==='Activa'||c.st==='En aprendizaje';}).length;}
+  function refreshAll(){counts();RENDER[cur]();bindGo();}
+
+  $$('.mx-nav-i').forEach(function(b){b.addEventListener('click',function(){go(b.dataset.v);});});
+  $('#mxBurger').addEventListener('click',function(){$('#mxSide').classList.add('open');$('#mxScrim').classList.add('on');});
+  $('#mxScrim').addEventListener('click',function(){$('#mxSide').classList.remove('open');closeDrawer();$('#mxScrim').classList.remove('on');});
+  $('#mxDrX').addEventListener('click',closeDrawer);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&document.body.classList.contains('adm-mode'))closeDrawer();});
+  function toSite(){if(typeof window.goPage==='function')window.goPage('inicio');else location.hash='#inicio';}
+  $$('[data-mx-site]').forEach(function(b){b.addEventListener('click',toSite);});
+
+  // tema
+  function themeIcon(){var d=document.body.classList.contains('dark');var s=$('#mxTheme span');s.innerHTML=ico(d?'sun':'moon');}
+  $('#mxTheme').addEventListener('click',function(){var tb=document.getElementById('temaBtn');if(tb)tb.click();else document.body.classList.toggle('dark');themeIcon();});
+
+  // logos (se reutiliza el del encabezado, sin duplicar la imagen en el archivo)
+  var hl=document.querySelector('.hdr-logo img');if(hl){$('#mxBrandLogo').src=hl.src;$('#mxLoginLogo').src=hl.src;}
+
+  // login
+  function entrar(){var u=$('#mxUser').value.trim(),p=$('#mxPass').value.trim();
+    if(u===CLAVE&&p===CLAVE){$('#mxErr').classList.remove('on');abrirApp();try{sessionStorage.setItem('mxAdm','1');}catch(e){}}
+    else{$('#mxErr').classList.add('on');$('#mxPass').value='';$('#mxPass').focus();}}
+  var iniciado=false;
+  function abrirApp(){$('#mxLogin').style.display='none';$('#mxApp').classList.add('on');if(!iniciado){genData();iniciado=true;}counts();var v='dash';try{v=sessionStorage.getItem('mxView')||'dash';}catch(e){}go(RENDER[v]?v:'dash');}
+  $('#mxEntrar').addEventListener('click',entrar);
+  ['mxUser','mxPass'].forEach(function(id){$('#'+id).addEventListener('keydown',function(e){if(e.key==='Enter')entrar();});});
+  $('#mxSalir').addEventListener('click',function(){try{sessionStorage.removeItem('mxAdm');}catch(e){}$('#mxApp').classList.remove('on');$('#mxLogin').style.display='';$('#mxUser').value='';$('#mxPass').value='';toSite();});
+
+  paintIcons(root);themeIcon();
+  try{if(sessionStorage.getItem('mxAdm')==='1')abrirApp();}catch(e){}
+  window.mxThemeIcon=themeIcon;
+})();
+</script>
 </body>
 </html>
